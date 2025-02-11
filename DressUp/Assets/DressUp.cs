@@ -12,29 +12,20 @@ public class DressUp : MonoBehaviour
 {
 
     public List<GameObject> im;
-    
-    public List<Sprite> mm;
 
     public List<menu> selectedButtons;
 
-    public int index, CLIndex;
+    private int index, CLIndex;
     
     public List<GameObject> buttonMenu;
-    
-    void Start()
-    {
-        
-    }
 
+    public GameObject pl;
     
-    void Update()
-    {
-        
-    }
-
     public void ClothesMenu(int clothesIndex)
     {
         CLIndex = clothesIndex;
+
+        pl.SetActive(false);
 
         if (CLIndex == clothesIndex)
         {
@@ -55,6 +46,16 @@ public class DressUp : MonoBehaviour
         {
             im[CLIndex].GetComponent<RawImage>().texture = selectedButtons[CLIndex].ClothesChose[index].texture;
         }
+    }
+
+    public void turnoffButtons()
+    {
+        foreach (var turnOn in buttonMenu)
+        {
+            turnOn.SetActive(false);
+        }
+        
+        pl.SetActive(true);
     }
 }
 
