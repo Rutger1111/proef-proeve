@@ -9,11 +9,14 @@ public class Timer : MonoBehaviour
     
     void Update()
     {
+        // ternery operator to determan wether to use decimals or not and make the entire string ready
         string time = timerDuration > 30 ? "time: "+timerDuration.ToString("F0") : "time: " + timerDuration.ToString("F2");
+        // checks wether it needs to subtract then subtracts
         if (timerDuration >= 0 && _isTimerOn )
         {
-            timerDuration -= 1 * Time.deltaTime;
+            timerDuration -= Time.deltaTime;
         }
+        // if its lower then 0 than it stops timer and sets it 0
         else
         {
             timerDuration = 0;
