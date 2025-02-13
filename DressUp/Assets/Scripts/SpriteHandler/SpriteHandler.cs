@@ -8,18 +8,12 @@ public class SpriteHandler : MonoBehaviour
 
     public GameObject topHalf;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Invoke(ClotheSettings clothingSettings)
     {
-        
+        ChangeSprite(clothingSettings);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void ChangeSprite(ClothingSettings clothingSettings)
+    public void ChangeSprite(ClotheSettings clothingSettings)
     {
         topHalf.GetComponent<RawImage>().texture = clothingSettings.GetTexture();
     }

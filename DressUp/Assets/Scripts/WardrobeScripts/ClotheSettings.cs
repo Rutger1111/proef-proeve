@@ -12,4 +12,7 @@ public class ClotheSettings : MonoBehaviour
     public EStyles GetStyle(){
         return cloth.style;
     }
+    public void ChangeSprite(){
+        GameObject.Find("EventSystem").GetComponent<SpriteHandler>().Invoke(this);
+    }
 }
