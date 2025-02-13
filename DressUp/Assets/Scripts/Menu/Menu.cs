@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    [SerializeField] public GameObject scoreBoard;
     public void ExitGame()
     {
         Application.Quit();
@@ -12,5 +13,15 @@ public class Menu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Main");
+    }
+
+    public void Inleveren()
+    {
+        scoreBoard.SetActive(true);
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

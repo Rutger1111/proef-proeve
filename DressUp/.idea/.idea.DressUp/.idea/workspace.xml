@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f952860d-ec6d-48d2-84e0-5c083486875f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DressUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DressUp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WardrobeScripts/WardrobeInstantiator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WardrobeScripts/WardrobeInstantiator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +35,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "SpriteHandler",
+    "git-widget-placeholder": "InleverKnop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
