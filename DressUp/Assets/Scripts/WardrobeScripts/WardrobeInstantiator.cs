@@ -14,6 +14,7 @@ public class WardrobeInstantiator : MonoBehaviour
     {
         for (int index = 0; index <= wardrobes.Count - 1; index ++){
             GameObject gameObject = Instantiate(gridPrefab,canvasTransform);
+            gameObject.transform.parent = canvasTransform.GetChild(1);
             for (int I = 0; I < wardrobes[index].clothesTextures.Count; I ++){
                 GameObject gameObject1 = Instantiate(boxiePrefab, gameObject.transform);
                 gameObject1.GetComponent<ClotheSettings>().cloth = wardrobes[index].clothesTextures[I];
