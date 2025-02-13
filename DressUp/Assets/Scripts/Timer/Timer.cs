@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    public double timerDuration = 120;
+    public double timerDuration;
     public TMPro.TMP_Text timerText;
     
     private bool _isTimerOn = true;
