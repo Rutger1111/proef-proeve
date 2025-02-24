@@ -654,6 +654,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topHalf: {fileID: 1566137640}
+  MidHalf: {fileID: 0}
+  bottomHalf: {fileID: 0}
 --- !u!114 &548861587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,9 +669,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wardrobes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 68f737bcbff61544fa07de8892c7773a, type: 2}
+  - {fileID: 11400000, guid: 6227809b213de0e41b1710e0271870ad, type: 2}
+  - {fileID: 11400000, guid: 6a9b51b28d7ee894eaf4dc13cb469473, type: 2}
   Dress:
   - {fileID: 0}
   - {fileID: 0}
