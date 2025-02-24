@@ -14,7 +14,7 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("inleverKnop");
+        SceneManager.LoadScene("InleverKnop");
     }
 
     public void Inleveren()

@@ -2463,11 +2463,11 @@ RectTransform:
   - {fileID: 1566137641}
   - {fileID: 1711795034}
   - {fileID: 39322530}
-  - {fileID: 2004744103}
-  - {fileID: 1284043855}
   - {fileID: 1199366691}
   - {fileID: 582758921}
   - {fileID: 847639256}
+  - {fileID: 2004744103}
+  - {fileID: 1284043855}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
