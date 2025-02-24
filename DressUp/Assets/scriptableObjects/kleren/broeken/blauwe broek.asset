@@ -15,3 +15,4 @@ MonoBehaviour:
   texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Id: 0
   style: 2
+  clothKind: 2

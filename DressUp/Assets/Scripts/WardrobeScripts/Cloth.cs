@@ -9,6 +9,7 @@ public class Cloth : ScriptableObject
     public Texture texture;
     public int Id;
     public EStyles style;
+    public EClothes clothKind;
 
 }
 
