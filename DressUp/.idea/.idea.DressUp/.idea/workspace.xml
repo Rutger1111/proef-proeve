@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f952860d-ec6d-48d2-84e0-5c083486875f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DressUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DressUp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/SinglePlayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/SinglePlayer.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/SinglePlayer.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/SinglePlayer.unity.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +106,7 @@
       <workItem from="1739264491149" duration="1938000" />
       <workItem from="1739266477450" duration="6127000" />
       <workItem from="1740384187767" duration="17000" />
-      <workItem from="1740390130983" duration="1101000" />
+      <workItem from="1740390130983" duration="1751000" />
     </task>
     <servers />
   </component>
