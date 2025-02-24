@@ -12,9 +12,14 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
-    public void StartGame()
+    public void SinglePlayerGame()
     {
-        SceneManager.LoadScene("inleverKnop");
+        SceneManager.LoadScene("SinglePlayer");
+    }
+    
+    public void MultiPlayerGame()
+    {
+        SceneManager.LoadScene("dressup");
     }
 
     public void Inleveren()
