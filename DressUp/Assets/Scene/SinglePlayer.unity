@@ -1402,6 +1402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: {fileID: 548861589}
   scoreboard: {fileID: 1284043854}
+  _score: {fileID: 548861590}
 --- !u!1 &564337096
 GameObject:
   m_ObjectHideFlags: 0
