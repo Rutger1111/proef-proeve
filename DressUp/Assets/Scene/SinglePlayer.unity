@@ -1195,7 +1195,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &531350699
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1203,7 +1202,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531350696}
   m_CullTransparentMesh: 1
---- !u!1 &548861581
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1219,11 +1217,10 @@ GameObject:
   - component: {fileID: 548861587}
   - component: {fileID: 548861588}
   - component: {fileID: 548861589}
-=======
 
   - component: {fileID: 548861590}
   - component: {fileID: 548861591}
-<<<<<<< Updated upstream
+
 
   m_Layer: 0
   m_Name: EventSystem
@@ -1330,25 +1327,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 548861589}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
   popupTimer: {fileID: 564337098}
   _score: {fileID: 548861590}
   _aiDresser: {fileID: 548861588}
   plane: {fileID: 564337096}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 --- !u!114 &548861588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1387,14 +1371,7 @@ MonoBehaviour:
   bestTimeText: {fileID: 1554108937}
   currentTime: {fileID: 251021873}
   isTimerOn: 1
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
   popupTimer: {fileID: 564337098}
 --- !u!114 &548861590
 MonoBehaviour:
@@ -1429,13 +1406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: {fileID: 0}
   scoreboard: {fileID: 0}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 --- !u!1 &564337096
 GameObject:
   m_ObjectHideFlags: 0
