@@ -12,6 +12,10 @@ public class WardrobeInstantiator : MonoBehaviour
     public SpriteHandler spriteHandler;
 
     private List<GameObject> buttonsList = new List<GameObject>();
+
+    public int index;
+
+    public UIScale _uiscale;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,6 +44,8 @@ public class WardrobeInstantiator : MonoBehaviour
     }
     public void buttonInstatiate(int buttonIndex)
     {
+        _uiscale.ButttonSizeChanger(buttonIndex);
+
         foreach (var button in buttonsList) 
         { 
             Destroy(button);
