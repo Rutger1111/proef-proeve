@@ -1224,6 +1224,9 @@ GameObject:
   - component: {fileID: 548861590}
   - component: {fileID: 548861591}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1334,7 +1337,10 @@ MonoBehaviour:
   timer: {fileID: 548861589}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   popupTimer: {fileID: 564337098}
@@ -1342,6 +1348,9 @@ MonoBehaviour:
   _aiDresser: {fileID: 548861588}
   plane: {fileID: 564337096}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1385,7 +1394,10 @@ MonoBehaviour:
   isTimerOn: 1
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   popupTimer: {fileID: 564337098}
@@ -1423,6 +1435,9 @@ MonoBehaviour:
   time: {fileID: 0}
   scoreboard: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
