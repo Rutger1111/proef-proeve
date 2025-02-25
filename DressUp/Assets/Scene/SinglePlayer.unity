@@ -1219,12 +1219,8 @@ GameObject:
   - component: {fileID: 548861587}
   - component: {fileID: 548861588}
   - component: {fileID: 548861589}
-
-
   - component: {fileID: 548861590}
   - component: {fileID: 548861591}
-
-
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1315,7 +1311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topHalf: {fileID: 1566137640}
-  MidHalf: {fileID: 1711795033}
+  midHalf: {fileID: 1711795033}
   bottomHalf: {fileID: 39322529}
 --- !u!114 &548861587
 MonoBehaviour:
@@ -1330,12 +1326,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 548861589}
-
   popupTimer: {fileID: 564337098}
   _score: {fileID: 548861590}
   _aiDresser: {fileID: 548861588}
   plane: {fileID: 564337096}
-
 --- !u!114 &548861588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1374,7 +1368,6 @@ MonoBehaviour:
   bestTimeText: {fileID: 1554108937}
   currentTime: {fileID: 251021873}
   isTimerOn: 1
-
   popupTimer: {fileID: 564337098}
 --- !u!114 &548861590
 MonoBehaviour:
@@ -1407,9 +1400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172767a56a9d4eb45b059722987fd3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: {fileID: 0}
-  scoreboard: {fileID: 0}
-
+  time: {fileID: 548861589}
+  scoreboard: {fileID: 1284043854}
 --- !u!1 &564337096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,7 +1420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &564337097
 RectTransform:
   m_ObjectHideFlags: 0
