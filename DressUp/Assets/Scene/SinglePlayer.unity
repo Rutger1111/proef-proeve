@@ -1221,6 +1221,7 @@ GameObject:
   - component: {fileID: 548861589}
 <<<<<<< Updated upstream
 =======
+
   - component: {fileID: 548861590}
   - component: {fileID: 548861591}
 <<<<<<< Updated upstream
@@ -1230,6 +1231,7 @@ GameObject:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
