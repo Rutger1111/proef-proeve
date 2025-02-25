@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 39322532}
   - component: {fileID: 39322531}
   m_Layer: 5
-  m_Name: bottemHalf
+  m_Name: Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,6 +190,78 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39322529}
+  m_CullTransparentMesh: 1
+--- !u!1 &51252460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51252461}
+  - component: {fileID: 51252463}
+  - component: {fileID: 51252462}
+  m_Layer: 5
+  m_Name: Shoes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &51252461
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51252460}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.775608, y: 2.3634121, z: 2.1698}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1552867576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -451, y: -305}
+  m_SizeDelta: {x: 100, y: 118.7418}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &51252462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51252460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: c06ed5932181a0a42b96cd972b5d965e, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &51252463
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51252460}
   m_CullTransparentMesh: 1
 --- !u!1 &54819344
 GameObject:
@@ -1294,9 +1366,10 @@ MonoBehaviour:
   boxiePrefab: {fileID: 4289729182337218736, guid: 89d4dac3d2543f24f873eba8f135424e, type: 3}
   canvasTransform: {fileID: 1552867576}
   wardrobes:
-  - {fileID: 11400000, guid: 6a9b51b28d7ee894eaf4dc13cb469473, type: 2}
-  - {fileID: 11400000, guid: 68f737bcbff61544fa07de8892c7773a, type: 2}
+  - {fileID: 11400000, guid: edec03d00face31438a8b738a37fb72f, type: 2}
   - {fileID: 11400000, guid: 6227809b213de0e41b1710e0271870ad, type: 2}
+  - {fileID: 11400000, guid: 98c8f296bcfb6ec46b7e9c0121bce653, type: 2}
+  - {fileID: 11400000, guid: a39b90d7d48d30845becf3db67b268a8, type: 2}
   spriteHandler: {fileID: 548861586}
 --- !u!114 &548861586
 MonoBehaviour:
@@ -1310,9 +1383,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfefd52872751154092ba48cb2c75e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topHalf: {fileID: 1566137640}
-  midHalf: {fileID: 1711795033}
-  bottomHalf: {fileID: 39322529}
+  hair: {fileID: 1566137640}
+  shirts: {fileID: 1711795033}
+  pants: {fileID: 39322529}
+  shoes: {fileID: 51252460}
 --- !u!114 &548861587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1362,7 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb51a723c1ff5be4281e00980bc9095a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerDuration: 1
+  timerDuration: 1000
   bestTime: 0
   timerText: {fileID: 1636720962}
   bestTimeText: {fileID: 1554108937}
@@ -1421,7 +1495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &564337097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3068,6 +3142,7 @@ RectTransform:
   - {fileID: 1566137641}
   - {fileID: 39322530}
   - {fileID: 1711795034}
+  - {fileID: 51252461}
   - {fileID: 1199366691}
   - {fileID: 582758921}
   - {fileID: 847639256}
@@ -3230,7 +3305,7 @@ GameObject:
   - component: {fileID: 1566137643}
   - component: {fileID: 1566137642}
   m_Layer: 5
-  m_Name: TopHalf
+  m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3375,7 +3450,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 548861587}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: Retry
+        m_MethodName: Return
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3571,7 +3646,7 @@ GameObject:
   - component: {fileID: 1711795036}
   - component: {fileID: 1711795035}
   m_Layer: 5
-  m_Name: MiddleHalf
+  m_Name: Shirts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -6,9 +6,10 @@ using UnityEngine.UIElements;
 public class SpriteHandler : MonoBehaviour
 {
 
-    public GameObject topHalf;
-    public GameObject midHalf;
-    public GameObject bottomHalf;
+    public GameObject hair;
+    public GameObject shirts;
+    public GameObject pants;
+    public GameObject shoes;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Invoke(ClotheSettings clothingSettings)
     {
@@ -20,16 +21,20 @@ public class SpriteHandler : MonoBehaviour
         switch (clothingSettings.GetClothKind())
         {
             case EClothes.Head:
-                topHalf.GetComponent<RawImage>().texture = clothingSettings.GetTexture();
-                topHalf.GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
+                hair.GetComponent<RawImage>().texture = clothingSettings.GetTexture();
+                hair.GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
                 break;
-            case EClothes.Torso:
-                midHalf.GetComponent<RawImage>().texture = clothingSettings.GetTexture();
-                midHalf.GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
+            case EClothes.Shirts:
+                shirts.GetComponent<RawImage>().texture = clothingSettings.GetTexture();
+                shirts.GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
                 break;
             case EClothes.Pants:
-                bottomHalf.GetComponent<RawImage>().texture = clothingSettings.GetTexture();
-                bottomHalf.GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
+                pants.GetComponent<RawImage>().texture = clothingSettings.GetTexture();
+                pants.GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
+                break;
+            case EClothes.Shoes:
+                shoes.GetComponent<RawImage>().texture = clothingSettings.GetTexture();
+                shoes.GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
                 break;
         }
         
