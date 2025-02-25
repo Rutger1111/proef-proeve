@@ -410,6 +410,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 283c6cbf45502dd49971a607b695a4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 3
+  resetTimer: 0
 --- !u!114 &80163970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,7 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topHalf: {fileID: 1566137640}
-  MidHalf: {fileID: 0}
+  midHalf: {fileID: 0}
   bottomHalf: {fileID: 0}
 --- !u!114 &548861587
 MonoBehaviour:
