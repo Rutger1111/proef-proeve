@@ -1,9 +1,14 @@
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class ChooseCommand : ICommand
 {
-    public void Invoke()
+    public List<ICommand> commands;
+    public override void Invoke()
     {
-
+        int randomNumber = Random.Range(0, commands.Count);
+        print(randomNumber);
+        commands[randomNumber].Invoke();
     }
 }

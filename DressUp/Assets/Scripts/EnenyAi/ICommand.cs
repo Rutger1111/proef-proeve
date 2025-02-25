@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface ICommand
+public abstract class ICommand : MonoBehaviour
 {
-    void Invoke();
+    public abstract void Invoke();
 }
