@@ -5,8 +5,5 @@ public class ClotheReference : MonoBehaviour
 {
     public Cloth CL;
 
-    private void Start()
-    {
-        
-    }
+   
 }

@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] public GameObject scoreBoard;
+    
     public Timer timer;
-
+    public PopupTimer popupTimer;
     public Score _score;
+
+    public AIDresser _aiDresser;
+    public GameObject plane;
     
     public void ExitGame()
     {
@@ -27,13 +30,9 @@ public class Menu : MonoBehaviour
 
     public void Inleveren()
     {
-      
-
-
-        scoreBoard.SetActive(true);
-        timer.isTimerOn = false;
-        Debug.Log(timer.bestTime);
-
+        _aiDresser.ChooseDress();
+        plane.SetActive(true);
+        popupTimer.ResetTimer();
         _score.SubmitClothes();
     }
 

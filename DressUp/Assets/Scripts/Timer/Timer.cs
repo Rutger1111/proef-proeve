@@ -13,6 +13,8 @@ public class Timer : MonoBehaviour
     
     public bool isTimerOn = true;
 
+    public PopupTimer popupTimer;
+
     public void Start()
     {
         float lastbesttime = PlayerPrefs.GetFloat("best time", bestTime);
@@ -29,16 +31,15 @@ public class Timer : MonoBehaviour
         string time = timerDuration > 30 ? "time: "+timerDuration.ToString("F0") : "time: " + timerDuration.ToString("F2");
         
         // checks wether it needs to subtract then subtracts
-        if (timerDuration >= 0 && isTimerOn )
+        if (timerDuration >= 0 && popupTimer.timer <= 0)
         {
-            timerDuration -= Time.deltaTime;
+                timerDuration -= Time.deltaTime;
         }
         
         // if its lower then 0 than it stops timer
         else
         {
             currentTime.text = "tijd: " + timerDuration.ToString("F2") + " sec";
-            isTimerOn = false;
         }
         timerText.text = time;
         

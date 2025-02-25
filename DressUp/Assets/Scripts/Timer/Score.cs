@@ -9,13 +9,16 @@ public class Score : MonoBehaviour
     public TMPro.TMP_Text scoreText;
 
     private double _finalScore;
-    public double _stylePoints;
+    public double stylePoints;
+    public double pointsForRightClothes;
 
-    
     public List<GameObject> shownClothes;
     public List<GameObject> selectedclothes;
 
     public AIDresser _aiDresser;
+
+    
+    
 
     void Start()
     {
@@ -51,12 +54,23 @@ public class Score : MonoBehaviour
             {
                 if (image.GetComponent<ClotheReference>().CL.style == clothes.GetComponent<ClotheReference>().CL.style)
                 {
-                    _stylePoints += 5F;
-                    _finalScore = timeReference.timerDuration + _stylePoints;
+                    stylePoints += pointsForRightClothes;
+                    _finalScore = timeReference.timerDuration + stylePoints;
                     scoreText.text = "score: " + _finalScore.ToString("F0");
                 }
             }
-
+        }
+        foreach (GameObject Image in selectedclothes)
+        {
+            foreach (GameObject clothes in shownClothes)
+            {
+                if (Image.GetComponent<ClotheReference>().CL.Id == clothes.GetComponent<ClotheReference>().CL.Id)
+                {
+                    
+                    _finalScore = timeReference.timerDuration + stylePoints;
+                    scoreText.text = "score: " + _finalScore.ToString("F0");
+                }
+            }
         }
     }
 

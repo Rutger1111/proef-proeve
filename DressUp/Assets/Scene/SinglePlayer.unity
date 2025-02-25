@@ -1219,6 +1219,11 @@ GameObject:
   - component: {fileID: 548861587}
   - component: {fileID: 548861588}
   - component: {fileID: 548861589}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 548861590}
+  - component: {fileID: 548861591}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1323,8 +1328,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74750b9c260a8c0488d8c4ac795a47ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreBoard: {fileID: 1284043854}
   timer: {fileID: 548861589}
+<<<<<<< Updated upstream
+=======
+  popupTimer: {fileID: 564337098}
+  _score: {fileID: 548861590}
+  _aiDresser: {fileID: 548861588}
+  plane: {fileID: 564337096}
+>>>>>>> Stashed changes
 --- !u!114 &548861588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1357,12 +1368,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb51a723c1ff5be4281e00980bc9095a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerDuration: 40
+  timerDuration: 1
   bestTime: 0
   timerText: {fileID: 1636720962}
   bestTimeText: {fileID: 1554108937}
   currentTime: {fileID: 251021873}
   isTimerOn: 1
+<<<<<<< Updated upstream
+=======
+  popupTimer: {fileID: 564337098}
+--- !u!114 &548861590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548861581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d2a40194903264694c17209223d0d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeReference: {fileID: 548861589}
+  scoreText: {fileID: 922684393}
+  stylePoints: 0
+  pointsForRightClothes: 0
+  shownClothes: []
+  selectedclothes: []
+  _aiDresser: {fileID: 548861588}
+--- !u!114 &548861591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548861581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172767a56a9d4eb45b059722987fd3d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: {fileID: 0}
+  scoreboard: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1 &564337096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,6 +1462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 283c6cbf45502dd49971a607b695a4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 3
+  resetTimer: 3
 --- !u!114 &564337099
 MonoBehaviour:
   m_ObjectHideFlags: 0
