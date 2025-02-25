@@ -1219,18 +1219,11 @@ GameObject:
   - component: {fileID: 548861587}
   - component: {fileID: 548861588}
   - component: {fileID: 548861589}
-<<<<<<< Updated upstream
 =======
 
   - component: {fileID: 548861590}
   - component: {fileID: 548861591}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
   m_Layer: 0
   m_Name: EventSystem
