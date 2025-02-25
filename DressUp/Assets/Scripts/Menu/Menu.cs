@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -5,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     [SerializeField] public GameObject scoreBoard;
+    public Timer timer;
 
     
     public void ExitGame()
@@ -25,6 +27,8 @@ public class Menu : MonoBehaviour
     public void Inleveren()
     {
         scoreBoard.SetActive(true);
+        timer.isTimerOn = false;
+        Debug.Log(timer.bestTime);
     }
 
     public void Retry()
