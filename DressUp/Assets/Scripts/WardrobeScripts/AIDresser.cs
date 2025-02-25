@@ -28,6 +28,8 @@ public class AIDresser : MonoBehaviour
     }
     // actually chooses the cloth via the cloth his  function
     private void ChooseClothe(Wardrobe wardrobe, int index){
-        Dress[index].texture = wardrobe.Choose();
+        Cloth cloth = wardrobe.Choose();
+        Dress[index].texture = cloth.texture;
+        Dress[index].GetComponent<ClotheReference>().CL = cloth;
     }
 }

@@ -54,7 +54,6 @@ public class Score : MonoBehaviour
                     _stylePoints += 5F;
                     _finalScore = timeReference.timerDuration + _stylePoints;
                     scoreText.text = "score: " + _finalScore.ToString("F0");
-                    _aiDresser.ChooseDress();
                 }
             }
 

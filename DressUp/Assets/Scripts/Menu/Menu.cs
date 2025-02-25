@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour
     [SerializeField] public GameObject scoreBoard;
     public Timer timer;
 
+    public Score _score;
     
     public void ExitGame()
     {
@@ -26,9 +27,14 @@ public class Menu : MonoBehaviour
 
     public void Inleveren()
     {
+      
+
+
         scoreBoard.SetActive(true);
         timer.isTimerOn = false;
         Debug.Log(timer.bestTime);
+
+        _score.SubmitClothes();
     }
 
     public void Retry()
