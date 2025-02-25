@@ -33,6 +33,11 @@ public class Menu : MonoBehaviour
 
     public void Retry()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Return()
+    {
         SceneManager.LoadScene("Menu");
     }
 }
