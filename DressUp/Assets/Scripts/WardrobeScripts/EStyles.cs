@@ -4,10 +4,7 @@ using UnityEngine;
 
 public enum EStyles
 {
-    casual,
-    formal,
-    hipster,
-    goth,
-    street,
-    punk
+    Comfy,
+    Fancy,
+    Cute
 }
