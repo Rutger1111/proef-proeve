@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WardrobeInstantiator : MonoBehaviour
 {
@@ -60,6 +61,7 @@ public class WardrobeInstantiator : MonoBehaviour
             {
                 GameObject gameObject1 = Instantiate(boxiePrefab, gameObject.transform);
                 gameObject1.GetComponent<ClotheSettings>().cloth = wardrobes[buttonIndex].clothesTextures[I];
+                gameObject1.GetComponent<RawImage>().texture = wardrobes[buttonIndex].clothesTextures[I].iconTexture;
             }
         
 

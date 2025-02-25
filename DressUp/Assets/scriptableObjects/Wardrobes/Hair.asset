@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8b17199447710442b6694c39c7d48cb, type: 3}
-  m_Name: SHirts
+  m_Name: Hair
   m_EditorClassIdentifier: 
   clothesTextures:
-  - {fileID: 11400000, guid: 018be9593f143d64c97c34c16785ded9, type: 2}
-  - {fileID: 11400000, guid: 63409e33e88e4c74b9de88d6f746b6dc, type: 2}
-  - {fileID: 11400000, guid: a3baf2b8e7b8c9e40a74c4db9c7e4841, type: 2}
-  - {fileID: 11400000, guid: 5afcff11b111b9548b6692ecc85e68b2, type: 2}
-  - {fileID: 11400000, guid: 4c6fb0eddcef55a44905c05e98344731, type: 2}
+  - {fileID: 11400000, guid: 333b9abd4641e634e9f07297a4745510, type: 2}
+  - {fileID: 11400000, guid: aa88f376a18d7b34e92ceed44c808ebe, type: 2}
+  - {fileID: 11400000, guid: 653881aa76d142744ae325e66fd961af, type: 2}
+  - {fileID: 11400000, guid: 3f03ac9fdf27af342853065a86bd4a4a, type: 2}
+  - {fileID: 11400000, guid: 5fbea650485ec7848b8a3cc34808eda3, type: 2}
