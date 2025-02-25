@@ -56,7 +56,7 @@ public class Score : MonoBehaviour
                 {
                     stylePoints += pointsForRightClothes;
                     _finalScore = timeReference.timerDuration + stylePoints;
-                    scoreText.text = "score: " + _finalScore.ToString("F0");
+                   
                 }
             }
         }
@@ -68,10 +68,15 @@ public class Score : MonoBehaviour
                 {
                     
                     _finalScore = timeReference.timerDuration + stylePoints;
-                    scoreText.text = "score: " + _finalScore.ToString("F0");
+                   
                 }
             }
         }
+    }
+
+    public void gameOver()
+    {
+        scoreText.text = "score: " + _finalScore.ToString("F0");
     }
 
 
