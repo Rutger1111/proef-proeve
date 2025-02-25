@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using Random = Unity.Mathematics.Random;
 
 public class Score : MonoBehaviour
@@ -7,17 +9,57 @@ public class Score : MonoBehaviour
     public TMPro.TMP_Text scoreText;
 
     private double _finalScore;
-    private double _stylePoints;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public double _stylePoints;
+
+    
+    public List<GameObject> shownClothes;
+    public List<GameObject> selectedclothes;
+
+    public AIDresser _aiDresser;
+
     void Start()
     {
+       GameObject parentSelectedClothes = GameObject.Find("ParentClothParts");
+       
+       foreach(Transform clothesSelected in parentSelectedClothes.transform)
+       {
+           selectedclothes.Add(clothesSelected.gameObject);
+       }
         
+        GameObject parentShownClothes = GameObject.Find("Panel");
+
+        foreach (Transform clothesShown in parentShownClothes.transform)
+        {
+            GameObject parentModelClothes = GameObject.Find("modelOutline");
+            
+                foreach (Transform ModelClothes in parentModelClothes.transform)
+                {
+                    shownClothes.Add(ModelClothes.gameObject);
+               }
+           
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    
+
+    public void SubmitClothes()
     {
-        _finalScore = timeReference.timerDuration + _stylePoints;
-        scoreText.text = "score: " + _finalScore.ToString("F0");
+        foreach (GameObject image in selectedclothes)
+        {
+            foreach (GameObject clothes in shownClothes)
+            {
+                if (image.GetComponent<ClotheReference>().CL.style == clothes.GetComponent<ClotheReference>().CL.style)
+                {
+                    _stylePoints += 5F;
+                    _finalScore = timeReference.timerDuration + _stylePoints;
+                    scoreText.text = "score: " + _finalScore.ToString("F0");
+                    _aiDresser.ChooseDress();
+                }
+            }
+
+        }
     }
+
+
 }

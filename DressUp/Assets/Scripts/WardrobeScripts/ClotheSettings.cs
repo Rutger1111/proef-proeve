@@ -15,6 +15,10 @@ public class ClotheSettings : MonoBehaviour
     public void ChangeSprite(){
         GameObject.Find("EventSystem").GetComponent<SpriteHandler>().Invoke(this);
     }
+    public Cloth GetCloth()
+    {
+        return this.cloth;
+    }
     public EClothes GetClothKind()
     {
         return cloth.clothKind;

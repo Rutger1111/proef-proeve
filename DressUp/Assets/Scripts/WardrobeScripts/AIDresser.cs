@@ -21,7 +21,7 @@ public class AIDresser : MonoBehaviour
         }
     }
     //chooses dress according to all warddrobes in list
-    private void ChooseDress(){
+    public void ChooseDress(){
         for (int I = wardrobes.Count - 1;I > -1; I --){
             ChooseClothe(wardrobes[I], I);
         }
