@@ -39,17 +39,22 @@ public class Timer : MonoBehaviour
         // if its lower then 0 than it stops timer
         else
         {
-            currentTime.text = "tijd: " + timerDuration.ToString("F2") + " sec";
+            currentTime.text = "tijd: 0 sec";
         }
         timerText.text = time;
         
         // if the current time is better than your previous best time than the high score will be updated to the current best score
         if (timerDuration > PlayerPrefs.GetFloat("best time", bestTime) && !isTimerOn)
         {
-            bestTime = timerDuration;
-            bestTimeText.text = "beste tijd: " + bestTime.ToString("F2") + " sec";
-            PlayerPrefs.SetFloat("best time", bestTime);
+            SetHighScore();
         }
+    }
+
+    private void SetHighScore()
+    {
+        bestTime = timerDuration;
+        bestTimeText.text = "beste tijd: " + bestTime.ToString("F2") + " sec";
+        PlayerPrefs.SetFloat("best time", bestTime);
     }
 
     private void ResetHighScores()

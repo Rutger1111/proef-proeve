@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class AIDresser : MonoBehaviour
 {
     public List<Wardrobe> wardrobes = new List<Wardrobe>();
-    public List<RawImage> Dress = new List<RawImage>();
+    public List<RawImage[]> Dress = new List<RawImage[]>();
     void Start()
     {
         // start choosing example dress
@@ -29,7 +29,12 @@ public class AIDresser : MonoBehaviour
     // actually chooses the cloth via the cloth his  function
     private void ChooseClothe(Wardrobe wardrobe, int index){
         Cloth cloth = wardrobe.Choose();
-        Dress[index].texture = cloth.texture;
-        Dress[index].GetComponent<ClotheReference>().CL = cloth;
+        for (int i = 0; i < cloth.textures.Count; i++)
+        {
+            Dress[index][i].texture = cloth.textures[i];
+            Dress[index][i].GetComponent<ClotheReference>().CL = cloth;
+        }
+        
+        
     }
 }

@@ -1561,10 +1561,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfefd52872751154092ba48cb2c75e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hair: {fileID: 1566137640}
-  shirts: {fileID: 1711795033}
-  pants: {fileID: 39322529}
-  shoes: {fileID: 51252460}
+  hair:
+  - {fileID: 1566137640}
+  shirts:
+  - {fileID: 1711795033}
+  pants:
+  - {fileID: 39322529}
+  shoes:
+  - {fileID: 51252460}
 --- !u!114 &548861587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1598,10 +1602,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 68f737bcbff61544fa07de8892c7773a, type: 2}
   - {fileID: 11400000, guid: 6227809b213de0e41b1710e0271870ad, type: 2}
   - {fileID: 11400000, guid: 6a9b51b28d7ee894eaf4dc13cb469473, type: 2}
-  Dress:
-  - {fileID: 54819347}
-  - {fileID: 2030459011}
-  - {fileID: 1928605939}
 --- !u!114 &548861589
 MonoBehaviour:
   m_ObjectHideFlags: 0

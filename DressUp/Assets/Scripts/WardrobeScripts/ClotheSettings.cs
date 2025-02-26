@@ -1,10 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ClotheSettings : MonoBehaviour
 {
     public Cloth cloth;
-    public Texture GetTexture(){
-        return cloth.texture;
+    public List<Texture> GetTexture(){
+        return cloth.textures;
     }
     public int GetId(){
         return cloth.Id;
