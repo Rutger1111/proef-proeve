@@ -1919,7 +1919,19 @@ PrefabInstance:
     - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: 'hair.Array.data[0]'
       value: 
-      objectReference: {fileID: 6419533940634861691}
+      objectReference: {fileID: 417293993045930573}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: 'pants.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1850199000006921912}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: 'shoes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 801812678723454620}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: 'shirts.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7855135369002736619}
     - target: {fileID: 8342750307822376617, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: scoreboard
       value: 
