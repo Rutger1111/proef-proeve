@@ -5,14 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    
-    public Timer timer;
-    public PopupTimer popupTimer;
-    public Score _score;
 
-    public AIDresser _aiDresser;
-    public GameObject plane;
-    
+
+    [SerializeField] private GameObject plane;
+
+    private Timer _timer;
+    private PopupTimer _popupTimer;
+    private Score _score;
+    private AIDresser _aiDresser;
+
+    private void Start()
+    {
+        _timer = GetComponent<Timer>();
+        _popupTimer = GetComponent<PopupTimer>();
+        _score = GetComponent<Score>();
+        _aiDresser = GetComponent<AIDresser>();
+    }
     public void ExitGame()
     {
         Application.Quit();
@@ -32,7 +40,7 @@ public class Menu : MonoBehaviour
     {
         _aiDresser.ChooseDress();
         plane.SetActive(true);
-        popupTimer.ResetTimer();
+        _popupTimer.ResetTimer();
         _score.SubmitClothes();
     }
 
