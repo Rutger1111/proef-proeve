@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,12 +7,16 @@ using UnityEngine.UI;
 public class ChooseNext : ICommand
 {
     public Wardrobe wardrobe;
-    public RawImage cloth;
     public int index = 0;
     public ClotheReference clothe;
+    public List<RawImage> images = new List<RawImage>();
     void Start()
     {
-        cloth.texture = wardrobe.clothesTextures[index].texture;    
+        for (int i = 0; i < wardrobe.clothesTextures[index].textures.Count; i++)
+        {
+            images[i].texture = wardrobe.clothesTextures[index].textures[i];
+        }
+            
     }
     public override void Invoke(){
         if( clothe.CL.Id != index){
@@ -33,7 +38,10 @@ public class ChooseNext : ICommand
                         index = 0;
                     }
                 }
-                cloth.texture = wardrobe.clothesTextures[index].texture;
+                for (int i = 0; i < wardrobe.clothesTextures[index].textures.Count; i++)
+                {
+                    images[i].texture = wardrobe.clothesTextures[index].textures[i];
+                }
             }
             else{            
                 if (index - clothe.CL.Id >= 0){
@@ -53,11 +61,17 @@ public class ChooseNext : ICommand
                     }
 
                 }
-                cloth.texture = wardrobe.clothesTextures[index].texture;
+                for (int i = 0; i < wardrobe.clothesTextures[index].textures.Count; i++)
+                {
+                    images[i].texture = wardrobe.clothesTextures[index].textures[i];
+                }
             }            
         }
         else{
-            cloth.texture = wardrobe.clothesTextures[index].texture;
+            for (int i = 0; i < wardrobe.clothesTextures[index].textures.Count; i++)
+            {
+                images[i].texture = wardrobe.clothesTextures[index].textures[i];
+            }
         }
         
     }
