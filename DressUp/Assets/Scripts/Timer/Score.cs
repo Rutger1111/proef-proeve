@@ -17,60 +17,68 @@ public class Score : MonoBehaviour
 
     public AIDresser _aiDresser;
 
-    
-    
+    public float points;
+    public float idDifference;
 
     void Start()
     {
-       GameObject parentSelectedClothes = GameObject.Find("ParentClothParts");
-       
-       foreach(Transform clothesSelected in parentSelectedClothes.transform)
-       {
-           selectedclothes.Add(clothesSelected.gameObject);
-       }
-        
+        GameObject parentSelectedClothes = GameObject.Find("ModelClothesParts");
+
+        foreach (Transform clothesSelected in parentSelectedClothes.transform)
+        {
+            selectedclothes.Add(clothesSelected.gameObject);
+        }
+
         GameObject parentShownClothes = GameObject.Find("Panel");
 
-        foreach (Transform clothesShown in parentShownClothes.transform)
-        {
-            GameObject parentModelClothes = GameObject.Find("modelOutline");
+        shownClothes.Clear();
+        
             
-                foreach (Transform ModelClothes in parentModelClothes.transform)
-                {
-                    shownClothes.Add(ModelClothes.gameObject);
-               }
-           
+        GameObject parentModelClothes = GameObject.Find("modelOutline");
+
+            
+        foreach (Transform ModelClothes in parentModelClothes.transform)  
+        {
+            if (!shownClothes.Contains(ModelClothes.gameObject))
+            {
+                shownClothes.Add(ModelClothes.gameObject);
+            }
+                
+            
         }
     }
 
-    
-    
+
+
 
     public void SubmitClothes()
     {
-        foreach (GameObject image in selectedclothes)
+        for (int i = 0; i < shownClothes.Count; i++)
         {
-            foreach (GameObject clothes in shownClothes)
+            for(int j = 0; j < selectedclothes.Count; j++)
             {
-                if (image.GetComponent<ClotheReference>().CL.style == clothes.GetComponent<ClotheReference>().CL.style)
+                if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
                 {
                     stylePoints += pointsForRightClothes;
                 }
 
-                if (image.GetComponent<ClotheReference>().CL.Id == clothes.GetComponent<ClotheReference>().CL.Id)
+                if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == selectedclothes[j].GetComponent<ClotheReference>().CL.Id)
                 {
-                    stylePoints = 10f;
+                    stylePoints += 5f;
                 }
-                else if (image.GetComponent<ClotheReference>().CL.Id >= clothes.GetComponent<ClotheReference>().CL.Id && image.GetComponent<ClotheReference>().CL.Id <= clothes.GetComponent<ClotheReference>().CL.Id)
+                else
                 {
-                    stylePoints = 5f;
+                    idDifference = Mathf.Abs(selectedclothes[j].GetComponent<ClotheReference>().CL.Id - shownClothes[i].GetComponent<ClotheReference>().CL.Id);
+                    points = Mathf.Max(0, 10f - idDifference * 2f);
+
+                    stylePoints += points;
                 }
             }
         }
         
+        
 
             
-        
 
         CalculateScore();
 
@@ -78,7 +86,15 @@ public class Score : MonoBehaviour
 
     public void CalculateScore()
     {
-        _finalScore += stylePoints;
+        if(stylePoints < 100)
+        {
+            _finalScore += stylePoints;
+        }
+        else
+        {
+            _finalScore += 100;
+        }
+       
     }
 
     public void gameOver()

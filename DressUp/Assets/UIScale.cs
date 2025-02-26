@@ -1,29 +1,34 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIScale : MonoBehaviour
 {
     public List<GameObject> list;
   
     public int index;
-    
 
+    private void Start()
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+               list[i].GetComponent<Image>().color = new Color(1, 1, 1, 0.5f);
+        }
+    }
     public void ButttonSizeChanger(int indexButton)
     {
         index = indexButton;
 
-        foreach (GameObject t in list)
+        for (int i = 0; i < list.Count; i++)
         {
-           
-            if (indexButton == index)
+            if (i == indexButton)
             {
-                list[indexButton].GetComponent<Transform>().localScale = new Vector3(2f, 2f, 2f);
+                list[i].GetComponent<Image>().color = new Color(1,1,1,1.5f);
             }
-            else
+            else if (i != indexButton)
             {
-                t.GetComponent<Transform>().localScale = new Vector3(1f, 1f, 1f);
+                list[i].GetComponent<Image>().color = new Color(1, 1, 1, 0.5f);
             }
-            
         }
     }
 }
