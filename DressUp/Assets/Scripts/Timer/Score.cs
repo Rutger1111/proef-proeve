@@ -17,34 +17,39 @@ public class Score : MonoBehaviour
 
     public AIDresser _aiDresser;
 
-    
-    
+    public float points;
+    public float idDifference;
 
     void Start()
     {
-       GameObject parentSelectedClothes = GameObject.Find("ParentClothParts");
-       
-       foreach(Transform clothesSelected in parentSelectedClothes.transform)
-       {
-           selectedclothes.Add(clothesSelected.gameObject);
-       }
-        
+        GameObject parentSelectedClothes = GameObject.Find("ModelClothesParts");
+
+        foreach (Transform clothesSelected in parentSelectedClothes.transform)
+        {
+            selectedclothes.Add(clothesSelected.gameObject);
+        }
+
         GameObject parentShownClothes = GameObject.Find("Panel");
 
-        foreach (Transform clothesShown in parentShownClothes.transform)
-        {
-            GameObject parentModelClothes = GameObject.Find("modelOutline");
+        shownClothes.Clear();
+        
             
-                foreach (Transform ModelClothes in parentModelClothes.transform)
-                {
-                    shownClothes.Add(ModelClothes.gameObject);
-               }
-           
+        GameObject parentModelClothes = GameObject.Find("modelOutline");
+
+            
+        foreach (Transform ModelClothes in parentModelClothes.transform)  
+        {
+            if (!shownClothes.Contains(ModelClothes.gameObject))
+            {
+                shownClothes.Add(ModelClothes.gameObject);
+            }
+                
+            
         }
     }
 
-    
-    
+
+
 
     public void SubmitClothes()
     {
@@ -63,8 +68,8 @@ public class Score : MonoBehaviour
                 }
                 else
                 {
-                    float idDifference = Mathf.Abs(image.GetComponent<ClotheReference>().CL.Id - clothes.GetComponent<ClotheReference>().CL.Id);
-                    float points = Mathf.Max(0, 10f - idDifference * 2f);
+                    idDifference = Mathf.Abs(image.GetComponent<ClotheReference>().CL.Id - clothes.GetComponent<ClotheReference>().CL.Id);
+                    points = Mathf.Max(0, 10f - idDifference * 2f);
 
                     stylePoints += points;
                 }
