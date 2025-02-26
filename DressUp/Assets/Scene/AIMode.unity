@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 39322532}
   - component: {fileID: 39322531}
   m_Layer: 5
-  m_Name: bottemHalf
+  m_Name: Shirts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 54819347}
   - component: {fileID: 54819348}
   m_Layer: 5
-  m_Name: TopHalf (1)
+  m_Name: Hair (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -903,6 +903,7 @@ RectTransform:
   - {fileID: 54819345}
   - {fileID: 2030459009}
   - {fileID: 1928605941}
+  - {fileID: 1403467349}
   m_Father: {fileID: 1348778283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.366}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -930,7 +931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: ebf22876a6a5a15409e0acdd099a7f8d, type: 3}
+  m_Texture: {fileID: 2800000, guid: b86f428774cf60b449e711e7ada7eb3b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1116,6 +1117,7 @@ RectTransform:
   - {fileID: 1898782143}
   - {fileID: 983476357}
   - {fileID: 1983013822}
+  - {fileID: 1145174625}
   m_Father: {fileID: 1552867576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.366}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1143,7 +1145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: ebf22876a6a5a15409e0acdd099a7f8d, type: 3}
+  m_Texture: {fileID: 2800000, guid: b86f428774cf60b449e711e7ada7eb3b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1174,6 +1176,7 @@ MonoBehaviour:
   - {fileID: 1898782147}
   - {fileID: 983476361}
   - {fileID: 1983013826}
+  - {fileID: 1145174626}
 --- !u!114 &514680613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,10 +1418,13 @@ MonoBehaviour:
   boxiePrefab: {fileID: 4289729182337218736, guid: 89d4dac3d2543f24f873eba8f135424e, type: 3}
   canvasTransform: {fileID: 1552867576}
   wardrobes:
-  - {fileID: 11400000, guid: 6a9b51b28d7ee894eaf4dc13cb469473, type: 2}
-  - {fileID: 11400000, guid: 68f737bcbff61544fa07de8892c7773a, type: 2}
+  - {fileID: 11400000, guid: edec03d00face31438a8b738a37fb72f, type: 2}
   - {fileID: 11400000, guid: 6227809b213de0e41b1710e0271870ad, type: 2}
+  - {fileID: 11400000, guid: 98c8f296bcfb6ec46b7e9c0121bce653, type: 2}
+  - {fileID: 11400000, guid: a39b90d7d48d30845becf3db67b268a8, type: 2}
   spriteHandler: {fileID: 548861586}
+  index: 0
+  _uiscale: {fileID: 0}
 --- !u!114 &548861586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1431,9 +1437,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfefd52872751154092ba48cb2c75e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topHalf: {fileID: 1566137640}
-  midHalf: {fileID: 1711795033}
-  bottomHalf: {fileID: 39322529}
+  hair: {fileID: 1566137640}
+  shirts: {fileID: 39322529}
+  pants: {fileID: 1711795033}
+  shoes: {fileID: 1451322149}
 --- !u!114 &548861587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1464,13 +1471,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wardrobes:
-  - {fileID: 11400000, guid: 68f737bcbff61544fa07de8892c7773a, type: 2}
+  - {fileID: 11400000, guid: edec03d00face31438a8b738a37fb72f, type: 2}
   - {fileID: 11400000, guid: 6227809b213de0e41b1710e0271870ad, type: 2}
-  - {fileID: 11400000, guid: 6a9b51b28d7ee894eaf4dc13cb469473, type: 2}
+  - {fileID: 11400000, guid: 98c8f296bcfb6ec46b7e9c0121bce653, type: 2}
+  - {fileID: 11400000, guid: a39b90d7d48d30845becf3db67b268a8, type: 2}
   Dress:
   - {fileID: 54819347}
   - {fileID: 2030459011}
   - {fileID: 1928605939}
+  - {fileID: 1403467351}
 --- !u!114 &548861589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1483,7 +1492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb51a723c1ff5be4281e00980bc9095a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerDuration: 1
+  timerDuration: 120
   bestTime: 0
   timerText: {fileID: 1636720962}
   bestTimeText: {fileID: 1554108937}
@@ -1938,7 +1947,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: ebf22876a6a5a15409e0acdd099a7f8d, type: 3}
+  m_Texture: {fileID: 2800000, guid: b86f428774cf60b449e711e7ada7eb3b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2235,7 +2244,7 @@ GameObject:
   - component: {fileID: 983476359}
   - component: {fileID: 983476361}
   m_Layer: 5
-  m_Name: MiddleHalf (1)
+  m_Name: Shirt (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2311,6 +2320,142 @@ MonoBehaviour:
   cloth: {fileID: 983476359}
   index: 0
   clothe: {fileID: 2030459012}
+--- !u!1 &1131183877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1131183878}
+  - component: {fileID: 1131183880}
+  - component: {fileID: 1131183879}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1131183878
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131183877}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1410389884}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1131183879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131183877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Shoes
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1131183880
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131183877}
+  m_CullTransparentMesh: 1
 --- !u!1 &1132043540
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,6 +2591,95 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132043540}
+  m_CullTransparentMesh: 1
+--- !u!1 &1145174624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1145174625}
+  - component: {fileID: 1145174628}
+  - component: {fileID: 1145174627}
+  - component: {fileID: 1145174626}
+  m_Layer: 5
+  m_Name: shoes (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1145174625
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145174624}
+  m_LocalRotation: {x: -0, y: -0, z: -0.07465802, w: 0.9972092}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3485368, y: 0.23934391, z: 0.2752203}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 514680609}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.563}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 8.5, y: -34.3}
+  m_SizeDelta: {x: 98.6588, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1145174626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145174624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b1b23d939caaa4eac17a27912cdc72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wardrobe: {fileID: 11400000, guid: a39b90d7d48d30845becf3db67b268a8, type: 2}
+  cloth: {fileID: 1145174627}
+  index: 0
+  clothe: {fileID: 1403467350}
+--- !u!114 &1145174627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145174624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 22965a9376f8db647bd5238a3a0bb843, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1145174628
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145174624}
   m_CullTransparentMesh: 1
 --- !u!1 &1199366690
 GameObject:
@@ -3173,11 +3407,302 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348778282}
   m_CullTransparentMesh: 1
+--- !u!1 &1403467348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403467349}
+  - component: {fileID: 1403467352}
+  - component: {fileID: 1403467351}
+  - component: {fileID: 1403467350}
+  m_Layer: 5
+  m_Name: Shoes (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1403467349
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403467348}
+  m_LocalRotation: {x: -0, y: -0, z: -0.079280265, w: 0.9968524}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.32487148, y: 0.22309268, z: 0.2565331}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 302237259}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.094}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 8.1, y: -34.4}
+  m_SizeDelta: {x: 98.6588, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1403467350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403467348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d67acb49659285744bae9de4453a1bf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CL: {fileID: 11400000, guid: 51979429e47bec74c9c1b5c87bd35718, type: 2}
+--- !u!114 &1403467351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403467348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 22965a9376f8db647bd5238a3a0bb843, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1403467352
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403467348}
+  m_CullTransparentMesh: 1
+--- !u!1 &1410389883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1410389884}
+  - component: {fileID: 1410389887}
+  - component: {fileID: 1410389886}
+  - component: {fileID: 1410389885}
+  m_Layer: 5
+  m_Name: ShoesButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1410389884
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410389883}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1131183878}
+  m_Father: {fileID: 1552867576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000043869, y: -247}
+  m_SizeDelta: {x: 155.203, y: 136.8868}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1410389885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410389883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1410389886}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 548861585}
+        m_TargetAssemblyTypeName: WardrobeInstantiator, Assembly-CSharp
+        m_MethodName: buttonInstatiate
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1410389886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410389883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1410389887
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410389883}
+  m_CullTransparentMesh: 1
 --- !u!224 &1431166625 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7473780056294557727, guid: 091d18fc84d46cf49bad76a6da3f0bcd, type: 3}
   m_PrefabInstance: {fileID: 1166345239241502339}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1451322149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1451322150}
+  - component: {fileID: 1451322152}
+  - component: {fileID: 1451322151}
+  m_Layer: 5
+  m_Name: Shoes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1451322150
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451322149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.775608, y: 2.3634121, z: 2.1698}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1552867576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -531, y: 47.3}
+  m_SizeDelta: {x: 100, y: 118.7418}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1451322151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451322149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 3cc877e782569b845977497083a00b33, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1451322152
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451322149}
+  m_CullTransparentMesh: 1
 --- !u!1 &1552867572
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,9 +3803,11 @@ RectTransform:
   - {fileID: 1566137641}
   - {fileID: 39322530}
   - {fileID: 1711795034}
+  - {fileID: 1451322150}
   - {fileID: 1199366691}
   - {fileID: 582758921}
   - {fileID: 847639256}
+  - {fileID: 1410389884}
   - {fileID: 2004744103}
   - {fileID: 1636720961}
   - {fileID: 1284043855}
@@ -3441,7 +3968,7 @@ GameObject:
   - component: {fileID: 1566137643}
   - component: {fileID: 1566137642}
   m_Layer: 5
-  m_Name: TopHalf
+  m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3782,7 +4309,7 @@ GameObject:
   - component: {fileID: 1711795036}
   - component: {fileID: 1711795035}
   m_Layer: 5
-  m_Name: MiddleHalf
+  m_Name: Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3991,7 +4518,7 @@ GameObject:
   - component: {fileID: 1898782145}
   - component: {fileID: 1898782147}
   m_Layer: 5
-  m_Name: TopHalf (1)
+  m_Name: Hair (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4063,7 +4590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b1b23d939caaa4eac17a27912cdc72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wardrobe: {fileID: 11400000, guid: 68f737bcbff61544fa07de8892c7773a, type: 2}
+  wardrobe: {fileID: 11400000, guid: edec03d00face31438a8b738a37fb72f, type: 2}
   cloth: {fileID: 1898782145}
   index: 0
   clothe: {fileID: 54819348}
@@ -4080,7 +4607,7 @@ GameObject:
   - component: {fileID: 1928605939}
   - component: {fileID: 1928605942}
   m_Layer: 5
-  m_Name: bottemHalf (1)
+  m_Name: Pants (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4166,7 +4693,7 @@ GameObject:
   - component: {fileID: 1983013824}
   - component: {fileID: 1983013826}
   m_Layer: 5
-  m_Name: bottemHalf (1)
+  m_Name: Pants (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4238,7 +4765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b1b23d939caaa4eac17a27912cdc72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wardrobe: {fileID: 11400000, guid: 6a9b51b28d7ee894eaf4dc13cb469473, type: 2}
+  wardrobe: {fileID: 11400000, guid: 98c8f296bcfb6ec46b7e9c0121bce653, type: 2}
   cloth: {fileID: 1983013824}
   index: 0
   clothe: {fileID: 1928605942}
@@ -4388,7 +4915,7 @@ GameObject:
   - component: {fileID: 2030459011}
   - component: {fileID: 2030459012}
   m_Layer: 5
-  m_Name: MiddleHalf (1)
+  m_Name: Shirt (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
