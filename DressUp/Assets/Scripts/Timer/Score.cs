@@ -59,18 +59,20 @@ public class Score : MonoBehaviour
 
                 if (image.GetComponent<ClotheReference>().CL.Id == clothes.GetComponent<ClotheReference>().CL.Id)
                 {
-                    stylePoints = 10f;
+                    stylePoints += 10f;
                 }
-                else if (image.GetComponent<ClotheReference>().CL.Id >= clothes.GetComponent<ClotheReference>().CL.Id && image.GetComponent<ClotheReference>().CL.Id <= clothes.GetComponent<ClotheReference>().CL.Id)
+                else
                 {
-                    stylePoints = 5f;
+                    float idDifference = Mathf.Abs(image.GetComponent<ClotheReference>().CL.Id - clothes.GetComponent<ClotheReference>().CL.Id);
+                    float points = Mathf.Max(0, 10f - idDifference * 2f);
+
+                    stylePoints += points;
                 }
             }
         }
         
 
             
-        
 
         CalculateScore();
 
