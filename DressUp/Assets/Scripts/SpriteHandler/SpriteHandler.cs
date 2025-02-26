@@ -6,11 +6,11 @@ using UnityEngine.UIElements;
 public class SpriteHandler : MonoBehaviour
 {
 
-    public GameObject hair;
-    public GameObject shirts;
-    public GameObject pants;
-    public GameObject shoes;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private GameObject hair;
+    [SerializeField] private GameObject shirts;
+    [SerializeField] private GameObject pants;
+    [SerializeField] private GameObject shoes;
+    
     public void Invoke(ClotheSettings clothingSettings)
     {
         ChangeSprite(clothingSettings);

@@ -6,31 +6,20 @@ using UnityEngine.UI;
 
 public class WardrobeInstantiator : MonoBehaviour
 {
-    public GameObject gridPrefab;
-    public GameObject boxiePrefab;
-    public Transform canvasTransform;
-    public List<Wardrobe> wardrobes;
-    public SpriteHandler spriteHandler;
-
+    [SerializeField] private GameObject gridPrefab;
+    [SerializeField] private GameObject boxiePrefab;
+    [SerializeField] private Transform canvasTransform;
+    [SerializeField] private List<Wardrobe> wardrobes;
+    
     private List<GameObject> buttonsList = new List<GameObject>();
+    private UIScale _uiscale;
+    private SpriteHandler spriteHandler;
+  
 
-    public int index;
-
-    public UIScale _uiscale;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {
-
-        /*for (int index = 0; index <= wardrobes.Count - 1; index ++){
-            GameObject gameObject = Instantiate(gridPrefab,canvasTransform);
-            gameObject.transform.parent = canvasTransform.GetChild(1);
-            //this for loop makes a cloth for every cloth in the wardrobe
-            for (int I = 0; I < wardrobes[index].clothesTextures.Count; I ++){
-                GameObject gameObject1 = Instantiate(boxiePrefab, gameObject.transform);
-                //sets the settings of the cloth
-                gameObject1.GetComponent<ClotheSettings>().cloth = wardrobes[index].clothesTextures[I];
-            }
-        }*/
+    { 
+        spriteHandler = GetComponent<SpriteHandler>();
+        _uiscale = GetComponent<UIScale>();
     }
     private void Update()
     {
@@ -56,13 +45,13 @@ public class WardrobeInstantiator : MonoBehaviour
 
         buttonsList.Add(gameObject);
 
-            gameObject.transform.parent = canvasTransform.GetChild(1);
-            for (int I = 0; I < wardrobes[buttonIndex].clothesTextures.Count; I++)
-            {
-                GameObject gameObject1 = Instantiate(boxiePrefab, gameObject.transform);
-                gameObject1.GetComponent<ClotheSettings>().cloth = wardrobes[buttonIndex].clothesTextures[I];
-                gameObject1.GetComponent<RawImage>().texture = wardrobes[buttonIndex].clothesTextures[I].iconTexture;
-            }
+        gameObject.transform.parent = canvasTransform.GetChild(1);
+        for (int I = 0; I < wardrobes[buttonIndex].clothesTextures.Count; I++)
+        {
+            GameObject gameObject1 = Instantiate(boxiePrefab, gameObject.transform);
+            gameObject1.GetComponent<ClotheSettings>().cloth = wardrobes[buttonIndex].clothesTextures[I];
+            gameObject1.GetComponent<RawImage>().texture = wardrobes[buttonIndex].clothesTextures[I].iconTexture;
+        }
         
 
     }

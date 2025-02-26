@@ -5,18 +5,20 @@ using UnityEngine.Timeline;
 
 public class Timer : MonoBehaviour
 {
-    public float timerDuration;
-    public float bestTime;
-    public TMPro.TMP_Text timerText;
-    public TMPro.TMP_Text bestTimeText;
-    public TMPro.TMP_Text currentTime;
-    
-    public bool isTimerOn = true;
+    [SerializeField] public float timerDuration;
+    [SerializeField] private float bestTime;
+    [SerializeField] private TMPro.TMP_Text timerText;
+    [SerializeField] private TMPro.TMP_Text bestTimeText;
+    [SerializeField] private TMPro.TMP_Text currentTime;
 
-    public PopupTimer popupTimer;
+    [SerializeField] private bool isTimerOn = true;
+
+    [HideInInspector] public PopupTimer _popupTimer;
 
     public void Start()
     {
+        _popupTimer = GetComponent<PopupTimer>();
+
         float lastbesttime = PlayerPrefs.GetFloat("best time", bestTime);
         bestTimeText.text = "beste tijd: " + lastbesttime.ToString("F2");
     }
@@ -31,7 +33,7 @@ public class Timer : MonoBehaviour
         string time = timerDuration > 30 ? "time: "+timerDuration.ToString("F0") : "time: " + timerDuration.ToString("F2");
         
         // checks wether it needs to subtract then subtracts
-        if (timerDuration >= 0 && popupTimer.timer <= 0)
+        if (timerDuration >= 0 && _popupTimer.timer <= 0)
         {
                 timerDuration -= Time.deltaTime;
         }

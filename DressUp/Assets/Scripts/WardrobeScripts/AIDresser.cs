@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class AIDresser : MonoBehaviour
 {
-    public List<Wardrobe> wardrobes = new List<Wardrobe>();
-    public List<RawImage> Dress = new List<RawImage>();
+    [SerializeField] private List<Wardrobe> wardrobes = new List<Wardrobe>();
+    [SerializeField] private List<RawImage> Dress = new List<RawImage>();
     void Start()
     {
         // start choosing example dress

@@ -43,8 +43,6 @@ public class Score : MonoBehaviour
             {
                 shownClothes.Add(ModelClothes.gameObject);
             }
-                
-            
         }
     }
 
