@@ -13,11 +13,11 @@ public class Timer : MonoBehaviour
 
     [SerializeField] private bool isTimerOn = true;
 
-    [HideInInspector] public PopupTimer _popupTimer;
+    public PopupTimer _popupTimer;
 
     public void Start()
     {
-        _popupTimer = GetComponent<PopupTimer>();
+        
 
         float lastbesttime = PlayerPrefs.GetFloat("best time", bestTime);
         bestTimeText.text = "beste tijd: " + lastbesttime.ToString("F2");
