@@ -883,6 +883,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CL: {fileID: 0}
+--- !u!114 &1760984181 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 750535619053970979, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+  m_PrefabInstance: {fileID: 2208611994090132161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908f8e8342b15b34ca37e696e9e89674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1898782149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,7 +1017,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1760984181}
         m_TargetAssemblyTypeName: WardrobeInstantiator, Assembly-CSharp
         m_MethodName: buttonInstatiate
         m_Mode: 3
@@ -3395,7 +3406,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1760984181}
         m_TargetAssemblyTypeName: WardrobeInstantiator, Assembly-CSharp
         m_MethodName: buttonInstatiate
         m_Mode: 3
@@ -3634,7 +3645,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1760984181}
         m_TargetAssemblyTypeName: WardrobeInstantiator, Assembly-CSharp
         m_MethodName: buttonInstatiate
         m_Mode: 3
@@ -4526,7 +4537,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1760984181}
         m_TargetAssemblyTypeName: WardrobeInstantiator, Assembly-CSharp
         m_MethodName: buttonInstatiate
         m_Mode: 3
