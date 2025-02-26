@@ -31,7 +31,7 @@ public class AIDresser : MonoBehaviour
         Cloth cloth = wardrobe.Choose();
         if (cloth.textures.Count > 1){
             Dress[index].texture = cloth.textures[0];
-            Dress[index].texture = cloth.textures[4];
+            Dress[index].texture = cloth.textures[1];
             Dress[index].GetComponent<ClotheReference>().CL = cloth;
         }
         else{
