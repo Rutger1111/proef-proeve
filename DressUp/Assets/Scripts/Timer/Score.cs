@@ -53,28 +53,29 @@ public class Score : MonoBehaviour
 
     public void SubmitClothes()
     {
-        foreach (GameObject image in selectedclothes)
+        for (int i = 0; i < shownClothes.Count; i++)
         {
-            foreach (GameObject clothes in shownClothes)
+            for(int j = 0; j < selectedclothes.Count; j++)
             {
-                if (image.GetComponent<ClotheReference>().CL.style == clothes.GetComponent<ClotheReference>().CL.style)
+                if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
                 {
                     stylePoints += pointsForRightClothes;
                 }
 
-                if (image.GetComponent<ClotheReference>().CL.Id == clothes.GetComponent<ClotheReference>().CL.Id)
+                if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == selectedclothes[j].GetComponent<ClotheReference>().CL.Id)
                 {
-                    stylePoints += 10f;
+                    stylePoints += 5f;
                 }
                 else
                 {
-                    idDifference = Mathf.Abs(image.GetComponent<ClotheReference>().CL.Id - clothes.GetComponent<ClotheReference>().CL.Id);
+                    idDifference = Mathf.Abs(selectedclothes[j].GetComponent<ClotheReference>().CL.Id - shownClothes[i].GetComponent<ClotheReference>().CL.Id);
                     points = Mathf.Max(0, 10f - idDifference * 2f);
 
                     stylePoints += points;
                 }
             }
         }
+        
         
 
             
@@ -85,7 +86,15 @@ public class Score : MonoBehaviour
 
     public void CalculateScore()
     {
-        _finalScore += stylePoints;
+        if(stylePoints < 100)
+        {
+            _finalScore += stylePoints;
+        }
+        else
+        {
+            _finalScore += 100;
+        }
+       
     }
 
     public void gameOver()
