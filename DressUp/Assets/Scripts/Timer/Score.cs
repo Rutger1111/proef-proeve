@@ -55,23 +55,30 @@ public class Score : MonoBehaviour
                 if (image.GetComponent<ClotheReference>().CL.style == clothes.GetComponent<ClotheReference>().CL.style)
                 {
                     stylePoints += pointsForRightClothes;
-                    _finalScore = timeReference.timerDuration + stylePoints;
-                   
                 }
-            }
-        }
-        foreach (GameObject Image in selectedclothes)
-        {
-            foreach (GameObject clothes in shownClothes)
-            {
-                if (Image.GetComponent<ClotheReference>().CL.Id == clothes.GetComponent<ClotheReference>().CL.Id)
+
+                if (image.GetComponent<ClotheReference>().CL.Id == clothes.GetComponent<ClotheReference>().CL.Id)
                 {
-                    
-                    _finalScore = timeReference.timerDuration + stylePoints;
-                   
+                    stylePoints = 10f;
+                }
+                else if (image.GetComponent<ClotheReference>().CL.Id >= clothes.GetComponent<ClotheReference>().CL.Id && image.GetComponent<ClotheReference>().CL.Id <= clothes.GetComponent<ClotheReference>().CL.Id)
+                {
+                    stylePoints = 5f;
                 }
             }
         }
+        
+
+            
+        
+
+        CalculateScore();
+
+    }
+
+    public void CalculateScore()
+    {
+        _finalScore += stylePoints;
     }
 
     public void gameOver()

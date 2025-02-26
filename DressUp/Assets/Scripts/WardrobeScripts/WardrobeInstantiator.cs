@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WardrobeInstantiator : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class WardrobeInstantiator : MonoBehaviour
     public SpriteHandler spriteHandler;
 
     private List<GameObject> buttonsList = new List<GameObject>();
+
+    public int index;
+
+    public UIScale _uiscale;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,6 +45,8 @@ public class WardrobeInstantiator : MonoBehaviour
     }
     public void buttonInstatiate(int buttonIndex)
     {
+        _uiscale.ButttonSizeChanger(buttonIndex);
+
         foreach (var button in buttonsList) 
         { 
             Destroy(button);
@@ -54,6 +61,7 @@ public class WardrobeInstantiator : MonoBehaviour
             {
                 GameObject gameObject1 = Instantiate(boxiePrefab, gameObject.transform);
                 gameObject1.GetComponent<ClotheSettings>().cloth = wardrobes[buttonIndex].clothesTextures[I];
+                gameObject1.GetComponent<RawImage>().texture = wardrobes[buttonIndex].clothesTextures[I].iconTexture;
             }
         
 
