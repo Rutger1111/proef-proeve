@@ -36,9 +36,7 @@ public class Score : MonoBehaviour
             if (!shownClothes.Contains(ModelClothes.gameObject))
             {
                 shownClothes.Add(ModelClothes.gameObject);
-            }
-                
-            
+            } 
         }
         GameObject parentSelectedClothes = GameObject.Find("ParentClothParts");
 
@@ -70,12 +68,12 @@ public class Score : MonoBehaviour
                 if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
                 {
                     print("check");
-                    stylePoints += pointsForRightClothes;
+                    stylePoints += 1;
                 }
 
                 if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == selectedclothes[j].GetComponent<ClotheReference>().CL.Id)
                 {
-                    stylePoints += 5f;
+                    stylePoints += 3f;
                 }
                 else
                 {
@@ -103,9 +101,9 @@ public class Score : MonoBehaviour
         }
         else
         {
-            _finalScore += 100;
+            _finalScore += stylePoints;
         }
-       
+       stylePoints = 0;
     }
 
     public void gameOver()

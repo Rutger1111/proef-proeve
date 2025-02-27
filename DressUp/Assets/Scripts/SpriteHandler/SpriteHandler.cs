@@ -27,6 +27,8 @@ public class SpriteHandler : MonoBehaviour
                 for (int i = 0; i < clothingSettings.GetTexture().Count; i++)
                 {
                     hair[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
+                    Color color = hair[i].GetComponent<RawImage>().color;
+                    hair[i].GetComponent<RawImage>().color = new Color(color.r,color.g,color.b, 225);
                     hair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
 
                 }
@@ -34,6 +36,8 @@ public class SpriteHandler : MonoBehaviour
             case EClothes.Shirts:
                 for (int i = 0; i < clothingSettings.GetTexture().Count; i++)
                 {
+                    Color color = shirts[i].GetComponent<RawImage>().color;
+                    shirts[i].GetComponent<RawImage>().color = new Color(color.r,color.g,color.b, 225);
                     shirts[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
                     shirts[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
 
@@ -42,6 +46,8 @@ public class SpriteHandler : MonoBehaviour
             case EClothes.Pants:
                 for (int i = 0; i < clothingSettings.GetTexture().Count; i++)
                 {
+                    Color color = pants[i].GetComponent<RawImage>().color;
+                    pants[i].GetComponent<RawImage>().color = new Color(color.r,color.g,color.b, 225);
                     pants[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
                     pants[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
 
@@ -50,6 +56,8 @@ public class SpriteHandler : MonoBehaviour
             case EClothes.Shoes:
                 for (int i = 0; i < clothingSettings.GetTexture().Count; i++)
                 {
+                    Color color = shoes[i].GetComponent<RawImage>().color;
+                    shoes[i].GetComponent<RawImage>().color = new Color(color.r,color.g,color.b, 225);
                     shoes[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
                     shoes[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
 
