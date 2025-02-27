@@ -1658,11 +1658,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 564337096}
-  character:
-  - {fileID: 1566137640}
-  - {fileID: 51252460}
-  - {fileID: 39322529}
-  - {fileID: 1711795033}
 --- !u!114 &548861588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,15 +1702,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d2a40194903264694c17209223d0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeReference: {fileID: 548861589}
   scoreText: {fileID: 922684393}
-  stylePoints: 0
-  pointsForRightClothes: 0
+  pointsForRightClothes: 2
   shownClothes: []
   selectedclothes: []
-  _aiDresser: {fileID: 548861588}
-  points: 0
-  idDifference: 0
 --- !u!114 &548861591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1728,9 +1718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172767a56a9d4eb45b059722987fd3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: {fileID: 548861589}
   scoreboard: {fileID: 1284043854}
-  _score: {fileID: 548861590}
 --- !u!114 &548861592
 MonoBehaviour:
   m_ObjectHideFlags: 0

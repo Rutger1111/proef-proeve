@@ -5,24 +5,23 @@ using Random = Unity.Mathematics.Random;
 
 public class Score : MonoBehaviour
 {
-    public Timer timeReference;
-    public TMPro.TMP_Text scoreText;
+    
+    [SerializeField] private TMPro.TMP_Text scoreText;
+    [SerializeField] private float pointsForRightClothes;
+
+    [HideInInspector] public List<GameObject> shownClothes;
+    [HideInInspector] public List<GameObject> selectedclothes;
 
     private double _finalScore;
-    public double stylePoints;
-    public double pointsForRightClothes;
+    private double stylePoints;
 
-    public List<GameObject> shownClothes;
-    public List<GameObject> selectedclothes;
-
-    public AIDresser _aiDresser;
-
-    public float points;
-    public float idDifference;
+    private AIDresser _aiDresser;
+    private Timer timeReference;
 
     void Start()
     {
-        
+        _aiDresser = GetComponent<AIDresser>();
+        timeReference = GetComponent<Timer>();
 
         GameObject parentShownClothes = GameObject.Find("VoorbeeldPanel");
 
@@ -69,8 +68,8 @@ public class Score : MonoBehaviour
                 }
                 else
                 {
-                    idDifference = Mathf.Abs(selectedclothes[j].GetComponent<ClotheReference>().CL.Id - shownClothes[i].GetComponent<ClotheReference>().CL.Id);
-                    points = Mathf.Max(0, 10f - idDifference * 2f);
+                    float idDifference = Mathf.Abs(selectedclothes[j].GetComponent<ClotheReference>().CL.Id - shownClothes[i].GetComponent<ClotheReference>().CL.Id);
+                    float points = Mathf.Max(0, 10f - idDifference * 2f);
 
                     stylePoints += points;
                 }
