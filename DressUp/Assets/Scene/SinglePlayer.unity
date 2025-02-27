@@ -1658,6 +1658,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 564337096}
+  character:
+  - {fileID: 1566137640}
+  - {fileID: 51252460}
+  - {fileID: 39322529}
+  - {fileID: 1711795033}
 --- !u!114 &548861588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1688,10 +1693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerDuration: 120
-  bestTime: 0
   timerText: {fileID: 1636720962}
-  bestTimeText: {fileID: 1554108937}
-  currentTime: {fileID: 251021873}
   isTimerOn: 1
 --- !u!114 &548861590
 MonoBehaviour:
@@ -3713,7 +3715,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 7b4d9dddb64838245949f07c741449c0, type: 3}
+  m_Texture: {fileID: 2800000, guid: 08cd81c382b81bb43b9fd91db1ddda6e, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

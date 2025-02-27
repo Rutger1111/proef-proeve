@@ -24,7 +24,7 @@ public class Score : MonoBehaviour
     {
         
 
-        GameObject parentShownClothes = GameObject.Find("Panel");
+        GameObject parentShownClothes = GameObject.Find("VoorbeeldPanel");
 
         shownClothes.Clear();
         

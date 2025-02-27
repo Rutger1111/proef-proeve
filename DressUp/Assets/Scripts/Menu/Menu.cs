@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class Menu : MonoBehaviour
     private PopupTimer _popupTimer;
     private Score _score;
     private AIDresser _aiDresser;
+
 
     private void Start()
     {
