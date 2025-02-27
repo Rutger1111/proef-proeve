@@ -7,16 +7,16 @@ public class Score : MonoBehaviour
 {
     
     [SerializeField] private TMPro.TMP_Text scoreText;
-    [SerializeField] private float pointsForRightClothes;
+    [SerializeField] private float pointsForRightClothes = 2f;
 
-    [HideInInspector] public List<GameObject> shownClothes;
-    [HideInInspector] public List<GameObject> selectedclothes;
+     public List<GameObject> shownClothes;
+     public List<GameObject> selectedclothes;
 
-    private double _finalScore;
-    private double stylePoints;
+    public double _finalScore;
+    public double stylePoints;
 
-    private AIDresser _aiDresser;
-    private Timer timeReference;
+    public AIDresser _aiDresser;
+    public Timer timeReference;
 
     void Start()
     {
@@ -49,16 +49,23 @@ public class Score : MonoBehaviour
     }
 
 
-
+    private void Update()
+    {
+        scoreText.text = "score: " + _finalScore.ToString("F0");
+    }
 
     public void SubmitClothes()
     {
+        
+
         for (int i = 0; i < shownClothes.Count; i++)
         {
             for(int j = 0; j < selectedclothes.Count; j++)
             {
+                print("fuck");
                 if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
                 {
+                    print("check");
                     stylePoints += pointsForRightClothes;
                 }
 

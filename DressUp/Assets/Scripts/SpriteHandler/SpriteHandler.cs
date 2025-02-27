@@ -8,10 +8,10 @@ using UnityEngine.UIElements;
 public class SpriteHandler : MonoBehaviour
 {
 
-    public List<GameObject> hair =new List<GameObject>();
-    public List<GameObject> shirts =new List<GameObject>();
-    public List<GameObject> pants =new List<GameObject>();
-    public List<GameObject> shoes =new List<GameObject>();
+    [SerializeField] private List<GameObject> hair =new List<GameObject>();
+    [SerializeField] private List<GameObject> shirts =new List<GameObject>();
+    [SerializeField] private List<GameObject> pants =new List<GameObject>();
+    [SerializeField] private List<GameObject> shoes =new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Invoke(ClotheSettings clothingSettings)
     {
