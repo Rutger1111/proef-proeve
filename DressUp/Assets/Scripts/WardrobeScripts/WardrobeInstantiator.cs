@@ -66,7 +66,16 @@ public class WardrobeInstantiator : MonoBehaviour
                 gameObject1.GetComponent<RawImage>().texture = wardrobes[buttonIndex].clothesTextures[I].iconTexture;
                 switch(gameObject1.GetComponent<ClotheSettings>().cloth.clothKind){
                     case EClothes.Head:
-                        gameObject1.GetComponent<SpriteHandler>().hair.Add(this.gameObject);
+                        GameObject.Find("EventSystem").GetComponent<SpriteHandler>().hair.Add(this.gameObject);
+                        break;           
+                    case EClothes.Pants:
+                        GameObject.Find("EventSystem").GetComponent<SpriteHandler>().pants.Add(this.gameObject);
+                        break;           
+                    case EClothes.Shirts:
+                        GameObject.Find("EventSystem").GetComponent<SpriteHandler>().shirts.Add(this.gameObject);
+                        break;           
+                    case EClothes.Shoes:
+                        GameObject.Find("EventSystem").GetComponent<SpriteHandler>().shoes.Add(this.gameObject);
                         break;           
                 }
 

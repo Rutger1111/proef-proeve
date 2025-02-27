@@ -933,6 +933,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CL: {fileID: 0}
+--- !u!114 &2054904749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4855488101957001405, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+  m_PrefabInstance: {fileID: 2208611994090132161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa63bc9afce2085469447d8b5308964c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2054904755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+  m_PrefabInstance: {fileID: 2208611994090132161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfefd52872751154092ba48cb2c75e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &942791297359949
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1808,6 +1830,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 750535619053970979, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: _uiscale
+      value: 
+      objectReference: {fileID: 2054904749}
+    - target: {fileID: 750535619053970979, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: spriteHandler
+      value: 
+      objectReference: {fileID: 2054904755}
+    - target: {fileID: 750535619053970979, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: canvasTransform
       value: 
       objectReference: {fileID: 7900666829503297673}
@@ -1925,6 +1955,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7821142799001611898, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: hair.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: pants.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: shoes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: shirts.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
