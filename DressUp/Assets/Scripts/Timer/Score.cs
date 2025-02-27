@@ -52,6 +52,10 @@ public class Score : MonoBehaviour
     private void Update()
     {
         scoreText.text = "score: " + _finalScore.ToString("F0");
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            SubmitClothes();
+        }
     }
 
     public void SubmitClothes()

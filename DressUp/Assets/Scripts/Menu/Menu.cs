@@ -49,6 +49,7 @@ public class Menu : MonoBehaviour
         _score.SubmitClothes();
 
         plane.SetActive(true);
+
         _popupTimer.ResetTimer();
         
     }
