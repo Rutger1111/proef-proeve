@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textures:
   - {fileID: 2800000, guid: 7b9418b1a58bae047a8aaaa7ae6c8b7d, type: 3}
-  iconTexture: {fileID: 2800000, guid: 7b9418b1a58bae047a8aaaa7ae6c8b7d, type: 3}
+  iconTexture: {fileID: 2800000, guid: b2e835372dba0504eab69106766d78a1, type: 3}
   Id: 3
   style: 2
   clothKind: 1
