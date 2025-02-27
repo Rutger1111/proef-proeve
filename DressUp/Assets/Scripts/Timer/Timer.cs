@@ -13,8 +13,7 @@ public class Timer : MonoBehaviour
 
     [SerializeField] private bool isTimerOn = true;
 
-    [HideInInspector] public PopupTimer _popupTimer;
-
+    private PopupTimer _popupTimer;
     public void Start()
     {
         _popupTimer = GetComponent<PopupTimer>();

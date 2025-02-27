@@ -1394,6 +1394,7 @@ GameObject:
   - component: {fileID: 548861590}
   - component: {fileID: 548861591}
   - component: {fileID: 548861592}
+  - component: {fileID: 548861593}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1471,9 +1472,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6227809b213de0e41b1710e0271870ad, type: 2}
   - {fileID: 11400000, guid: 98c8f296bcfb6ec46b7e9c0121bce653, type: 2}
   - {fileID: 11400000, guid: a39b90d7d48d30845becf3db67b268a8, type: 2}
-  spriteHandler: {fileID: 548861586}
-  index: 0
-  _uiscale: {fileID: 548861592}
 --- !u!114 &548861586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1502,10 +1500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74750b9c260a8c0488d8c4ac795a47ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 548861589}
-  popupTimer: {fileID: 564337098}
-  _score: {fileID: 548861590}
-  _aiDresser: {fileID: 548861588}
   plane: {fileID: 564337096}
 --- !u!114 &548861588
 MonoBehaviour:
@@ -1547,7 +1541,6 @@ MonoBehaviour:
   bestTimeText: {fileID: 1554108937}
   currentTime: {fileID: 251021873}
   isTimerOn: 1
-  popupTimer: {fileID: 564337098}
 --- !u!114 &548861590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1602,6 +1595,21 @@ MonoBehaviour:
   - {fileID: 847639255}
   - {fileID: 330839}
   index: 0
+--- !u!114 &548861593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548861581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283c6cbf45502dd49971a607b695a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 3
+  resetTimer: 3
+  displayModel: {fileID: 564337096}
 --- !u!1 &564337096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,7 +1621,6 @@ GameObject:
   - component: {fileID: 564337097}
   - component: {fileID: 564337100}
   - component: {fileID: 564337099}
-  - component: {fileID: 564337098}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1642,20 +1649,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &564337098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 564337096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283c6cbf45502dd49971a607b695a4c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 3
-  resetTimer: 3
 --- !u!114 &564337099
 MonoBehaviour:
   m_ObjectHideFlags: 0
