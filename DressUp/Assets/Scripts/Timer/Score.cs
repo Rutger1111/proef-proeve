@@ -22,12 +22,7 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-        GameObject parentSelectedClothes = GameObject.Find("ModelClothesParts");
-
-        foreach (Transform clothesSelected in parentSelectedClothes.transform)
-        {
-            selectedclothes.Add(clothesSelected.gameObject);
-        }
+        
 
         GameObject parentShownClothes = GameObject.Find("Panel");
 
@@ -43,6 +38,14 @@ public class Score : MonoBehaviour
             {
                 shownClothes.Add(ModelClothes.gameObject);
             }
+                
+            
+        }
+        GameObject parentSelectedClothes = GameObject.Find("ParentClothParts");
+
+        foreach (Transform clothesSelected in parentSelectedClothes.transform)
+        {
+            selectedclothes.Add(clothesSelected.gameObject);
         }
     }
 
