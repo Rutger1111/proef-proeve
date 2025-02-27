@@ -4709,7 +4709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wardrobe: {fileID: 11400000, guid: edec03d00face31438a8b738a37fb72f, type: 2}
   index: 1
-  clothe: {fileID: 0}
+  clothe: {fileID: 110399757}
   images:
   - {fileID: 110399758}
 --- !u!224 &8148912607470841044
