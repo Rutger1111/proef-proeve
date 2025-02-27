@@ -5,7 +5,7 @@ using Random = Unity.Mathematics.Random;
 
 public class Score : MonoBehaviour
 {
-    
+    [SerializeField] private TMPro.TMP_Text finalScore;
     [SerializeField] private TMPro.TMP_Text scoreText;
     [SerializeField] private float pointsForRightClothes = 2f;
 
@@ -109,6 +109,7 @@ public class Score : MonoBehaviour
     public void gameOver()
     {
         scoreText.text = "score: " + _finalScore.ToString("F0");
+        finalScore.text = "score: " + _finalScore.ToString("F0");
     }
 
 

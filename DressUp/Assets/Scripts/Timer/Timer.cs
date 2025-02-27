@@ -34,12 +34,13 @@ public class Timer : MonoBehaviour
         // checks wether it needs to subtract then subtracts
         if (timerDuration >= 0 && _popupTimer.timer <= 0)
         {
-                timerDuration -= Time.deltaTime;
+            timerDuration -= Time.deltaTime;
         }
         
         // if its lower then 0 than it stops timer
         else
         {
+            GetComponent<Score>().gameOver();
             //currentTime.text = "tijd: " + timerDuration.ToString("F2") + " sec";
         }
         
