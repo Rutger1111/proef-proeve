@@ -5,26 +5,25 @@ using Random = Unity.Mathematics.Random;
 
 public class Score : MonoBehaviour
 {
-    public Timer timeReference;
-    public TMPro.TMP_Text scoreText;
+    
+    [SerializeField] private TMPro.TMP_Text scoreText;
+    [SerializeField] private float pointsForRightClothes = 2f;
 
-    private double _finalScore;
+     public List<GameObject> shownClothes;
+     public List<GameObject> selectedclothes;
+
+    public double _finalScore;
     public double stylePoints;
-    public double pointsForRightClothes;
-
-    public List<GameObject> shownClothes;
-    public List<GameObject> selectedclothes;
 
     public AIDresser _aiDresser;
-
-    public float points;
-    public float idDifference;
+    public Timer timeReference;
 
     void Start()
     {
-        
+        _aiDresser = GetComponent<AIDresser>();
+        timeReference = GetComponent<Timer>();
 
-        GameObject parentShownClothes = GameObject.Find("Panel");
+        GameObject parentShownClothes = GameObject.Find("VoorbeeldPanel");
 
         shownClothes.Clear();
         
@@ -50,16 +49,27 @@ public class Score : MonoBehaviour
     }
 
 
-
+    private void Update()
+    {
+        scoreText.text = "score: " + _finalScore.ToString("F0");
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            SubmitClothes();
+        }
+    }
 
     public void SubmitClothes()
     {
+        
+
         for (int i = 0; i < shownClothes.Count; i++)
         {
             for(int j = 0; j < selectedclothes.Count; j++)
             {
+                print("fuck");
                 if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
                 {
+                    print("check");
                     stylePoints += pointsForRightClothes;
                 }
 
@@ -69,8 +79,8 @@ public class Score : MonoBehaviour
                 }
                 else
                 {
-                    idDifference = Mathf.Abs(selectedclothes[j].GetComponent<ClotheReference>().CL.Id - shownClothes[i].GetComponent<ClotheReference>().CL.Id);
-                    points = Mathf.Max(0, 10f - idDifference * 2f);
+                    float idDifference = Mathf.Abs(selectedclothes[j].GetComponent<ClotheReference>().CL.Id - shownClothes[i].GetComponent<ClotheReference>().CL.Id);
+                    float points = Mathf.Max(0, 10f - idDifference * 2f);
 
                     stylePoints += points;
                 }

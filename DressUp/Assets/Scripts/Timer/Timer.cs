@@ -6,10 +6,10 @@ using UnityEngine.Timeline;
 public class Timer : MonoBehaviour
 {
     [SerializeField] public float timerDuration;
-    [SerializeField] private float bestTime;
+    //[SerializeField] private float bestTime;
     [SerializeField] private TMPro.TMP_Text timerText;
-    [SerializeField] private TMPro.TMP_Text bestTimeText;
-    [SerializeField] private TMPro.TMP_Text currentTime;
+    //[SerializeField] private TMPro.TMP_Text bestTimeText;
+    //[SerializeField] private TMPro.TMP_Text currentTime;
 
     [SerializeField] private bool isTimerOn = true;
 
@@ -18,8 +18,8 @@ public class Timer : MonoBehaviour
     {
         _popupTimer = GetComponent<PopupTimer>();
 
-        float lastbesttime = PlayerPrefs.GetFloat("best time", bestTime);
-        bestTimeText.text = "beste tijd: " + lastbesttime.ToString("F2");
+        //float lastbesttime = PlayerPrefs.GetFloat("best time", bestTime);
+        //bestTimeText.text = "beste tijd: " + lastbesttime.ToString("F2");
     }
 
     void Update()
@@ -40,21 +40,21 @@ public class Timer : MonoBehaviour
         // if its lower then 0 than it stops timer
         else
         {
-            currentTime.text = "tijd: " + timerDuration.ToString("F2") + " sec";
+            //currentTime.text = "tijd: " + timerDuration.ToString("F2") + " sec";
         }
         
         
         // if the current time is better than your previous best time than the high score will be updated to the current best score
-        if (timerDuration > PlayerPrefs.GetFloat("best time", bestTime) && !isTimerOn)
+        //if (timerDuration > PlayerPrefs.GetFloat("best time", bestTime) && !isTimerOn)
         {
-            bestTime = timerDuration;
-            bestTimeText.text = "beste tijd: " + bestTime.ToString("F2") + " sec";
-            PlayerPrefs.SetFloat("best time", bestTime);
+            //bestTime = timerDuration;
+            //bestTimeText.text = "beste tijd: " + bestTime.ToString("F2") + " sec";
+            //PlayerPrefs.SetFloat("best time", bestTime);
         }
     }
 
     private void ResetHighScores()
     {
-        PlayerPrefs.SetFloat("best time", bestTime = 0);
+        //PlayerPrefs.SetFloat("best time", bestTime = 0);
     }
 }

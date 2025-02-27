@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class NomoreTime : MonoBehaviour
 {
-    public Timer time;
-    public GameObject scoreboard;
-    public Score _score;
+
+    [SerializeField] private GameObject scoreboard;
+
+    private Timer time;
+    private Score _score;
     void Start()
     {
+        time = GetComponent<Timer>();
+        _score = GetComponent<Score>();
+
         scoreboard.SetActive(false);
     }
 
