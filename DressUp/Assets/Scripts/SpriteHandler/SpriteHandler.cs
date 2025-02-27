@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Playables;
@@ -6,12 +8,14 @@ using UnityEngine.UIElements;
 public class SpriteHandler : MonoBehaviour
 {
 
-    public GameObject topHalf;
-    public GameObject MidHalf;
-    public GameObject bottomHalf;
+    public List<GameObject> hair =new List<GameObject>();
+    public List<GameObject> shirts =new List<GameObject>();
+    public List<GameObject> pants =new List<GameObject>();
+    public List<GameObject> shoes =new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Invoke(ClotheSettings clothingSettings)
     {
+        print(clothingSettings);
         ChangeSprite(clothingSettings);
     }
 
@@ -20,13 +24,36 @@ public class SpriteHandler : MonoBehaviour
         switch (clothingSettings.GetClothKind())
         {
             case EClothes.Head:
-                topHalf.GetComponent<RawImage>().texture = clothingSettings.GetTexture();
+                for (int i = 0; i < clothingSettings.GetTexture().Count; i++)
+                {
+                    hair[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
+                    hair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
+
+                }
                 break;
-            case EClothes.Torso:
-                MidHalf.GetComponent<RawImage>().texture = clothingSettings.GetTexture();
+            case EClothes.Shirts:
+                for (int i = 0; i < clothingSettings.GetTexture().Count; i++)
+                {
+                    shirts[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
+                    shirts[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
+
+                }
                 break;
             case EClothes.Pants:
-                bottomHalf.GetComponent<RawImage>().texture = clothingSettings.GetTexture();
+                for (int i = 0; i < clothingSettings.GetTexture().Count; i++)
+                {
+                    pants[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
+                    pants[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
+
+                }
+                break;
+            case EClothes.Shoes:
+                for (int i = 0; i < clothingSettings.GetTexture().Count; i++)
+                {
+                    shoes[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
+                    shoes[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
+
+                }
                 break;
         }
         

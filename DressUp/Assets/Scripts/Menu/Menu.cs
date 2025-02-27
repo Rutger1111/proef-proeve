@@ -1,12 +1,26 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] public GameObject scoreBoard;
 
-    
+
+    [SerializeField] private GameObject plane;
+
+    private Timer _timer;
+    private PopupTimer _popupTimer;
+    private Score _score;
+    private AIDresser _aiDresser;
+
+    private void Start()
+    {
+        _timer = GetComponent<Timer>();
+        _popupTimer = GetComponent<PopupTimer>();
+        _score = GetComponent<Score>();
+        _aiDresser = GetComponent<AIDresser>();
+    }
     public void ExitGame()
     {
         Application.Quit();
@@ -24,10 +38,18 @@ public class Menu : MonoBehaviour
 
     public void Inleveren()
     {
-        scoreBoard.SetActive(true);
+        _aiDresser.ChooseDress();
+        plane.SetActive(true);
+        _popupTimer.ResetTimer();
+        _score.SubmitClothes();
     }
 
     public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Return()
     {
         SceneManager.LoadScene("Menu");
     }

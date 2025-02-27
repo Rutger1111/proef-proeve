@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class PopupTimer : MonoBehaviour
 {
-    float timer = 3;
+    public float timer = 3;
+    public float resetTimer = 3;
+
+    public GameObject displayModel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,7 +17,12 @@ public class PopupTimer : MonoBehaviour
     {
         timer -= Time.deltaTime;
         if (timer <= 0){
-            gameObject.SetActive(false);
+            displayModel.SetActive(false);
         }
+    }
+
+    public void ResetTimer()
+    {
+        timer = resetTimer;
     }
 }
