@@ -531,6 +531,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408727192}
   m_CullTransparentMesh: 1
+--- !u!1 &633426705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5135735672547687960, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+  m_PrefabInstance: {fileID: 2208611994090132161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &787017500
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,69 +875,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411883122}
   m_CullTransparentMesh: 1
---- !u!114 &1690467475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020005474847355914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67acb49659285744bae9de4453a1bf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CL: {fileID: 0}
 --- !u!114 &1760984181 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 750535619053970979, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
   m_PrefabInstance: {fileID: 2208611994090132161}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 633426705}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 908f8e8342b15b34ca37e696e9e89674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1898782149
+--- !u!114 &2054904749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4855488101957001405, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+  m_PrefabInstance: {fileID: 2208611994090132161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633426705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa63bc9afce2085469447d8b5308964c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2054904755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+  m_PrefabInstance: {fileID: 2208611994090132161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633426705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfefd52872751154092ba48cb2c75e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2054904764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6419533940634861691}
+  m_GameObject: {fileID: 633426705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67acb49659285744bae9de4453a1bf1, type: 3}
+  m_Script: {fileID: 11500000, guid: 283c6cbf45502dd49971a607b695a4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CL: {fileID: 0}
---- !u!114 &1983013828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850199000006921912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67acb49659285744bae9de4453a1bf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CL: {fileID: 0}
---- !u!114 &2026690390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801812678723454620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67acb49659285744bae9de4453a1bf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CL: {fileID: 0}
+  timer: 3
+  resetTimer: 3
+  displayModel: {fileID: 5889875618893157454}
 --- !u!222 &942791297359949
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -959,20 +949,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &149888950554216422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5889875618893157454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283c6cbf45502dd49971a607b695a4c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 3
-  resetTimer: 3
 --- !u!114 &174947895145234830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,7 +1355,6 @@ GameObject:
   - component: {fileID: 2211068623737332620}
   - component: {fileID: 2445042773198896002}
   - component: {fileID: 5276496200062863855}
-  - component: {fileID: 2026690390}
   m_Layer: 5
   m_Name: shoes (1)
   m_TagString: Untagged
@@ -1725,7 +1700,6 @@ GameObject:
   - component: {fileID: 4256890801393390564}
   - component: {fileID: 4902404310090947536}
   - component: {fileID: 6338009887134659665}
-  - component: {fileID: 1983013828}
   m_Layer: 5
   m_Name: Pants (1)
   m_TagString: Untagged
@@ -1764,7 +1738,6 @@ GameObject:
   - component: {fileID: 6269667874114804649}
   - component: {fileID: 8644985891284064541}
   - component: {fileID: 4586492492687369024}
-  - component: {fileID: 1690467475}
   m_Layer: 5
   m_Name: Shirt (1)
   m_TagString: Untagged
@@ -1807,6 +1780,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 750535619053970979, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: _uiscale
+      value: 
+      objectReference: {fileID: 2054904749}
+    - target: {fileID: 750535619053970979, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: spriteHandler
+      value: 
+      objectReference: {fileID: 2054904755}
     - target: {fileID: 750535619053970979, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: canvasTransform
       value: 
@@ -1928,9 +1909,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: hair.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: pants.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: shoes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: shirts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: 'hair.Array.data[0]'
       value: 
-      objectReference: {fileID: 6419533940634861691}
+      objectReference: {fileID: 417293993045930573}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: 'hair.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4154558900158075024}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: 'pants.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5484599286975097161}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: 'shoes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 6914496281436507933}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: 'shirts.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7855135369002736619}
     - target: {fileID: 8342750307822376617, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: scoreboard
       value: 
@@ -1938,7 +1951,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5135735672547687960, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2054904764}
   m_SourcePrefab: {fileID: 100100000, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
 --- !u!222 &2211068623737332620
 CanvasRenderer:
@@ -3337,7 +3353,6 @@ GameObject:
   - component: {fileID: 5414643584808501731}
   - component: {fileID: 3496579711580818067}
   - component: {fileID: 3726499493015284374}
-  - component: {fileID: 149888950554216422}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -3845,7 +3860,6 @@ GameObject:
   - component: {fileID: 7443727936147696837}
   - component: {fileID: 6041438836743804506}
   - component: {fileID: 8135895431347965764}
-  - component: {fileID: 1898782149}
   m_Layer: 5
   m_Name: Hair (1)
   m_TagString: Untagged
@@ -4647,9 +4661,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wardrobe: {fileID: 11400000, guid: edec03d00face31438a8b738a37fb72f, type: 2}
   index: 1
-  clothe: {fileID: 0}
+  clothe: {fileID: 110399757}
   images:
-  - {fileID: 110399758}
+  - {fileID: 6041438836743804506}
 --- !u!224 &8148912607470841044
 RectTransform:
   m_ObjectHideFlags: 0

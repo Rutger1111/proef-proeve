@@ -13,11 +13,10 @@ public class Timer : MonoBehaviour
 
     [SerializeField] private bool isTimerOn = true;
 
-    public PopupTimer _popupTimer;
-
+    private PopupTimer _popupTimer;
     public void Start()
     {
-        
+        _popupTimer = GetComponent<PopupTimer>();
 
         float lastbesttime = PlayerPrefs.GetFloat("best time", bestTime);
         bestTimeText.text = "beste tijd: " + lastbesttime.ToString("F2");
@@ -41,22 +40,17 @@ public class Timer : MonoBehaviour
         // if its lower then 0 than it stops timer
         else
         {
-            currentTime.text = "tijd: 0 sec";
+            currentTime.text = "tijd: " + timerDuration.ToString("F2") + " sec";
         }
         timerText.text = time;
         
         // if the current time is better than your previous best time than the high score will be updated to the current best score
         if (timerDuration > PlayerPrefs.GetFloat("best time", bestTime) && !isTimerOn)
         {
-            SetHighScore();
+            bestTime = timerDuration;
+            bestTimeText.text = "beste tijd: " + bestTime.ToString("F2") + " sec";
+            PlayerPrefs.SetFloat("best time", bestTime);
         }
-    }
-
-    private void SetHighScore()
-    {
-        bestTime = timerDuration;
-        bestTimeText.text = "beste tijd: " + bestTime.ToString("F2") + " sec";
-        PlayerPrefs.SetFloat("best time", bestTime);
     }
 
     private void ResetHighScores()

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Pants
   m_EditorClassIdentifier: 
   clothesTextures:
-  - {fileID: 11400000, guid: c7e844c7b4306a24ea01bb7b1744b15c, type: 2}
   - {fileID: 11400000, guid: 7a1cc10cfed2e4042972d1301e8ed224, type: 2}
   - {fileID: 11400000, guid: 4a164fa1cb32ee04d91d9650d2aecc79, type: 2}
+  - {fileID: 11400000, guid: c7e844c7b4306a24ea01bb7b1744b15c, type: 2}
   - {fileID: 11400000, guid: 3064c0d104bf74f4d97b8aa97b4fcc11, type: 2}
   - {fileID: 11400000, guid: 7cbc702656048fb4782a27bc5a58e84b, type: 2}
