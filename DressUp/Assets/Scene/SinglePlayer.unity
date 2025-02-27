@@ -1782,7 +1782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb51a723c1ff5be4281e00980bc9095a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerDuration: 120
+  timerDuration: 60
   timerText: {fileID: 1636720962}
   isTimerOn: 1
 --- !u!114 &548861590
