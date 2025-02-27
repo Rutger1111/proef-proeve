@@ -1823,6 +1823,10 @@ PrefabInstance:
       propertyPath: bestTimeText
       value: 
       objectReference: {fileID: 6012580457639511872}
+    - target: {fileID: 2938881011498280997, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: timerDuration
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 4855488101957001405, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: 'list.Array.data[0]'
       value: 
