@@ -66,10 +66,10 @@ public class Score : MonoBehaviour
         {
             for(int j = 0; j < selectedclothes.Count; j++)
             {
-                print("fuck");
+               
                 if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
                 {
-                    print("check");
+                   
                     stylePoints += pointsForRightClothes;
                 }
 
