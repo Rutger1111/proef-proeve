@@ -30,7 +30,7 @@ public class Timer : MonoBehaviour
         }
         // ternery operator to determan wether to use decimals or not and make the entire string ready
         string time = timerDuration > 30 ? "time: "+timerDuration.ToString("F0") : "time: " + timerDuration.ToString("F2");
-        
+        timerText.text = time;
         // checks wether it needs to subtract then subtracts
         if (timerDuration >= 0 && _popupTimer.timer <= 0)
         {
@@ -42,7 +42,7 @@ public class Timer : MonoBehaviour
         {
             currentTime.text = "tijd: " + timerDuration.ToString("F2") + " sec";
         }
-        timerText.text = time;
+        
         
         // if the current time is better than your previous best time than the high score will be updated to the current best score
         if (timerDuration > PlayerPrefs.GetFloat("best time", bestTime) && !isTimerOn)
