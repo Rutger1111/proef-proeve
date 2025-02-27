@@ -33,7 +33,7 @@ public class Menu : MonoBehaviour
     
     public void MultiPlayerGame()
     {
-        SceneManager.LoadScene("dressup");
+        SceneManager.LoadScene("AIMode");
     }
 
     public void Inleveren()
