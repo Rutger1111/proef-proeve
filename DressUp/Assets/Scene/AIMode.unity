@@ -1959,32 +1959,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: hair.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: pants.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: shoes.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: shirts.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: 'hair.Array.data[0]'
       value: 
       objectReference: {fileID: 417293993045930573}
     - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: 'hair.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4154558900158075024}
+    - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: 'pants.Array.data[0]'
       value: 
-      objectReference: {fileID: 1850199000006921912}
+      objectReference: {fileID: 5484599286975097161}
     - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: 'shoes.Array.data[0]'
       value: 
-      objectReference: {fileID: 801812678723454620}
+      objectReference: {fileID: 6914496281436507933}
     - target: {fileID: 8014128211273346836, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: 'shirts.Array.data[0]'
       value: 
