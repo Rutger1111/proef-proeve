@@ -870,19 +870,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411883122}
   m_CullTransparentMesh: 1
---- !u!114 &1690467475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020005474847355914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67acb49659285744bae9de4453a1bf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CL: {fileID: 0}
 --- !u!114 &1760984181 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 750535619053970979, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
@@ -894,45 +881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908f8e8342b15b34ca37e696e9e89674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1898782149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6419533940634861691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67acb49659285744bae9de4453a1bf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CL: {fileID: 0}
---- !u!114 &1983013828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850199000006921912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67acb49659285744bae9de4453a1bf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CL: {fileID: 0}
---- !u!114 &2026690390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801812678723454620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67acb49659285744bae9de4453a1bf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CL: {fileID: 0}
 --- !u!114 &2054904749 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4855488101957001405, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
@@ -995,6 +943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 3
   resetTimer: 3
+  displayModel: {fileID: 0}
 --- !u!114 &174947895145234830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,7 +1350,6 @@ GameObject:
   - component: {fileID: 2211068623737332620}
   - component: {fileID: 2445042773198896002}
   - component: {fileID: 5276496200062863855}
-  - component: {fileID: 2026690390}
   m_Layer: 5
   m_Name: shoes (1)
   m_TagString: Untagged
@@ -1747,7 +1695,6 @@ GameObject:
   - component: {fileID: 4256890801393390564}
   - component: {fileID: 4902404310090947536}
   - component: {fileID: 6338009887134659665}
-  - component: {fileID: 1983013828}
   m_Layer: 5
   m_Name: Pants (1)
   m_TagString: Untagged
@@ -1786,7 +1733,6 @@ GameObject:
   - component: {fileID: 6269667874114804649}
   - component: {fileID: 8644985891284064541}
   - component: {fileID: 4586492492687369024}
-  - component: {fileID: 1690467475}
   m_Layer: 5
   m_Name: Shirt (1)
   m_TagString: Untagged
@@ -3907,7 +3853,6 @@ GameObject:
   - component: {fileID: 7443727936147696837}
   - component: {fileID: 6041438836743804506}
   - component: {fileID: 8135895431347965764}
-  - component: {fileID: 1898782149}
   m_Layer: 5
   m_Name: Hair (1)
   m_TagString: Untagged
@@ -4711,7 +4656,7 @@ MonoBehaviour:
   index: 1
   clothe: {fileID: 110399757}
   images:
-  - {fileID: 110399758}
+  - {fileID: 6041438836743804506}
 --- !u!224 &8148912607470841044
 RectTransform:
   m_ObjectHideFlags: 0
