@@ -75,6 +75,7 @@ public class Score : MonoBehaviour
                 {
                     stylePoints += 3f;
                 }
+                /*
                 else
                 {
                     float idDifference = Mathf.Abs(selectedclothes[j].GetComponent<ClotheReference>().CL.Id - shownClothes[i].GetComponent<ClotheReference>().CL.Id);
@@ -82,6 +83,7 @@ public class Score : MonoBehaviour
 
                     stylePoints += points;
                 }
+                */
             }
         }
         
