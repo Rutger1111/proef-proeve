@@ -10,7 +10,6 @@ public class Menu : MonoBehaviour
 
 
     [SerializeField] private GameObject plane;
-    [SerializeField] private GameObject escapePanel;
 
     [SerializeField] private List<GameObject> plcs = new List<GameObject>();
     private bool pauseScreen;
@@ -79,15 +78,5 @@ public class Menu : MonoBehaviour
     public void Return()
     {
         SceneManager.LoadScene("Menu");
-    }
-
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) && pauseScreen == false)
-        {
-            escapePanel.SetActive(true );
-            Time.timeScale = 0f;
-
-        }
     }
 }

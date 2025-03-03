@@ -5,18 +5,21 @@ using Random = Unity.Mathematics.Random;
 
 public class Score : MonoBehaviour
 {
-    [SerializeField] private TMPro.TMP_Text finalScore;
+    [SerializeField] private TMPro.TMP_Text finalScoreText;
     [SerializeField] private TMPro.TMP_Text scoreText;
+    [SerializeField] private TMPro.TMP_Text HighScoreText;
+
     [SerializeField] private float pointsForRightClothes = 2f;
 
-     public List<GameObject> shownClothes;
-     public List<GameObject> selectedclothes;
+    [HideInInspector] public List<GameObject> shownClothes;
+    [HideInInspector] public List<GameObject> selectedclothes;
 
-    public double _finalScore;
-    public double stylePoints;
+    private float _finalScore;
+    private float stylePoints;
+    private float HighScore;
 
-    public AIDresser _aiDresser;
-    public Timer timeReference;
+    private AIDresser _aiDresser;
+    private Timer timeReference;
 
     void Start()
     {
@@ -44,6 +47,15 @@ public class Score : MonoBehaviour
         {
             selectedclothes.Add(clothesSelected.gameObject);
         }
+
+
+
+        UpdateHighScore();
+    }
+
+    private void UpdateHighScore()
+    {
+        HighScore = PlayerPrefs.GetFloat("highscore");    
     }
 
 
@@ -54,6 +66,8 @@ public class Score : MonoBehaviour
         {
             SubmitClothes();
         }
+
+        save();
     }
 
     public void SubmitClothes()
@@ -63,11 +77,9 @@ public class Score : MonoBehaviour
         for (int i = 0; i < shownClothes.Count; i++)
         {
             for(int j = 0; j < selectedclothes.Count; j++)
-            {
-                print("fuck");
+            { 
                 if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
                 {
-                    print("check");
                     stylePoints += 1;
                 }
 
@@ -110,9 +122,18 @@ public class Score : MonoBehaviour
 
     public void gameOver()
     {
+        HighScoreText.text = "HighScore " + HighScore.ToString("F0");
         scoreText.text = "score: " + _finalScore.ToString("F0");
-        finalScore.text = "score: " + _finalScore.ToString("F0");
+        finalScoreText.text = "score: " + _finalScore.ToString("F0");
     }
 
-
+    public void save()
+    {
+        if (_finalScore >= HighScore)
+        {
+            HighScore = _finalScore;
+            PlayerPrefs.SetFloat("highscore", HighScore);
+            PlayerPrefs.Save();
+        }
+    }
 }

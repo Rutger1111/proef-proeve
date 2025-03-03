@@ -6,33 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f952860d-ec6d-48d2-84e0-5c083486875f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DressUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DressUp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/SinglePlayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/SinglePlayer.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnenyAi/ChooseNext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnenyAi/ChooseNext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpriteHandler/ClothingSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpriteHandler/ClothingSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpriteHandler/SpriteHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpriteHandler/SpriteHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Timer/Timer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WardrobeScripts/AIDresser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WardrobeScripts/AIDresser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WardrobeScripts/Cloth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WardrobeScripts/Cloth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WardrobeScripts/ClotheSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WardrobeScripts/ClotheSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Haren/BlackBob.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Haren/BlackBob.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Haren/BlondePigTails.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Haren/BlondePigTails.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Haren/BlondePonyTail.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Haren/BlondePonyTail.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Haren/HairHeadBand.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Haren/HairHeadBand.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Haren/PinkBob.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Haren/PinkBob.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Tops/BlueOffShoulder.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Tops/BlueOffShoulder.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Tops/BlueTangTop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Tops/BlueTangTop.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Tops/PinkOffShoulder.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Tops/PinkOffShoulder.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Tops/PinkTangTop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Tops/PinkTangTop.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Tops/WhiteKimono.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/Tops/WhiteKimono.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/broeken/BlueShortSkirt.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/broeken/BlueShortSkirt.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/broeken/LongPants.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/broeken/LongPants.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/broeken/LongSkirt.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/broeken/LongSkirt.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/broeken/PinkShortSkirt.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/broeken/PinkShortSkirt.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/broeken/Shorts.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/broeken/Shorts.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/schoenen/MaryJanes.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/schoenen/MaryJanes.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/schoenen/ShoeLegWarmers.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/schoenen/ShoeLegWarmers.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/schoenen/ShoesBoots.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/schoenen/ShoesBoots.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/schoenen/ShoesConversie.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptableObjects/kleren/schoenen/ShoesConversie.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +18,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e6aa588f9882420485fca490ded58a721dee00/88/0baab211/Texture.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -54,27 +28,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "textureList",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;textureList&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\reeme\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\reeme\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\reeme\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\ruben\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\ruben\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\ruben\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.37f1\Editor\Unity.exe" />
@@ -135,6 +109,9 @@
       <workItem from="1740390130983" duration="6280000" />
       <workItem from="1740482704943" duration="3455000" />
       <workItem from="1740561678943" duration="4749000" />
+      <workItem from="1740996433302" duration="240000" />
+      <workItem from="1740999984704" duration="149000" />
+      <workItem from="1741000655269" duration="638000" />
     </task>
     <servers />
   </component>
