@@ -6,7 +6,8 @@ using UnityEngine;
 public class Cloth : ScriptableObject
 {
     // cloth is a scriptable object with the info of eacht cloth
-    public Texture texture;
+    public List<Texture> textures = new List<Texture>();
+    public Texture iconTexture;
     public int Id;
     public EStyles style;
     public EClothes clothKind;

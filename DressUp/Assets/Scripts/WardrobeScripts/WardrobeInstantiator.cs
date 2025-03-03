@@ -1,31 +1,24 @@
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WardrobeInstantiator : MonoBehaviour
 {
-    public GameObject gridPrefab;
-    public GameObject boxiePrefab;
-    public Transform canvasTransform;
-    public List<Wardrobe> wardrobes;
-    public SpriteHandler spriteHandler;
-
+    [SerializeField] private GameObject gridPrefab;
+    [SerializeField] private GameObject boxiePrefab;
+    [SerializeField] private Transform canvasTransform;
+    [SerializeField] private List<Wardrobe> wardrobes;
+    
     private List<GameObject> buttonsList = new List<GameObject>();
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    private UIScale _uiscale;
+    private SpriteHandler spriteHandler;
+  
 
-        /*for (int index = 0; index <= wardrobes.Count - 1; index ++){
-            GameObject gameObject = Instantiate(gridPrefab,canvasTransform);
-            gameObject.transform.parent = canvasTransform.GetChild(1);
-            //this for loop makes a cloth for every cloth in the wardrobe
-            for (int I = 0; I < wardrobes[index].clothesTextures.Count; I ++){
-                GameObject gameObject1 = Instantiate(boxiePrefab, gameObject.transform);
-                //sets the settings of the cloth
-                gameObject1.GetComponent<ClotheSettings>().cloth = wardrobes[index].clothesTextures[I];
-            }
-        }*/
+    void Start()
+    { 
+        spriteHandler = GetComponent<SpriteHandler>();
+        _uiscale = GetComponent<UIScale>();
     }
     private void Update()
     {
@@ -40,6 +33,8 @@ public class WardrobeInstantiator : MonoBehaviour
     }
     public void buttonInstatiate(int buttonIndex)
     {
+        _uiscale.ButttonSizeChanger(buttonIndex);
+
         foreach (var button in buttonsList) 
         { 
             Destroy(button);
@@ -49,12 +44,13 @@ public class WardrobeInstantiator : MonoBehaviour
 
         buttonsList.Add(gameObject);
 
-            gameObject.transform.parent = canvasTransform.GetChild(1);
-            for (int I = 0; I < wardrobes[buttonIndex].clothesTextures.Count; I++)
-            {
-                GameObject gameObject1 = Instantiate(boxiePrefab, gameObject.transform);
-                gameObject1.GetComponent<ClotheSettings>().cloth = wardrobes[buttonIndex].clothesTextures[I];
-            }
+        gameObject.transform.parent = canvasTransform.GetChild(1);
+        for (int I = 0; I < wardrobes[buttonIndex].clothesTextures.Count; I++)
+        {
+            GameObject gameObject1 = Instantiate(boxiePrefab, gameObject.transform);
+            gameObject1.GetComponent<ClotheSettings>().cloth = wardrobes[buttonIndex].clothesTextures[I];
+            gameObject1.GetComponent<RawImage>().texture = wardrobes[buttonIndex].clothesTextures[I].iconTexture;
+        }
         
 
     }

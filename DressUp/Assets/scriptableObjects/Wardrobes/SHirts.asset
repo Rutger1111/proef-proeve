@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: SHirts
   m_EditorClassIdentifier: 
   clothesTextures:
-  - {fileID: 11400000, guid: 7a1cc10cfed2e4042972d1301e8ed224, type: 2}
-  - {fileID: 11400000, guid: 4a164fa1cb32ee04d91d9650d2aecc79, type: 2}
-  - {fileID: 11400000, guid: c7e844c7b4306a24ea01bb7b1744b15c, type: 2}
+  - {fileID: 11400000, guid: 018be9593f143d64c97c34c16785ded9, type: 2}
+  - {fileID: 11400000, guid: 63409e33e88e4c74b9de88d6f746b6dc, type: 2}
+  - {fileID: 11400000, guid: a3baf2b8e7b8c9e40a74c4db9c7e4841, type: 2}
+  - {fileID: 11400000, guid: 5afcff11b111b9548b6692ecc85e68b2, type: 2}
+  - {fileID: 11400000, guid: accfaeeff5d850b469b623421cebe051, type: 2}
