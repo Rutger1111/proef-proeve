@@ -50,24 +50,27 @@ public class Menu : MonoBehaviour
 
     public void Inleveren()
     {
-        _aiDresser.ChooseDress();
+        try{
+            _aiDresser.ChooseDress();
 
-        _score.SubmitClothes();
+            _score.SubmitClothes();
 
-        plane.SetActive(true);
+            plane.SetActive(true);
 
-        _popupTimer.ResetTimer();
+            _popupTimer.ResetTimer();
 
-        for(int i = 0; i < _clothref.Count; i++){
-        _clothref[i].placeholderr();
+            for(int i = 0; i < _clothref.Count; i++){
+            _clothref[i].placeholderr();
+            }
+            
+
+            foreach(var i in plcs){
+            i.GetComponent<RawImage>().color = new Color(255,255,255,0);
+                    
+            }
+            
         }
-        
 
-        foreach(var i in plcs){
-           i.GetComponent<RawImage>().color = new Color(255,255,255,0);
-                   
-        }
-        
     }
 
     public void Retry()
