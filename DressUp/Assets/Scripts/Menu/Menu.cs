@@ -16,22 +16,20 @@ public class Menu : MonoBehaviour
 
     private Timer _timer;
     private PopupTimer _popupTimer;
-    public Score _score;
+    private Score _score;
     private AIDresser _aiDresser;
 
     public List<ClotheReference> _clothref;
 
+    [SerializeField] private GameObject escapePanel;
 
+    private bool escThough;
     private void Start()
     {
         _timer = GetComponent<Timer>();
         _popupTimer = GetComponent<PopupTimer>();
         _score = GetComponent<Score>();
         _aiDresser = GetComponent<AIDresser>();
-        
-        
-
-       
     }
     public void ExitGame()
     {
@@ -62,12 +60,9 @@ public class Menu : MonoBehaviour
         _clothref[i].placeholderr();
         }
         
-
         foreach(var i in plcs){
-           i.GetComponent<RawImage>().color = new Color(255,255,255,0);
-                   
+           i.GetComponent<RawImage>().color = new Color(255,255,255,0);  
         }
-        
     }
 
     public void Retry()
@@ -78,5 +73,30 @@ public class Menu : MonoBehaviour
     public void Return()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape) && escThough == false)
+        {
+            EscapeTurnOn();
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape) && escThough == true)
+        {
+            EscapeTurnOff();
+        }
+    }
+
+    public void EscapeTurnOn()
+    {
+        escapePanel.SetActive(true);
+
+        escThough = true;
+    }
+    public void EscapeTurnOff()
+    {
+        escapePanel.SetActive(false);
+
+        escThough = false;
     }
 }
