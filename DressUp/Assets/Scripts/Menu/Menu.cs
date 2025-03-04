@@ -70,7 +70,9 @@ public class Menu : MonoBehaviour
             }
             
         }
-
+        catch{
+            return;
+        }
     }
 
     public void Retry()
