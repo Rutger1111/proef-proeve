@@ -23,36 +23,41 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-        _aiDresser = GetComponent<AIDresser>();
-        timeReference = GetComponent<Timer>();
 
-        GameObject parentShownClothes = GameObject.Find("VoorbeeldPanel");
-
-        shownClothes.Clear();
-        
-            
-        GameObject parentModelClothes = GameObject.Find("modelOutline");
-
-            
-        foreach (Transform ModelClothes in parentModelClothes.transform)  
-        {
-            if (!shownClothes.Contains(ModelClothes.gameObject))
-            {
-                shownClothes.Add(ModelClothes.gameObject);
-            } 
-        }
-        GameObject parentSelectedClothes = GameObject.Find("ParentClothParts");
-
-        foreach (Transform clothesSelected in parentSelectedClothes.transform)
-        {
-            selectedclothes.Add(clothesSelected.gameObject);
-        }
-
-
-
+        LookForObject();
         UpdateHighScore();
     }
+    private void LookForObject()
+    {
+        try
+        {
+            _aiDresser = GetComponent<AIDresser>();
+            timeReference = GetComponent<Timer>();
 
+            GameObject parentShownClothes = GameObject.Find("VoorbeeldPanel");
+
+            shownClothes.Clear();
+
+
+            GameObject parentModelClothes = GameObject.Find("modelOutline");
+
+
+            foreach (Transform ModelClothes in parentModelClothes.transform)
+            {
+                if (!shownClothes.Contains(ModelClothes.gameObject))
+                {
+                    shownClothes.Add(ModelClothes.gameObject);
+                }
+            }
+            GameObject parentSelectedClothes = GameObject.Find("ParentClothParts");
+
+            foreach (Transform clothesSelected in parentSelectedClothes.transform)
+            {
+                selectedclothes.Add(clothesSelected.gameObject);
+            }
+        }
+        catch { }
+    }
     private void UpdateHighScore()
     {
         HighScore = PlayerPrefs.GetFloat("highscore");    
@@ -99,24 +104,12 @@ public class Score : MonoBehaviour
             }
         }
         
-        
-
-            
-
         CalculateScore();
-
     }
 
     public void CalculateScore()
     {
-        if(stylePoints < 100)
-        {
-            _finalScore += stylePoints;
-        }
-        else
-        {
-            _finalScore += stylePoints;
-        }
+       _finalScore += stylePoints;
        stylePoints = 0;
     }
 
