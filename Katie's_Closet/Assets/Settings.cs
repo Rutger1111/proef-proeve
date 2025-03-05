@@ -7,8 +7,9 @@ using UnityEngine.Rendering;
 public class Settings : MonoBehaviour
 {
     public List<Node> nodes;
-    
 
+    public GameObject fullscreenButton;
+    public GameObject WindowedButton;
     void Start()
     {
         for (int i = 0; i < nodes.Count; i++)
@@ -26,6 +27,23 @@ public class Settings : MonoBehaviour
         {
             nodes[i].source.volume = nodes[i].volume;
         }
+    }
+    public void toggleFullScreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+        fullscreenButton.SetActive(false);
+        WindowedButton.SetActive(true);
+    }
+    public void toggleWindowedScreen()
+    {
+        Screen.fullScreenMode = FullScreenMode.Windowed;
+        fullscreenButton.SetActive(true);
+        WindowedButton.SetActive(false);
+    }
+
+    public void toggleSound(int soundIndex)
+    {
+        nodes[soundIndex].source.Play();
     }
 }
 
