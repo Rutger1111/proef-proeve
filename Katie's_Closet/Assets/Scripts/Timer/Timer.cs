@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
             ResetHighScores();   
         }
         // ternery operator to determan wether to use decimals or not and make the entire string ready
-        string time = timerDuration > 30 ? "time: "+timerDuration.ToString("F0") : "time: " + timerDuration.ToString("F2");
+        string time = timerDuration > 30 ? timerDuration.ToString("F0") : timerDuration.ToString("F2");
         timerText.text = time;
         // checks wether it needs to subtract then subtracts
         if (timerDuration >= 0 && _popupTimer.timer <= 0)
