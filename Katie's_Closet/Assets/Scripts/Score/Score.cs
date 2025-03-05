@@ -66,7 +66,7 @@ public class Score : MonoBehaviour
 
     private void Update()
     {
-        scoreText.text = "score: " + _finalScore.ToString("F0");
+        scoreText.text = _finalScore.ToString("F0");
         if (Input.GetKeyDown(KeyCode.Q))
         {
             SubmitClothes();
@@ -115,9 +115,9 @@ public class Score : MonoBehaviour
 
     public void gameOver()
     {
-        HighScoreText.text = "HighScore " + HighScore.ToString("F0");
-        scoreText.text = "score: " + _finalScore.ToString("F0");
-        finalScoreText.text = "score: " + _finalScore.ToString("F0");
+        HighScoreText.text = HighScore.ToString("F0");
+        scoreText.text = _finalScore.ToString("F0");
+        finalScoreText.text = _finalScore.ToString("F0");
     }
 
     public void save()

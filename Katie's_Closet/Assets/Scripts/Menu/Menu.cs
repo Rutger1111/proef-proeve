@@ -56,12 +56,12 @@ public class Menu : MonoBehaviour
             _popupTimer.ResetTimer();
 
             for(int i = 0; i < _clothref.Count; i++){
-            _clothref[i].placeholderr();
+                _clothref[i].placeholderr();
             }
             
 
             foreach(var i in ClothingSlothes){
-            i.GetComponent<RawImage>().color = new Color(255,255,255,0);
+                i.GetComponent<RawImage>().color = new Color(255,255,255,0);
                     
             }
             
@@ -82,6 +82,12 @@ public class Menu : MonoBehaviour
     }
     public void Update()
     {
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            Debug.Log("Ruben sucks");
+            modelPanel.SetActive(true);
+        }
+        
         if (Input.GetKeyDown(KeyCode.Escape) && isEscapeMenuOpen == false)
         {
             OpenEscapeMenu();
