@@ -8,9 +8,11 @@ public class WardrobeInstantiator : MonoBehaviour
     [SerializeField] private GameObject gridPrefab;
     [SerializeField] private GameObject boxiePrefab;
     [SerializeField] private Transform canvasTransform;
+
     [SerializeField] private List<Wardrobe> wardrobes;
     
     private List<GameObject> buttonsList = new List<GameObject>();
+
     private UIScale _uiscale;
     private SpriteHandler spriteHandler;
   

@@ -16,7 +16,10 @@ public class Settings : MonoBehaviour
         {
             nodes[i].source.clip = nodes[i].clip;
 
-            nodes[i].source.Play();
+            if (nodes[i].backgroundMusic == true)
+            {
+                nodes[i].source.Play();
+            }
         }
     }
 
@@ -41,9 +44,26 @@ public class Settings : MonoBehaviour
         WindowedButton.SetActive(false);
     }
 
-    public void toggleSound(int soundIndex)
+    public void PlaySoundTrack(int soundIndex)
     {
+        if (soundIndex < 0 || soundIndex >= nodes.Count)
+        {
+            Debug.LogWarning("Invalid sound index!");
+            return;
+        }
+
         nodes[soundIndex].source.Play();
+    }
+
+    public void StopSoundTrack(int soundIndex)
+    {
+        if (soundIndex < 0 || soundIndex >= nodes.Count)
+        {
+            Debug.LogWarning("Invalid sound index!");
+            return;
+        }
+
+        nodes[soundIndex].source.Stop();
     }
 }
 
@@ -52,9 +72,7 @@ public class Settings : MonoBehaviour
     [Range(0f, 1f)] public float volume;
     public AudioClip clip;
 
-
+    public bool backgroundMusic;
 
     public AudioSource source;
-
-    public UnityEvent unityEvent;
 }

@@ -7,17 +7,19 @@ public class Menu : MonoBehaviour
 {
 
 
-    [SerializeField] private GameObject plane;
+    [SerializeField] private GameObject modelPanel;
+    [SerializeField] private GameObject escapePanel;
+    [SerializeField] private List<GameObject> ClothingSlothes = new List<GameObject>();
+    public List<ClotheReference> _clothref;
 
-    [SerializeField] private List<GameObject> plcs = new List<GameObject>();
-    private bool pauseScreen;
 
     private Timer _timer;
     private PopupTimer _popupTimer;
-    public Score _score;
+    private Score _score;
     private AIDresser _aiDresser;
 
-    public List<ClotheReference> _clothref;
+    
+    private bool isEscapeMenuOpen;
 
 
     private void Start()
@@ -26,10 +28,6 @@ public class Menu : MonoBehaviour
         _popupTimer = GetComponent<PopupTimer>();
         _score = GetComponent<Score>();
         _aiDresser = GetComponent<AIDresser>();
-        
-        
-
-       
     }
     public void ExitGame()
     {
@@ -46,14 +44,14 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("AIMode");
     }
 
-    public void Inleveren()
+    public void SubmitClothes()
     {
         try{
             _aiDresser.ChooseDress();
 
             _score.SubmitClothes();
 
-            plane.SetActive(true);
+            modelPanel.SetActive(true);
 
             _popupTimer.ResetTimer();
 
@@ -62,7 +60,7 @@ public class Menu : MonoBehaviour
             }
             
 
-            foreach(var i in plcs){
+            foreach(var i in ClothingSlothes){
             i.GetComponent<RawImage>().color = new Color(255,255,255,0);
                     
             }
@@ -73,7 +71,7 @@ public class Menu : MonoBehaviour
         }
     }
 
-    public void Retry()
+    public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -81,5 +79,29 @@ public class Menu : MonoBehaviour
     public void Return()
     {
         SceneManager.LoadScene("Menu");
+    }
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && isEscapeMenuOpen == false)
+        {
+            OpenEscapeMenu();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isEscapeMenuOpen == true)
+        {
+            CloseEscapeMenu();
+        }
+    }
+
+    public void OpenEscapeMenu()
+    {
+        escapePanel.SetActive(true);
+
+        isEscapeMenuOpen = true;
+    }
+    public void CloseEscapeMenu()
+    {
+        escapePanel.SetActive(false);
+
+        isEscapeMenuOpen = false;
     }
 }
