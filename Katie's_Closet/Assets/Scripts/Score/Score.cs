@@ -8,9 +8,7 @@ public class Score : MonoBehaviour
     [SerializeField] private TMPro.TMP_Text finalScoreText;
     [SerializeField] private TMPro.TMP_Text scoreText;
     [SerializeField] private TMPro.TMP_Text HighScoreText;
-
-    [SerializeField] private float pointsForRightClothes = 2f;
-
+    
     [HideInInspector] public List<GameObject> shownClothes;
     [HideInInspector] public List<GameObject> selectedclothes;
 
@@ -20,10 +18,11 @@ public class Score : MonoBehaviour
 
     private AIDresser _aiDresser;
     private Timer timeReference;
+    private SaveClothes _saveClothes;
 
     void Start()
     {
-
+        
         LookForObject();
         UpdateHighScore();
     }
@@ -33,7 +32,8 @@ public class Score : MonoBehaviour
         {
             _aiDresser = GetComponent<AIDresser>();
             timeReference = GetComponent<Timer>();
-
+            _saveClothes = GetComponent<SaveClothes>();
+            
             GameObject parentShownClothes = GameObject.Find("VoorbeeldPanel");
 
             shownClothes.Clear();
@@ -86,6 +86,7 @@ public class Score : MonoBehaviour
                 if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
                 {
                     stylePoints += 1;
+                    _saveClothes.complatedClothes.Add();
                 }
 
                 if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == selectedclothes[j].GetComponent<ClotheReference>().CL.Id)

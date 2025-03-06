@@ -2940,6 +2940,10 @@ PrefabInstance:
       propertyPath: finalScoreText
       value: 
       objectReference: {fileID: 7589415911474657832}
+    - target: {fileID: 1011573203508330820, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: pointsForRightClothes
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1788127218496640380, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: plane
       value: 
