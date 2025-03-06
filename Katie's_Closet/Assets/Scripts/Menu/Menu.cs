@@ -14,6 +14,7 @@ public class Menu : MonoBehaviour
 
 
     private Timer _timer;
+    public InleverCount _inleverCount;
     private PopupTimer _popupTimer;
     private Score _score;
     private AIDresser _aiDresser;
@@ -54,6 +55,8 @@ public class Menu : MonoBehaviour
             modelPanel.SetActive(true);
 
             _popupTimer.ResetTimer();
+            
+            _inleverCount.count++;
 
             for(int i = 0; i < _clothref.Count; i++){
                 _clothref[i].placeholderr();
