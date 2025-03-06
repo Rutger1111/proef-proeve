@@ -5,12 +5,17 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-
+    [SerializeField] private List<GameObject> tutorialPanel = new List<GameObject>();
+    [SerializeField] private GameObject tutorialPanel1;
+    [SerializeField] private GameObject tutorialPanel2;
+    [SerializeField] private GameObject tutorialPanel3;
+    [SerializeField] private GameObject tutorialPanel4;
 
     [SerializeField] private GameObject modelPanel;
     [SerializeField] private GameObject escapePanel;
     [SerializeField] private List<GameObject> ClothingSlothes = new List<GameObject>();
     public List<ClotheReference> _clothref;
+    private int index = 0;
 
 
     private Timer _timer;
@@ -28,6 +33,40 @@ public class Menu : MonoBehaviour
         _popupTimer = GetComponent<PopupTimer>();
         _score = GetComponent<Score>();
         _aiDresser = GetComponent<AIDresser>();
+    }
+
+    public void NextPanel(int direction)
+    {
+        tutorialPanel[index].SetActive(false);
+        index += direction;
+        tutorialPanel[index].SetActive(true);
+    }
+
+    public void OpenTutorial()
+    {
+        tutorialPanel1.SetActive(true);
+    }
+    
+    public void Tutorial1()
+    {
+        tutorialPanel1.SetActive(false);
+        tutorialPanel2.SetActive(true);
+        tutorialPanel3.SetActive(false);
+    }
+    public void Tutorial2()
+    {
+        tutorialPanel2.SetActive(false);
+        tutorialPanel3.SetActive(true);
+        tutorialPanel4.SetActive(false);
+    }
+    public void Tutorial3()
+    {
+        tutorialPanel3.SetActive(false);
+        tutorialPanel4.SetActive(true);
+    }
+    public void Tutorial4()
+    {
+        tutorialPanel4.SetActive(false);
     }
     public void ExitGame()
     {
