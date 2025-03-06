@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,8 @@ public class Menu : MonoBehaviour
 
     [SerializeField] private GameObject modelPanel;
     [SerializeField] private GameObject escapePanel;
+    [SerializeField] private VisualFeedBack _visualFeedBack;
+
     [SerializeField] private List<GameObject> ClothingSlothes = new List<GameObject>();
     public List<ClotheReference> _clothref;
 
@@ -22,6 +25,10 @@ public class Menu : MonoBehaviour
     
     private bool isEscapeMenuOpen;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(escapePanel);
+    }
 
     private void Start()
     {
@@ -44,7 +51,7 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("AIMode");
     }
-
+    
     public void SubmitClothes()
     {
         try{
@@ -70,6 +77,7 @@ public class Menu : MonoBehaviour
             
         }
         catch{
+            _visualFeedBack.Invoke();
             return;
         }
     }
