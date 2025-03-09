@@ -9,8 +9,8 @@ public class Score : MonoBehaviour
     [SerializeField] private TMPro.TMP_Text scoreText;
     [SerializeField] private TMPro.TMP_Text HighScoreText;
     
-    [HideInInspector] public List<GameObject> shownClothes;
-    [HideInInspector] public List<GameObject> selectedclothes;
+    public List<GameObject> shownClothes;
+    public List<GameObject> selectedclothes;
 
     private float _finalScore;
     private float stylePoints;
@@ -19,6 +19,8 @@ public class Score : MonoBehaviour
     private AIDresser _aiDresser;
     private Timer timeReference;
     private SaveClothes _saveClothes;
+    
+    public List<GameObject> matchingClothes = new List<GameObject>();
 
     void Start()
     {
@@ -28,13 +30,14 @@ public class Score : MonoBehaviour
     }
     private void LookForObject()
     {
-        try
-        {
+        
             _aiDresser = GetComponent<AIDresser>();
             timeReference = GetComponent<Timer>();
             _saveClothes = GetComponent<SaveClothes>();
+
+           
             
-            GameObject parentShownClothes = GameObject.Find("VoorbeeldPanel");
+            
 
             shownClothes.Clear();
 
@@ -55,8 +58,8 @@ public class Score : MonoBehaviour
             {
                 selectedclothes.Add(clothesSelected.gameObject);
             }
-        }
-        catch { }
+        
+        
     }
     private void UpdateHighScore()
     {
@@ -82,17 +85,26 @@ public class Score : MonoBehaviour
         for (int i = 0; i < shownClothes.Count; i++)
         {
             for(int j = 0; j < selectedclothes.Count; j++)
-            { 
-                if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
+            {
+                for (int k = 0; k < _saveClothes.complatedClothes.Count; k++)
                 {
-                    stylePoints += 1;
-                    _saveClothes.complatedClothes.Add();
-                }
+                    if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
+                        {
+                            stylePoints += 1;
+                            
+                            _saveClothes.complatedClothes[k].savedClothes.Add(selectedclothes[j]);
+                            
+                            matchingClothes.Add(selectedclothes[j]);
+                        }
 
-                if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == selectedclothes[j].GetComponent<ClotheReference>().CL.Id)
-                {
-                    stylePoints += 3f;
-                }
+                        if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == selectedclothes[j].GetComponent<ClotheReference>().CL.Id)
+                        {
+                            stylePoints += 3f;
+                        }
+                    }
+                
+
+                
                 /*
                 else
                 {
@@ -104,8 +116,14 @@ public class Score : MonoBehaviour
                 */
             }
         }
-        
         CalculateScore();
+        
+        if (matchingClothes.Count > 0)
+        {
+            //_saveClothes.savedClothes(matchingClothes);
+        }
+        
+        
     }
 
     public void CalculateScore()
@@ -131,3 +149,4 @@ public class Score : MonoBehaviour
         }
     }
 }
+
