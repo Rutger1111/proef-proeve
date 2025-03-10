@@ -88,9 +88,6 @@ public class Score : MonoBehaviour
             {
                 for (int k = 0; k < _saveClothes.complatedClothes.Count; k++)
                 {
-                    stylePoints += 1;
-                    //_saveClothes.complatedClothes.Add();
-                }
                     if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
                         {
                             stylePoints += 1;
