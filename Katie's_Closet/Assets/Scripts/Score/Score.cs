@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using Random = Unity.Mathematics.Random;
+
 
 public class Score : MonoBehaviour
 {
