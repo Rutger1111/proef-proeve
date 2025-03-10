@@ -46,7 +46,7 @@ public class Menu : MonoBehaviour
 
     public void SubmitClothes()
     {
-        try{
+       
             _aiDresser.ChooseDress();
 
             _score.SubmitClothes();
@@ -65,10 +65,7 @@ public class Menu : MonoBehaviour
                     
             }
             
-        }
-        catch{
-            return;
-        }
+        
     }
 
     public void RestartLevel()
