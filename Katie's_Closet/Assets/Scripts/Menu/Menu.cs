@@ -81,7 +81,6 @@ public class Menu : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Tab))
         {
-            Debug.Log("Ruben sucks");
             modelPanel.SetActive(true);
         }
         
