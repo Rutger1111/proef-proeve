@@ -37,17 +37,29 @@ public class Menu : MonoBehaviour
 
     public void NextPanel(int direction)
     {
-        tutorialPanel[index].SetActive(false);
-        index += direction;
-        tutorialPanel[index].SetActive(true);
+        if (index >= tutorialPanel.Count || index < 0)
+        {
+            index = 0;
+            CloseTutorial();
+        }
+        else
+        {
+            tutorialPanel[index].SetActive(false);
+            index += direction;
+            tutorialPanel[index].SetActive(true);
+        }
+
     }
 
     public void OpenTutorial()
     {
         tutorialPanel1.SetActive(true);
     }
-    
-    public void Tutorial1()
+    public void CloseTutorial()
+    {
+        tutorialPanel1.SetActive(false);
+    }
+    /*public void Tutorial1()
     {
         tutorialPanel1.SetActive(false);
         tutorialPanel2.SetActive(true);
@@ -67,7 +79,7 @@ public class Menu : MonoBehaviour
     public void Tutorial4()
     {
         tutorialPanel4.SetActive(false);
-    }
+    }*/
     public void ExitGame()
     {
         Application.Quit();
