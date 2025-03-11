@@ -13,8 +13,17 @@ MonoBehaviour:
   m_Name: Pants
   m_EditorClassIdentifier: 
   clothesTextures:
-  - {fileID: 11400000, guid: 7a1cc10cfed2e4042972d1301e8ed224, type: 2}
-  - {fileID: 11400000, guid: 4a164fa1cb32ee04d91d9650d2aecc79, type: 2}
-  - {fileID: 11400000, guid: c7e844c7b4306a24ea01bb7b1744b15c, type: 2}
-  - {fileID: 11400000, guid: 3064c0d104bf74f4d97b8aa97b4fcc11, type: 2}
-  - {fileID: 11400000, guid: 7cbc702656048fb4782a27bc5a58e84b, type: 2}
+  - {fileID: 11400000, guid: 2e00a992ea7d65b42ae7b8312761068b, type: 2}
+  - {fileID: 11400000, guid: 2355d11a4a31a2c4eabcc83498d88d6a, type: 2}
+  - {fileID: 11400000, guid: 0c813fbdacc333d49a2ed0d9a0f5c51a, type: 2}
+  - {fileID: 11400000, guid: c3f416e3b888a4f45a85c410b85ad23c, type: 2}
+  - {fileID: 11400000, guid: 7a1a6b8c81aac654aa32805ee84f2df0, type: 2}
+  - {fileID: 11400000, guid: 1c9fedacc08551a4cba91d466301a795, type: 2}
+  - {fileID: 11400000, guid: 0b64b4f5df3e6ce4b9d2a19843be1571, type: 2}
+  - {fileID: 11400000, guid: bb303048dedb96f4781d9f3e19b003f4, type: 2}
+  - {fileID: 11400000, guid: 451908e9f0e82774d9446913324ec8b7, type: 2}
+  - {fileID: 11400000, guid: 148fd7dde67916641a42f57441175ab6, type: 2}
+  - {fileID: 11400000, guid: c5b4d9ef73caa2c4bbd8a5b907ca3344, type: 2}
+  - {fileID: 11400000, guid: 2f5821b76fc276344b837427eff75dcd, type: 2}
+  - {fileID: 11400000, guid: 535f1c16a5408a046a4d9e419531238a, type: 2}
+  - {fileID: 11400000, guid: 8419459c1ae9f15458756c7583eef036, type: 2}

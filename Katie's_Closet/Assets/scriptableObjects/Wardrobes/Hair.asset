@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Hair
   m_EditorClassIdentifier: 
   clothesTextures:
-  - {fileID: 11400000, guid: 3f03ac9fdf27af342853065a86bd4a4a, type: 2}
-  - {fileID: 11400000, guid: 5fbea650485ec7848b8a3cc34808eda3, type: 2}
-  - {fileID: 11400000, guid: c2b4881c8ec269b45a75ba87357b330d, type: 2}
-  - {fileID: 11400000, guid: aa88f376a18d7b34e92ceed44c808ebe, type: 2}
-  - {fileID: 11400000, guid: 653881aa76d142744ae325e66fd961af, type: 2}
-  - {fileID: 11400000, guid: 333b9abd4641e634e9f07297a4745510, type: 2}
-  - {fileID: 11400000, guid: e5067cd7da2d2414f8efcb873f6060be, type: 2}
+  - {fileID: 11400000, guid: c40a9567eb5fe0a4c8adb04e6dbe28b8, type: 2}
+  - {fileID: 11400000, guid: f660143aa9a8afd42b41d2c5f0e3722a, type: 2}
+  - {fileID: 11400000, guid: d0f6dcdf020b7fc41bbfaf5a90d8bb2b, type: 2}
+  - {fileID: 11400000, guid: d030a842a185d894a8ef9bd93074aa2f, type: 2}
+  - {fileID: 11400000, guid: ede78cb7423851e4f84653b585aa7a32, type: 2}
+  - {fileID: 11400000, guid: 997b71648d6a31749858e4164c61d096, type: 2}
+  - {fileID: 11400000, guid: b9a18d7301a443644bf956b44f1bfda3, type: 2}
+  - {fileID: 11400000, guid: 0343c467c9d2d1447819698c6077714f, type: 2}
