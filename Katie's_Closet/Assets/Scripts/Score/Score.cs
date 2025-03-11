@@ -4,6 +4,9 @@ using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using Random = Unity.Mathematics.Random;
 
+
+
+
 public class Score : MonoBehaviour
 {
     [SerializeField] private TMPro.TMP_Text finalScoreText;
