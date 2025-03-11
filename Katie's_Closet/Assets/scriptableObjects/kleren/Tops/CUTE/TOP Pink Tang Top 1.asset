@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TOP Pink Tang Top 1
   m_EditorClassIdentifier: 
   textures:
-  - {fileID: 2800000, guid: 32eb0dfedc3176242a2be362d9297c85, type: 3}
+  - {fileID: 2800000, guid: 83c02c2c88d7a794896ccafbaadfecad, type: 3}
   iconTexture: {fileID: 2800000, guid: 53940fa702158f54c9d9885856dcff04, type: 3}
   Id: 0
   style: 2
