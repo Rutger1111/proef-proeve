@@ -6,7 +6,7 @@ public class AssignSettings : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GameObject.Find("EventSystem").GetComponent<Settings>().nodes[soundIndex].source = GetComponent<AudioSource>();
+        //GameObject.Find("EventSystem").GetComponent<Settings>().nodes[soundIndex].source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -15,7 +15,7 @@ public class AssignSettings : MonoBehaviour
         
     }
     public void UseSound(){
-        GameObject.Find("EventSystem").GetComponent<Settings>().nodes[soundIndex].source = GetComponent<AudioSource>();
-        GameObject.Find("EventSystem").GetComponent<Settings>().PlaySoundTrack(soundIndex);
+        //GameObject.Find("EventSystem").GetComponent<Settings>().nodes[soundIndex].source = GetComponent<AudioSource>();
+        //GameObject.Find("EventSystem").GetComponent<Settings>().PlaySoundTrack(soundIndex, );
     }
 }

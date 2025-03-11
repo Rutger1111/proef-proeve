@@ -95,7 +95,6 @@ public class Score : MonoBehaviour
                 if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
                 { 
                     stylePoints += 1;
-
                     
                         RawImage imageComponent = selectedclothes[j].GetComponent<RawImage>();
                         

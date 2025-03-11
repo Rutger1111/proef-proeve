@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 155291736676615807}
   - component: {fileID: 1550329736546298987}
   - component: {fileID: -7447031036296224452}
-  - component: {fileID: 6175365858326007160}
   - component: {fileID: -9118900173207313773}
   m_Layer: 5
   m_Name: Image
@@ -89,26 +88,14 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: -7447031036296224452}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1550329736546298987}
         m_TargetAssemblyTypeName: ClotheSettings, Assembly-CSharp
         m_MethodName: ChangeSprite
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6175365858326007160}
-        m_TargetAssemblyTypeName: AssignSettings, Assembly-CSharp
-        m_MethodName: UseSound
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -157,19 +144,6 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
---- !u!114 &6175365858326007160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4289729182337218736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5775104a00b2e04428afd14daaea6522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundIndex: 0
 --- !u!82 &-9118900173207313773
 AudioSource:
   m_ObjectHideFlags: 0
@@ -192,7 +166,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 3000
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

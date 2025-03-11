@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,12 +16,14 @@ public class WardrobeInstantiator : MonoBehaviour
 
     private UIScale _uiscale;
     private SpriteHandler spriteHandler;
+    private SoundManager _soundManager;
   
 
     void Start()
     { 
         spriteHandler = GetComponent<SpriteHandler>();
         _uiscale = GetComponent<UIScale>();
+        _soundManager = GetComponent<SoundManager>();
     }
     private void Update()
     {
@@ -37,9 +40,12 @@ public class WardrobeInstantiator : MonoBehaviour
     {
         _uiscale.ButttonSizeChanger(buttonIndex);
 
+        _soundManager.PlaySoundTrack(0, buttonIndex);
+        
         foreach (var button in buttonsList) 
         { 
             Destroy(button);
+            _soundManager.nodes[1].source.Clear();
         }
         
         GameObject gameObject = Instantiate(gridPrefab, canvasTransform);
@@ -52,8 +58,7 @@ public class WardrobeInstantiator : MonoBehaviour
             GameObject gameObject1 = Instantiate(boxiePrefab, gameObject.transform);
             gameObject1.GetComponent<ClotheSettings>().cloth = wardrobes[buttonIndex].clothesTextures[I];
             gameObject1.GetComponent<RawImage>().texture = wardrobes[buttonIndex].clothesTextures[I].iconTexture;
+            _soundManager.nodes[1].source.Add(gameObject1.GetComponent<AudioSource>());
         }
-        
-
     }
 }
