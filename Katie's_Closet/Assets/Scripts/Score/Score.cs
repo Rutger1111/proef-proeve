@@ -99,6 +99,7 @@ public class Score : MonoBehaviour
                         
                         if (imageComponent != null)
                         {
+                            print("fuck");
                             newList.savedImage.Add(imageComponent.mainTexture);
                         }
                     

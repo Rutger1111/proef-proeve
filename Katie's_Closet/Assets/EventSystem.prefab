@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 2938881011498280997}
   - component: {fileID: 1011573203508330820}
   - component: {fileID: 8342750307822376617}
-  - component: {fileID: 4855488101957001405}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -128,7 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74750b9c260a8c0488d8c4ac795a47ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plane: {fileID: 0}
+  modelPanel: {fileID: 0}
+  escapePanel: {fileID: 0}
+  ClothingSlothes: []
+  _clothref: []
 --- !u!114 &7452844269026745174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,12 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerDuration: 120
-  bestTime: 0
   timerText: {fileID: 0}
-  bestTimeText: {fileID: 0}
-  currentTime: {fileID: 0}
   isTimerOn: 1
-  _popupTimer: {fileID: 0}
 --- !u!114 &1011573203508330820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,15 +181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d2a40194903264694c17209223d0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeReference: {fileID: 2938881011498280997}
+  finalScoreText: {fileID: 0}
   scoreText: {fileID: 0}
-  stylePoints: 0
-  pointsForRightClothes: 2
+  HighScoreText: {fileID: 0}
   shownClothes: []
   selectedclothes: []
-  _aiDresser: {fileID: 7452844269026745174}
-  points: 0
-  idDifference: 0
 --- !u!114 &8342750307822376617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,24 +198,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172767a56a9d4eb45b059722987fd3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: {fileID: 2938881011498280997}
   scoreboard: {fileID: 0}
-  _score: {fileID: 1011573203508330820}
---- !u!114 &4855488101957001405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5135735672547687960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa63bc9afce2085469447d8b5308964c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  list:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  index: 0
