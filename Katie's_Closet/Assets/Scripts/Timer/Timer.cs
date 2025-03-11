@@ -38,8 +38,9 @@ public class Timer : MonoBehaviour
         }
         
         // if its lower then 0 than it stops timer
-        else
+        else if (timerDuration <= 0)
         {
+            
             GetComponent<Score>().gameOver();
             //currentTime.text = "tijd: " + timerDuration.ToString("F2") + " sec";
         }

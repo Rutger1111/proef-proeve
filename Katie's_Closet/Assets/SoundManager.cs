@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Settings : MonoBehaviour
+public class SoundManager : MonoBehaviour
 {
     public List<Node> nodes;
 
@@ -10,15 +10,23 @@ public class Settings : MonoBehaviour
     public GameObject WindowedButton;
     void Start()
     {
+        updateSourceClip();
+    }
+
+    public void updateSourceClip()
+    {
         for (int i = 0; i < nodes.Count; i++)
         {
-
-            if (nodes[i].backgroundMusic == true)
+            foreach (var sources in nodes[i].source)
             {
-                nodes[i].source.clip = nodes[i].clip;
-
-                nodes[i].source.Play();
+                sources.clip = nodes[i].clip;
+                
+                if (nodes[i].backgroundMusic == true)
+                {
+                    sources.Play();
+                }
             }
+            
         }
     }
 
@@ -27,9 +35,12 @@ public class Settings : MonoBehaviour
     {
         for (int i = 0; i < nodes.Count; i++)
         {
-            if(nodes[i].source){
-                nodes[i].source.volume = nodes[i].volume;
-
+            foreach (var sources in nodes[i].source)
+            {
+                sources.volume = nodes[i].volume;
+                if(sources){
+                    sources.volume = nodes[i].volume;
+                }
             }
         }
     }
@@ -46,26 +57,14 @@ public class Settings : MonoBehaviour
         WindowedButton.SetActive(false);
     }
 
-    public void PlaySoundTrack(int soundIndex)
+    public void PlaySoundTrack(int soundIndex, int buttonIndex)
     {
-        if (soundIndex < 0 || soundIndex >= nodes.Count)
-        {
-            Debug.LogWarning("Invalid sound index!");
-            return;
-        }
-
-        nodes[soundIndex].source.Play();
+        nodes[soundIndex].source[buttonIndex].Play();
     }
 
-    public void StopSoundTrack(int soundIndex)
+    public void StopSoundTrack(int soundIndex, int buttonIndex)
     {
-        if (soundIndex < 0 || soundIndex >= nodes.Count)
-        {
-            Debug.LogWarning("Invalid sound index!");
-            return;
-        }
-
-        nodes[soundIndex].source.Stop();
+        nodes[soundIndex].source[buttonIndex].Stop();
     }
 }
 
@@ -76,5 +75,5 @@ public class Settings : MonoBehaviour
 
     public bool backgroundMusic;
 
-    public AudioSource source;
+    public List<AudioSource> source;
 }

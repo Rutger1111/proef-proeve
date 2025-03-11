@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class test : MonoBehaviour
 {
-    public Settings settings;
+    [FormerlySerializedAs("settings")] public SoundManager soundManager;
     void Start()
     {
         
@@ -13,7 +14,7 @@ public class test : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.N)) 
         {
-            settings.PlaySoundTrack(1);
+            soundManager.PlaySoundTrack(1, 0);
         }
     }
 }

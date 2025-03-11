@@ -1,5 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
+using Random = Unity.Mathematics.Random;
+
+
 
 
 public class Score : MonoBehaviour
@@ -39,7 +44,7 @@ public class Score : MonoBehaviour
             
 
             shownClothes.Clear();
-
+            selectedclothes.Clear();   
 
             GameObject parentModelClothes = GameObject.Find("modelOutline");
 
@@ -79,28 +84,32 @@ public class Score : MonoBehaviour
 
     public void SubmitClothes()
     {
+        complatedClothesList newList = new complatedClothesList();
+        newList.savedImage = new List<Texture>();
         
-
         for (int i = 0; i < shownClothes.Count; i++)
         {
             for(int j = 0; j < selectedclothes.Count; j++)
             {
-                for (int k = 0; k < _saveClothes.complatedClothes.Count; k++)
-                {
-                    if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
+                
+                if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
+                { 
+                    stylePoints += 1;
+                    
+                        RawImage imageComponent = selectedclothes[j].GetComponent<RawImage>();
+                        
+                        if (imageComponent != null)
                         {
-                            stylePoints += 1;
-                            
-                            _saveClothes.complatedClothes[k].savedClothes.Add(selectedclothes[j]);
-                            
-                            matchingClothes.Add(selectedclothes[j]);
+                            newList.savedImage.Add(imageComponent.mainTexture);
                         }
+                    
+                }
 
-                        if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == selectedclothes[j].GetComponent<ClotheReference>().CL.Id)
-                        {
-                            stylePoints += 3f;
-                        }
-                    }
+                if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == selectedclothes[j].GetComponent<ClotheReference>().CL.Id)
+                {
+                    stylePoints += 3f;
+                }
+                    
                 
 
                 
@@ -117,9 +126,9 @@ public class Score : MonoBehaviour
         }
         CalculateScore();
         
-        if (matchingClothes.Count > 0)
+        if (newList.savedImage.Count > 0)
         {
-            //_saveClothes.savedClothes(matchingClothes);
+            _saveClothes.complatedClothes.Add(newList);
         }
         
         
@@ -133,6 +142,8 @@ public class Score : MonoBehaviour
 
     public void gameOver()
     {
+        _saveClothes.complated();       
+        
         HighScoreText.text = HighScore.ToString("F0");
         scoreText.text = _finalScore.ToString("F0");
         finalScoreText.text = _finalScore.ToString("F0");

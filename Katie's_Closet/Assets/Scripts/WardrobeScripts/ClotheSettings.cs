@@ -13,8 +13,10 @@ public class ClotheSettings : MonoBehaviour
     public EStyles GetStyle(){
         return cloth.style;
     }
-    public void ChangeSprite(){
+    public void ChangeSprite(int buttonindex){
         GameObject.Find("EventSystem").GetComponent<SpriteHandler>().Invoke(this);
+        GameObject.Find("EventSystem").GetComponent<SoundManager>().PlaySoundTrack(1,buttonindex);
+        GameObject.Find("EventSystem").GetComponent<SoundManager>().updateSourceClip();
     }
     public Cloth GetCloth()
     {
