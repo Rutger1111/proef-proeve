@@ -59,17 +59,19 @@ public class Score : MonoBehaviour
                 }
             }
             GameObject parentSelectedClothes = GameObject.Find("ParentClothParts");
-            //
-            GameObject aiparentSelectedClothes = GameObject.Find("AIenemy");
+            
+            
 
             foreach (Transform clothesSelected in parentSelectedClothes.transform)
             {
                 selectedclothes.Add(clothesSelected.gameObject);
             }
-            //
+            
+            
+            GameObject aiparentSelectedClothes = GameObject.Find("AIenemy");
             foreach (Transform AIclothesSelected in aiparentSelectedClothes.transform)
             {
-                selectedclothes.Add(AIclothesSelected.gameObject);
+                AIselectedclothes.Add(AIclothesSelected.gameObject);
             }
         
         
@@ -118,36 +120,14 @@ public class Score : MonoBehaviour
                     {
                         stylePoints += 3f;
                     }
-            
-                    
-                
-
-                
-                /*
-                else
-                {
-                    float idDifference = Mathf.Abs(selectedclothes[j].GetComponent<ClotheReference>().CL.Id - shownClothes[i].GetComponent<ClotheReference>().CL.Id);
-                    float points = Mathf.Max(0, 10f - idDifference * 2f);
-
-                    stylePoints += points;
                 }
-                */
-            }
 
                 for (int j = 0; j < AIselectedclothes.Count; j++)
                 {
 
                     if (shownClothes[i].GetComponent<ClotheReference>().CL.style == AIselectedclothes[j].GetComponent<ClotheReference>().CL.style)
                     {
-                        AIStylePoints += 1;
-
-                        /*RawImage imageComponent = AIselectedclothes[j].GetComponent<RawImage>();
-
-                        if (imageComponent != null)
-                        {
-                            newList.savedImage.Add(imageComponent.mainTexture);
-                        }*/
-
+                        AIStylePoints += 1f;
                     }
 
                     if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == AIselectedclothes[j].GetComponent<ClotheReference>().CL.Id)
@@ -160,7 +140,6 @@ public class Score : MonoBehaviour
         
         if (newList.savedImage.Count > 0)
         {
-            print("check");
             _saveClothes.complatedClothes.Add(newList);
         }
         
