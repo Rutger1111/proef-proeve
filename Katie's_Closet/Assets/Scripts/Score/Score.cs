@@ -137,22 +137,20 @@ public class Score : MonoBehaviour
                 for (int j = 0; j < AIselectedclothes.Count; j++)
                 {
 
-                    if (shownClothes[i].GetComponent<ClotheReference>().CL.style ==
-                        selectedclothes[j].GetComponent<ClotheReference>().CL.style)
+                    if (shownClothes[i].GetComponent<ClotheReference>().CL.style == AIselectedclothes[j].GetComponent<ClotheReference>().CL.style)
                     {
                         AIStylePoints += 1;
 
-                        RawImage imageComponent = selectedclothes[j].GetComponent<RawImage>();
+                        /*RawImage imageComponent = AIselectedclothes[j].GetComponent<RawImage>();
 
                         if (imageComponent != null)
                         {
                             newList.savedImage.Add(imageComponent.mainTexture);
-                        }
+                        }*/
 
                     }
 
-                    if (shownClothes[i].GetComponent<ClotheReference>().CL.Id ==
-                        selectedclothes[j].GetComponent<ClotheReference>().CL.Id)
+                    if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == AIselectedclothes[j].GetComponent<ClotheReference>().CL.Id)
                     {
                         AIStylePoints += 3f;
                     }
