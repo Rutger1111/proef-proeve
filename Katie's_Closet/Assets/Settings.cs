@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Rendering;
 
 public class Settings : MonoBehaviour
 {
@@ -14,10 +12,11 @@ public class Settings : MonoBehaviour
     {
         for (int i = 0; i < nodes.Count; i++)
         {
-            nodes[i].source.clip = nodes[i].clip;
 
             if (nodes[i].backgroundMusic == true)
             {
+                nodes[i].source.clip = nodes[i].clip;
+
                 nodes[i].source.Play();
             }
         }
@@ -28,7 +27,10 @@ public class Settings : MonoBehaviour
     {
         for (int i = 0; i < nodes.Count; i++)
         {
-            nodes[i].source.volume = nodes[i].volume;
+            if(nodes[i].source){
+                nodes[i].source.volume = nodes[i].volume;
+
+            }
         }
     }
     public void toggleFullScreen()
