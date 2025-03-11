@@ -17,13 +17,14 @@ public class Menu : MonoBehaviour
     private PopupTimer _popupTimer;
     private Score _score;
     private AIDresser _aiDresser;
-
+    private SoundManager _soundManager;
     
     private bool isEscapeMenuOpen;
 
 
     private void Start()
     {
+        _soundManager = GetComponent<SoundManager>();
         _timer = GetComponent<Timer>();
         _popupTimer = GetComponent<PopupTimer>();
         _score = GetComponent<Score>();
@@ -37,13 +38,19 @@ public class Menu : MonoBehaviour
     public void SinglePlayerGame()
     {
         SceneManager.LoadScene("SinglePlayer");
+        music(1);
     }
     
     public void MultiPlayerGame()
     {
         SceneManager.LoadScene("AIMode");
+        music(1);
     }
 
+    public void music(int soundtrack)
+    {
+        _soundManager.PlaySoundTrack(soundtrack);
+    }
     public void SubmitClothes()
     {
        
@@ -77,6 +84,7 @@ public class Menu : MonoBehaviour
     public void Return()
     {
         SceneManager.LoadScene("Menu");
+        
     }
     public void Update()
     {

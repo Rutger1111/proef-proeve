@@ -3,10 +3,9 @@ using UnityEngine.InputSystem;
 
 public class FollowMouse : MonoBehaviour
 {
-
-    public ParticleSystem particleSystem;
     private Vector3 mousePosition;
-    
+
+    public Vector3 positon;
     void Start()
     {
         
@@ -19,7 +18,7 @@ public class FollowMouse : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, 10f));
 
 
-        transform.position = new Vector3(mousePosition.x - 0.2f, mousePosition.y - 0.2f, -1f);
+        transform.position = new Vector3(mousePosition.x - positon.x, mousePosition.y - positon.y, -1f);
 
         
         
