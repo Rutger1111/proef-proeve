@@ -938,6 +938,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188797424}
   m_CullTransparentMesh: 1
+--- !u!1 &202570536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2350151015993220767, guid: 091c1a635a968f64188a023fd720a2d8, type: 3}
+  m_PrefabInstance: {fileID: 921362518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &300196333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,7 +1368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodes:
-  - volume: 0.591
+  - volume: 0.5
     clip: {fileID: 8300000, guid: 1540f44a6d5d63c4793103dae55b96c9, type: 3}
     backgroundMusic: 0
     source:
@@ -1371,11 +1376,11 @@ MonoBehaviour:
     - {fileID: 582758925}
     - {fileID: 847639260}
     - {fileID: 330844}
-  - volume: 0.703
+  - volume: 0.5
     clip: {fileID: 8300000, guid: 4005fd3b5c7f78143b5d805bec17e0aa, type: 3}
     backgroundMusic: 0
     source: []
-  - volume: 0.078
+  - volume: 0.15
     clip: {fileID: 8300000, guid: 3d1d1d8121e88404b91b11a719eacaba, type: 3}
     backgroundMusic: 1
     source:
@@ -1395,8 +1400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   complatedClothes: []
-  canvas: {fileID: 4157085034099605430, guid: 4477545b34330364297835b5008b6e7d, type: 3}
-  model: {fileID: 307136752250571649, guid: 7e67e4486c239b04caae3882de885d77, type: 3}
+  canvas: {fileID: 202570536}
+  model: {fileID: 4157085034099605430, guid: 4477545b34330364297835b5008b6e7d, type: 3}
 --- !u!1 &564337096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,7 +1514,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3793,8 +3798,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
