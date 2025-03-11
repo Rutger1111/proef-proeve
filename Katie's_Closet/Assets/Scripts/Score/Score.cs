@@ -26,6 +26,7 @@ public class Score : MonoBehaviour
     private Timer timeReference;
     private SaveClothes _saveClothes;
     
+
     void Start()
     {
         
