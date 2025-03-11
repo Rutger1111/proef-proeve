@@ -1269,6 +1269,8 @@ MonoBehaviour:
   modelPanel: {fileID: 564337096}
   escapePanel: {fileID: 0}
   ClothingSlothes:
+  plane: {fileID: 564337096}
+  plcs:
   - {fileID: 1566137640}
   - {fileID: 51252460}
   - {fileID: 39322529}
@@ -1330,6 +1332,10 @@ MonoBehaviour:
   finalScoreText: {fileID: 359032045}
   scoreText: {fileID: 886990006}
   HighScoreText: {fileID: 2096872855}
+  finalScoreText: {fileID: 0}
+  scoreText: {fileID: 886990006}
+  HighScoreText: {fileID: 0}
+  pointsForRightClothes: 20
   shownClothes: []
   selectedclothes: []
 --- !u!114 &548861591
@@ -4733,7 +4739,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6dcd787035af54440b734400b426e0d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c1bdc927e83f6b24d83779ca28964874, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
