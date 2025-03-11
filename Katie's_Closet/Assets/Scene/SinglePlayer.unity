@@ -4902,6 +4902,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 23abecdb402b54e4a883750687a59c11, type: 3}
+    - target: {fileID: 2402263765489625819, guid: 091c1a635a968f64188a023fd720a2d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 548861587}
+    - target: {fileID: 2402263765489625819, guid: 091c1a635a968f64188a023fd720a2d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Return
+      objectReference: {fileID: 0}
     - target: {fileID: 2885384252410653222, guid: 091c1a635a968f64188a023fd720a2d8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5131,6 +5139,14 @@ PrefabInstance:
     - target: {fileID: 7158680126761987976, guid: 091c1a635a968f64188a023fd720a2d8, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7470907596507329926, guid: 091c1a635a968f64188a023fd720a2d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 548861587}
+    - target: {fileID: 7470907596507329926, guid: 091c1a635a968f64188a023fd720a2d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SinglePlayerGame
       objectReference: {fileID: 0}
     - target: {fileID: 8852369882406566463, guid: 091c1a635a968f64188a023fd720a2d8, type: 3}
       propertyPath: m_LocalScale.x
@@ -6878,8 +6894,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 132.3
-  m_fontSizeBase: 132.3
+  m_fontSize: 115.22
+  m_fontSizeBase: 115.22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
