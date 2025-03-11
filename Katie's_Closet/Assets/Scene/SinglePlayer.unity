@@ -436,6 +436,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CL: {fileID: 0}
+--- !u!1 &40557841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7024222176441718787, guid: 091c1a635a968f64188a023fd720a2d8, type: 3}
+  m_PrefabInstance: {fileID: 921362518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &51252460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,7 +1239,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modelPanel: {fileID: 564337096}
   escapePanel: {fileID: 0}
-  ClothingSlothes: []
+  ClothingSlothes:
+  - {fileID: 1566137640}
+  - {fileID: 51252460}
+  - {fileID: 39322529}
+  - {fileID: 1711795033}
   _clothref:
   - {fileID: 1566137644}
   - {fileID: 51252464}
@@ -1294,7 +1303,6 @@ MonoBehaviour:
   HighScoreText: {fileID: 2096872855}
   shownClothes: []
   selectedclothes: []
-  matchingClothes: []
 --- !u!114 &548861591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1307,7 +1315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172767a56a9d4eb45b059722987fd3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreboard: {fileID: 0}
+  scoreboard: {fileID: 40557841}
 --- !u!114 &548861592
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,7 +24,6 @@ public class Score : MonoBehaviour
     private Timer timeReference;
     private SaveClothes _saveClothes;
     
-    public List<GameObject> matchingClothes = new List<GameObject>();
 
     void Start()
     {

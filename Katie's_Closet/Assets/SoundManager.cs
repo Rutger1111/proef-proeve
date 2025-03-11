@@ -57,14 +57,21 @@ public class SoundManager : MonoBehaviour
         WindowedButton.SetActive(false);
     }
 
-    public void PlaySoundTrack(int soundIndex, int buttonIndex)
+    public void PlaySoundTrack(int soundIndex)
     {
-        nodes[soundIndex].source[buttonIndex].Play();
+        foreach (var sources in nodes[soundIndex].source)
+        {
+            sources.Play();
+        }
+       
     }
 
-    public void StopSoundTrack(int soundIndex, int buttonIndex)
+    public void StopSoundTrack(int soundIndex)
     {
-        nodes[soundIndex].source[buttonIndex].Stop();
+        foreach (var sources in nodes[soundIndex].source)
+        {
+            sources.Stop();
+        }
     }
 }
 

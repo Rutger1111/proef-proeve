@@ -40,7 +40,7 @@ public class WardrobeInstantiator : MonoBehaviour
     {
         _uiscale.ButttonSizeChanger(buttonIndex);
 
-        _soundManager.PlaySoundTrack(0, buttonIndex);
+        _soundManager.PlaySoundTrack(0);
         
         foreach (var button in buttonsList) 
         { 

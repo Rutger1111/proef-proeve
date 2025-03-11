@@ -61,6 +61,7 @@ public class Menu : MonoBehaviour
             
 
             foreach(var i in ClothingSlothes){
+                Debug.Log("check");
                 i.GetComponent<RawImage>().color = new Color(255,255,255,0);
                     
             }

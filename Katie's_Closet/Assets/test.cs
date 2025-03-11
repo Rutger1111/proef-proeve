@@ -14,7 +14,7 @@ public class test : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.N)) 
         {
-            soundManager.PlaySoundTrack(1, 0);
+            soundManager.PlaySoundTrack(1);
         }
     }
 }
