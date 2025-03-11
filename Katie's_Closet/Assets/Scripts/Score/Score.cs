@@ -127,6 +127,7 @@ public class Score : MonoBehaviour
         
         if (newList.savedImage.Count > 0)
         {
+            print("check");
             _saveClothes.complatedClothes.Add(newList);
         }
         
