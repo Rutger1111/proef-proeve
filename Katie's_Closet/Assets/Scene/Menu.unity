@@ -5505,7 +5505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c8656ab3e9e0a34db2a0e17fa5dce43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positon: {x: -0.7, y: 1.5, z: 0}
+  positon: {x: -0.2, y: 0.5, z: 0}
 --- !u!1 &819567506
 GameObject:
   m_ObjectHideFlags: 0
@@ -5591,6 +5591,7 @@ GameObject:
   - component: {fileID: 912974315}
   - component: {fileID: 912974318}
   - component: {fileID: 912974320}
+  - component: {fileID: 912974321}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -5691,6 +5692,19 @@ MonoBehaviour:
     - {fileID: 1744994556}
   fullscreenButton: {fileID: 0}
   WindowedButton: {fileID: 0}
+--- !u!114 &912974321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912974314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ea54692a6e9754ca1c47dbad463f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorText: {fileID: 2800000, guid: b86f428774cf60b449e711e7ada7eb3b, type: 3}
 --- !u!1 &1014516052
 GameObject:
   m_ObjectHideFlags: 0
