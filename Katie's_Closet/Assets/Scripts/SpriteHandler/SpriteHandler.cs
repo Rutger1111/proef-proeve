@@ -16,10 +16,7 @@ public class SpriteHandler : MonoBehaviour
     [SerializeField] private List<GameObject> pants =new List<GameObject>();
     [SerializeField] private List<GameObject> shoes =new List<GameObject>();
 
-    public List<Texture> backHairs;
-
-    public int index;
-   
+    public Wardrobe _Wardrobe;
     public void Invoke(ClotheSettings clothingSettings)
     {
         print(clothingSettings);
@@ -33,20 +30,18 @@ public class SpriteHandler : MonoBehaviour
             case EClothes.Head:
                 for (int i = 0; i < clothingSettings.GetTexture().Count; i++)
                 {
-                    RawImage hairImage = hair[i].GetComponent<RawImage>();
-                    RawImage backHairImage = backHair[i].GetComponent<RawImage>();
-
-                    index = i;
-                    hairImage.texture = clothingSettings.GetTexture()[i];
-                    Color color = hairImage.color;
-                    hairImage.color = new Color(color.r, color.g, color.b, 225);
+                    Color color = hair[i].GetComponent<RawImage>().color;
+                    hair[i].GetComponent<RawImage>().color = new Color(color.r,color.g,color.b, 225);
+                    hair[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
                     hair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
-        
-                    if (i < backHair.Count) 
+                    
+                    if (i < backHair.Count)
                     {
-                        backHairImage.texture = backHairs[i]; 
-                        backHairImage.color = new Color(color.r, color.g, color.b, 255);
-                        //backHair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
+                        Cloth chosenCloth = _Wardrobe.Choose(); 
+                        Color hairColor = backHair[i].GetComponent<RawImage>().color;
+                        backHair[i].GetComponent<RawImage>().color = new Color(hairColor.r, hairColor.g, hairColor.b, 225);
+                        backHair[i].GetComponent<RawImage>().texture = chosenCloth.textures; 
+                        backHair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
                     }
                 }
                 break;

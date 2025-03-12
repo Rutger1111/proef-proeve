@@ -38,6 +38,7 @@ public class AIDresser : MonoBehaviour
             Dress[index].texture = cloth.textures[0];
             Dress[index].GetComponent<ClotheReference>().CL = cloth;
         }
+        
 
     }
 }
