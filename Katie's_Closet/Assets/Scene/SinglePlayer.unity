@@ -1441,6 +1441,7 @@ GameObject:
   - component: {fileID: 548861594}
   - component: {fileID: 548861595}
   - component: {fileID: 548861596}
+  - component: {fileID: 548861597}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1539,7 +1540,6 @@ MonoBehaviour:
   - {fileID: 39322529}
   shoes:
   - {fileID: 51252460}
-  backHairs: []
   index: 0
 --- !u!114 &548861587
 MonoBehaviour:
@@ -1569,6 +1569,8 @@ MonoBehaviour:
   - {fileID: 1711795037}
   turban: {fileID: 2800000, guid: 59be241ee87058541a2bc198a95a5022, type: 3}
   slippers: {fileID: 2800000, guid: e899532ddab819b4f84ec378f22c9e2c, type: 3}
+  tutorialPanel: []
+  tutorialPanel1: {fileID: 0}
 --- !u!114 &548861588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1623,9 +1625,18 @@ MonoBehaviour:
   finalScoreText: {fileID: 8970952780124487707}
   scoreText: {fileID: 886990006}
   aiScoreText: {fileID: 0}
+  aiFinalScoreText: {fileID: 0}
   HighScoreText: {fileID: 7158680126599794654}
-  shownClothes: []
-  selectedclothes: []
+  shownClothes:
+  - {fileID: 54819344}
+  - {fileID: 838949091}
+  - {fileID: 1928605938}
+  - {fileID: 2030459008}
+  selectedclothes:
+  - {fileID: 1566137640}
+  - {fileID: 51252460}
+  - {fileID: 39322529}
+  - {fileID: 1711795033}
   AIselectedclothes: []
   _finalScore: 0
   AIFinalScore: 0
@@ -1726,6 +1737,19 @@ MonoBehaviour:
   - {fileID: 330839}
   sprite: {fileID: 21300000, guid: f0a9a65a0c3f9ca4eabe3930e0eaf029, type: 3}
   index: 0
+--- !u!114 &548861597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548861581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ea54692a6e9754ca1c47dbad463f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorText: {fileID: 2800000, guid: 5c396c69d266aee4f9a31e8f61314e9f, type: 3}
 --- !u!1 &564337096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,7 +1767,7 @@ GameObject:
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &564337097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2201,16 +2225,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661119408}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.2051764, y: 9.741517, z: 9.840712}
+  m_LocalScale: {x: 0.98419166, y: 1.0609182, z: 1.0829906}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1992225939}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -89.27637, y: 2.5051455}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -89.2, y: 2.4991}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661119410
@@ -6266,16 +6290,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567498513}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.211977, y: 9.7403965, z: 9.943046}
+  m_LocalScale: {x: 0.98419166, y: 1.0609182, z: 1.0829906}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1992225939}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -89.20001, y: 2.4990954}
+  m_AnchoredPosition: {x: -89.2, y: 2.4991}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567498515
@@ -8583,8 +8607,8 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 120, y: 120}
+  m_CellSize: {x: 80, y: 80}
+  m_Spacing: {x: 180, y: 120}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &7158680126599794654
