@@ -8,14 +8,13 @@ using UnityEngine.UIElements;
 public class SpriteHandler : MonoBehaviour
 {
 
-    [SerializeField] private List<GameObject> hair =new List<GameObject>();
+    [SerializeField] private List<GameObject> hair, backhear =new List<GameObject>();
     [SerializeField] private List<GameObject> shirts =new List<GameObject>();
     [SerializeField] private List<GameObject> pants =new List<GameObject>();
     [SerializeField] private List<GameObject> shoes =new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Invoke(ClotheSettings clothingSettings)
     {
-        print(clothingSettings);
         ChangeSprite(clothingSettings);
     }
 
@@ -30,6 +29,14 @@ public class SpriteHandler : MonoBehaviour
                     Color color = hair[i].GetComponent<RawImage>().color;
                     hair[i].GetComponent<RawImage>().color = new Color(color.r,color.g,color.b, 225);
                     hair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
+
+                    for (int j = 0; j < clothingSettings.GetTexture().Count; j++)
+                    {
+                        backhear[j].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[j];
+                        
+                        backhear[j].GetComponent<RawImage>().color = new Color(color.r,color.g,color.b, 225);
+                    }
+                    
 
                 }
                 break;

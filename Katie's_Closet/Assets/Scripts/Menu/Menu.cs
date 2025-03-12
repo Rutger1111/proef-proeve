@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,7 +13,8 @@ public class Menu : MonoBehaviour
     [SerializeField] private List<GameObject> ClothingSlothes = new List<GameObject>();
     public List<ClotheReference> _clothref;
 
-
+    public RawImage turban, slippers;
+    
     private Timer _timer;
     private PopupTimer _popupTimer;
     private Score _score;
@@ -68,14 +70,18 @@ public class Menu : MonoBehaviour
             
 
             foreach(var i in ClothingSlothes){
-                Debug.Log("check");
                 i.GetComponent<RawImage>().color = new Color(255,255,255,0);
-                    
+                KeepClothes();
             }
             
         
     }
 
+    void KeepClothes()
+    {
+        //turban.texture = ClothingSlothes[0].GetComponent<RawImage>().texture;
+        //slippers.texture = ClothingSlothes[1].GetComponent<RawImage>().texture;
+    }
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
