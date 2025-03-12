@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject escapePanel;
     [SerializeField] private List<GameObject> ClothingSlothes = new List<GameObject>();
     public List<ClotheReference> _clothref;
-
+    public Texture turban, slippers;
 
     private Timer _timer;
     private PopupTimer _popupTimer;
@@ -68,14 +68,21 @@ public class Menu : MonoBehaviour
             
 
             foreach(var i in ClothingSlothes){
-                Debug.Log("check");
+                
                 i.GetComponent<RawImage>().color = new Color(255,255,255,0);
-                    
+                TurbanAndSlippers();
             }
             
         
     }
 
+    public void TurbanAndSlippers()
+    {
+        ClothingSlothes[0].GetComponent<RawImage>().texture = turban;
+        ClothingSlothes[1].GetComponent<RawImage>().texture = slippers;
+        ClothingSlothes[0].GetComponent<RawImage>().color = new Color(255,255,255,255);
+        ClothingSlothes[1].GetComponent<RawImage>().color = new Color(255,255,255,255);
+    }
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
