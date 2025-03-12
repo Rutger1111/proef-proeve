@@ -27,6 +27,7 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 0;
         _soundManager = GetComponent<SoundManager>();
         _timer = GetComponent<Timer>();
         _popupTimer = GetComponent<PopupTimer>();
@@ -44,7 +45,7 @@ public class Menu : MonoBehaviour
         else
         {
             tutorialPanel[index].SetActive(false);
-            index += direction;
+            index += 1;
             tutorialPanel[index].SetActive(true);
         }
 
@@ -135,6 +136,11 @@ public class Menu : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Escape) && isEscapeMenuOpen == true)
         {
             CloseEscapeMenu();
+        }
+
+        if (index > tutorialPanel.Count - 1)
+        {
+            Time.timeScale = 1;
         }
     }
 

@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 1242002329410020205}
   m_LocalRotation: {x: -0, y: -0, z: -0.090334475, w: 0.99591154}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5802101, y: 0.7112684, z: 0.7112684}
+  m_LocalScale: {x: 0.49404886, y: 0.60564506, z: 0.60564506}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8218750897588873041}
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: c7ed387f65af8ea429bf624b0bfb8b65, type: 3}
+  m_Texture: {fileID: 2800000, guid: eee5b55db5889094fbc8fdef6099b02f, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -114,7 +114,7 @@ RectTransform:
   m_GameObject: {fileID: 2929235141163995401}
   m_LocalRotation: {x: -0, y: -0, z: -0.090334475, w: 0.99591154}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5802101, y: 0.7112684, z: 0.7112684}
+  m_LocalScale: {x: 0.49404886, y: 0.60564506, z: 0.60564506}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8218750897588873041}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 0463a180d88a87c42b1064cf756c7213, type: 3}
+  m_Texture: {fileID: 2800000, guid: 75bd8f5fb38174045a9fee574bce4368, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -199,7 +199,7 @@ RectTransform:
   m_GameObject: {fileID: 4102608650982868715}
   m_LocalRotation: {x: -0, y: -0, z: -0.090334475, w: 0.99591154}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5802101, y: 0.7112684, z: 0.7112684}
+  m_LocalScale: {x: 0.49404886, y: 0.60564506, z: 0.60564506}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8218750897588873041}
@@ -355,7 +355,7 @@ RectTransform:
   m_GameObject: {fileID: 7650186274374592029}
   m_LocalRotation: {x: -0, y: -0, z: -0.090334475, w: 0.99591154}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5802101, y: 0.7112684, z: 0.7112684}
+  m_LocalScale: {x: 0.49404886, y: 0.60564506, z: 0.60564506}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8218750897588873041}
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 7b4d603cecbfa964ca4f2ebcdc8a97b6, type: 3}
+  m_Texture: {fileID: 2800000, guid: a787877dde78dce47b6e95db7a67acc5, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -441,7 +441,7 @@ RectTransform:
   m_GameObject: {fileID: 8937764024073773384}
   m_LocalRotation: {x: -0, y: -0, z: -0.090334475, w: 0.99591154}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5802101, y: 0.7112684, z: 0.7112684}
+  m_LocalScale: {x: 0.49404886, y: 0.60564506, z: 0.60564506}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8218750897588873041}
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: a00cf9a67a91fa14dbda7e5aeeb3e016, type: 3}
+  m_Texture: {fileID: 2800000, guid: ed487c09f13d2654f8999c2891608874, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
