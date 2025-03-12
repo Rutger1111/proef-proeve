@@ -11,12 +11,12 @@ public class SpriteHandler : MonoBehaviour
 {
 
     [SerializeField] private List<GameObject> hair =new List<GameObject>();
-    [SerializeField] private List<GameObject> backHair;
+    
     [SerializeField] private List<GameObject> shirts =new List<GameObject>();
     [SerializeField] private List<GameObject> pants =new List<GameObject>();
     [SerializeField] private List<GameObject> shoes =new List<GameObject>();
 
-    public List<Texture> backHairs;
+    
 
     public int index;
    
@@ -34,20 +34,13 @@ public class SpriteHandler : MonoBehaviour
                 for (int i = 0; i < clothingSettings.GetTexture().Count; i++)
                 {
                     RawImage hairImage = hair[i].GetComponent<RawImage>();
-                    RawImage backHairImage = backHair[i].GetComponent<RawImage>();
+                    
 
-                    index = i;
+                    
                     hairImage.texture = clothingSettings.GetTexture()[i];
                     Color color = hairImage.color;
                     hairImage.color = new Color(color.r, color.g, color.b, 225);
                     hair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
-        
-                    if (i < backHair.Count) 
-                    {
-                        backHairImage.texture = backHairs[i]; 
-                        backHairImage.color = new Color(color.r, color.g, color.b, 255);
-                        //backHair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
-                    }
                 }
                 break;
             case EClothes.Shirts:

@@ -1544,6 +1544,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6227809b213de0e41b1710e0271870ad, type: 2}
   - {fileID: 11400000, guid: 98c8f296bcfb6ec46b7e9c0121bce653, type: 2}
   - {fileID: 11400000, guid: a39b90d7d48d30845becf3db67b268a8, type: 2}
+  - {fileID: 11400000, guid: 23117479026e715469a2bded0c5507e3, type: 2}
 --- !u!114 &548861586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1566,10 +1567,8 @@ MonoBehaviour:
   - {fileID: 39322529}
   shoes:
   - {fileID: 51252460}
-  backhairs:
-  - {fileID: 2800000, guid: 45ecd6a33254b5b41b77f40c3e828229, type: 3}
-  - {fileID: 2800000, guid: 3743489fcad65824b9fb66661a035046, type: 3}
-  - {fileID: 2800000, guid: e945314f8c76735479be6a623de7759f, type: 3}
+  backHairs: []
+  index: 0
 --- !u!114 &548861587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1611,17 +1610,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wardrobes:
-  - {fileID: 11400000, guid: 23117479026e715469a2bded0c5507e3, type: 2}
   - {fileID: 11400000, guid: edec03d00face31438a8b738a37fb72f, type: 2}
   - {fileID: 11400000, guid: 6227809b213de0e41b1710e0271870ad, type: 2}
   - {fileID: 11400000, guid: 98c8f296bcfb6ec46b7e9c0121bce653, type: 2}
   - {fileID: 11400000, guid: a39b90d7d48d30845becf3db67b268a8, type: 2}
+  - {fileID: 11400000, guid: 23117479026e715469a2bded0c5507e3, type: 2}
   Dress:
   - {fileID: 54819347}
-  - {fileID: 1386865146}
   - {fileID: 2030459011}
   - {fileID: 1928605939}
   - {fileID: 838949094}
+  - {fileID: 1386865146}
 --- !u!114 &548861589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1656,6 +1655,10 @@ MonoBehaviour:
   shownClothes: []
   selectedclothes: []
   AIselectedclothes: []
+  _finalScore: 0
+  AIFinalScore: 0
+  stylePoints: 0
+  AIStylePoints: 0
 --- !u!114 &548861591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2226,16 +2229,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661119408}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.103114, y: 9.741517, z: 9.840712}
+  m_LocalScale: {x: 0.98290753, y: 1.0610403, z: 1.0718445}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1552867576}
+  m_Father: {fileID: 1992225939}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 496.49, y: -4}
+  m_AnchoredPosition: {x: -89.27637, y: 2.5051455}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661119410
@@ -6397,8 +6400,6 @@ RectTransform:
   - {fileID: 1205251230}
   - {fileID: 881921329}
   - {fileID: 1431166625}
-  - {fileID: 1567498514}
-  - {fileID: 661119409}
   - {fileID: 1992225939}
   - {fileID: 2004744103}
   - {fileID: 968103168}
@@ -6663,14 +6664,14 @@ RectTransform:
   m_GameObject: {fileID: 1567498513}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.1097813, y: 9.7403965, z: 9.943046}
+  m_LocalScale: {x: 0.98419166, y: 1.0609182, z: 1.0829906}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1552867576}
+  m_Father: {fileID: 1992225939}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -463.1135, y: -4.0555305}
+  m_AnchoredPosition: {x: -89.20001, y: 2.4990954}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567498515
@@ -7885,6 +7886,8 @@ Transform:
   m_LocalScale: {x: 5.191856, y: 9.1811, z: 9.1811}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1567498514}
+  - {fileID: 661119409}
   - {fileID: 1566137641}
   - {fileID: 51252461}
   - {fileID: 39322530}
