@@ -15,7 +15,7 @@ public class AssignSettings : MonoBehaviour
         
     }
     public void UseSound(){
-        //GameObject.Find("EventSystem").GetComponent<Settings>().nodes[soundIndex].source = GetComponent<AudioSource>();
-        //GameObject.Find("EventSystem").GetComponent<Settings>().PlaySoundTrack(soundIndex, );
+        //GameObject.Find("EventSystem").GetComponent<SoundManager>().nodes[soundIndex].source.Add(GetComponent<AudioSource>());
+        GameObject.Find("EventSystem").GetComponent<SoundManager>().PlaySoundTrack(soundIndex);
     }
 }
