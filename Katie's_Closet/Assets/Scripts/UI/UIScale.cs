@@ -25,7 +25,7 @@ public class UIScale : MonoBehaviour
             if (i == indexButton)
             {
                 list[i].GetComponent<Image>().sprite = sprite;
-                list[i].GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                list[i].GetComponent<Image>().color = new Color(1, 1, 1, 0.5f);
             }
             else if (i != indexButton)
             {
