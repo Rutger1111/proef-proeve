@@ -78,8 +78,8 @@ public class Menu : MonoBehaviour
 
     public void TurbanAndSlippers()
     {
-        turban = ClothingSlothes[0].GetComponent<RawImage>().texture;
-        slippers = ClothingSlothes[1].GetComponent<RawImage>().texture;
+        ClothingSlothes[0].GetComponent<RawImage>().texture = turban;
+        ClothingSlothes[1].GetComponent<RawImage>().texture = slippers;
         ClothingSlothes[0].GetComponent<RawImage>().color = new Color(255,255,255,255);
         ClothingSlothes[1].GetComponent<RawImage>().color = new Color(255,255,255,255);
     }
