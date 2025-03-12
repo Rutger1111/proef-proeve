@@ -10,11 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6cd50e8c7becaa4a8a12a97e87dec5b, type: 3}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Katie's_Closet/Assets/scriptableObjects/kleren/broeken/COMFY/BOTTOM shorts.asset
   m_Name: BOTTOM shorts
   m_EditorClassIdentifier: 
   textures:
   - {fileID: 2800000, guid: 4c8aee8786abfa34eb9fb61ab8d1ff13, type: 3}
   iconTexture: {fileID: 2800000, guid: 8c137aad95082f84b9171c2b48e7c1c3, type: 3}
+========
+  m_Name: BOTTOM long bants
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 2800000, guid: 0c3395e7a45a3114baf62db6c9ce8069, type: 3}
+  iconTexture: {fileID: 2800000, guid: bf7b60125f706ac43aa20bffe5a76c92, type: 3}
+>>>>>>>> Clothing-Art:Katie's_Closet/Assets/scriptableObjects/kleren/broeken/COMFY/BOTTOM long bants.asset
+=======
+<<<<<<<< HEAD:Katie's_Closet/Assets/scriptableObjects/kleren/broeken/COMFY/BOTTOM long bants.asset
+  m_Name: BOTTOM long bants
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 2800000, guid: e5644cddf9385f947939d722f544aa2c, type: 3}
+  iconTexture: {fileID: 2800000, guid: 71919b05b54920447b50c5bae76447be, type: 3}
+========
+  m_Name: BOTTOM shorts
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 2800000, guid: 91159df9be7d3f74a9d8fc14a9fdb353, type: 3}
+  iconTexture: {fileID: 2800000, guid: 5a6846fce7a622141be1f80bcb436a8d, type: 3}
+>>>>>>>> Clothing-Art:Katie's_Closet/Assets/scriptableObjects/kleren/broeken/COMFY/BOTTOM shorts.asset
+>>>>>>> Clothing-Art
   Id: 0
   style: 0
   clothKind: 2

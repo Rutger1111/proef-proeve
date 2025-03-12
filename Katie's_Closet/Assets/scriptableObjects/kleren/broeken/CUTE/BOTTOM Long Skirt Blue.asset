@@ -10,11 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6cd50e8c7becaa4a8a12a97e87dec5b, type: 3}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Katie's_Closet/Assets/scriptableObjects/kleren/broeken/CUTE/BOTTOM Long Skirt Blue.asset
   m_Name: BOTTOM Long Skirt Blue
   m_EditorClassIdentifier: 
   textures:
   - {fileID: 2800000, guid: 6ec754f74f630ae4f932ab750244f7ba, type: 3}
   iconTexture: {fileID: 2800000, guid: 01d55e192a7958b44835cfbb291b5080, type: 3}
+========
+  m_Name: BOTTOM cute blue skirt
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 2800000, guid: c909765b04be2794f845919ea60169a2, type: 3}
+  iconTexture: {fileID: 2800000, guid: 42148845f951fa14dbab58a49d17b2d4, type: 3}
+>>>>>>>> Clothing-Art:Katie's_Closet/Assets/scriptableObjects/kleren/broeken/CUTE/BOTTOM cute blue skirt.asset
+=======
+<<<<<<<< HEAD:Katie's_Closet/Assets/scriptableObjects/kleren/broeken/CUTE/BOTTOM cute pink skirt.asset
+  m_Name: BOTTOM cute pink skirt
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 2800000, guid: 19f90c2ff4586c848a36fe93af27f7c9, type: 3}
+  iconTexture: {fileID: 2800000, guid: d05d3bced7eb80a409244c8d450b2707, type: 3}
+========
+  m_Name: BOTTOM Long Skirt Blue
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 2800000, guid: 03649cfde8068094d954628154cf6bd0, type: 3}
+  iconTexture: {fileID: 2800000, guid: b408b67f697edd54a9b8db2c663f53b1, type: 3}
+>>>>>>>> Clothing-Art:Katie's_Closet/Assets/scriptableObjects/kleren/broeken/CUTE/BOTTOM Long Skirt Blue.asset
+>>>>>>> Clothing-Art
   Id: 0
   style: 2
   clothKind: 2

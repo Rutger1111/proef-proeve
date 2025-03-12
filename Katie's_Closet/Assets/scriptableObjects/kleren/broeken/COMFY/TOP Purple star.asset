@@ -10,11 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6cd50e8c7becaa4a8a12a97e87dec5b, type: 3}
+<<<<<<<< HEAD:Katie's_Closet/Assets/scriptableObjects/kleren/broeken/COMFY/TOP Purple star.asset
   m_Name: TOP Purple star
   m_EditorClassIdentifier: 
   textures:
   - {fileID: 2800000, guid: d018b8c7cd8ccb141bb1a2c770f49bcd, type: 3}
   iconTexture: {fileID: 2800000, guid: 2c0f5ed718bcde547b0e99be7ef9e1c3, type: 3}
+========
+  m_Name: BOTTOM light pink shorts
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 2800000, guid: e661c5098b8fc0a408467e6cccd71734, type: 3}
+  iconTexture: {fileID: 2800000, guid: cde2f9f3345066544b078ff688ccec9f, type: 3}
+>>>>>>>> Clothing-Art:Katie's_Closet/Assets/scriptableObjects/kleren/broeken/COMFY/BOTTOM light pink shorts.asset
   Id: 0
   style: 0
-  clothKind: 1
+  clothKind: 2

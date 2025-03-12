@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: BOTTOM light blue long bpants
   m_EditorClassIdentifier: 
   textures:
+<<<<<<< HEAD
   - {fileID: 2800000, guid: 8fcd19102057a8a4a9e39a2c209acd47, type: 3}
   iconTexture: {fileID: 2800000, guid: 434012c6a2b5e954d94b91027974caa9, type: 3}
+=======
+  - {fileID: 2800000, guid: 181bb12fe0ee69e47950ae74d18bc296, type: 3}
+  iconTexture: {fileID: 2800000, guid: 8f38b2a2bee29114190ec35659ef2afb, type: 3}
+>>>>>>> Clothing-Art
   Id: 0
   style: 0
   clothKind: 2

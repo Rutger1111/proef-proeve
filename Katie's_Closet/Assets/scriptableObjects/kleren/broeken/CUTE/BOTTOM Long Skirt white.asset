@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: BOTTOM Long Skirt white
   m_EditorClassIdentifier: 
   textures:
+<<<<<<< HEAD
   - {fileID: 2800000, guid: 5a5907fefd999cd47b4587bf65c2ba94, type: 3}
   iconTexture: {fileID: 2800000, guid: 45fc12e0b61e0ab4aa1235bd82ed7329, type: 3}
+=======
+  - {fileID: 2800000, guid: f619fdcb04ab569448a6f72571c7ee85, type: 3}
+  iconTexture: {fileID: 2800000, guid: 99311432f0f457041a644d15dfd49275, type: 3}
+>>>>>>> Clothing-Art
   Id: 0
   style: 2
   clothKind: 2

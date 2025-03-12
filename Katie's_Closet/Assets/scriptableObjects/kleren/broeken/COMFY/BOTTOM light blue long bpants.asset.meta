@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 7a1a6b8c81aac654aa32805ee84f2df0
+=======
+<<<<<<<< HEAD:Katie's_Closet/Assets/URP_Renderer.asset.meta
+guid: 637763876750145458f54a342ea30e2a
+========
+guid: 1077357f5968b3b47915044e829b513a
+>>>>>>>> Clothing-Art:Katie's_Closet/Assets/scriptableObjects/kleren/broeken/COMFY/BOTTOM light blue long bpants.asset.meta
+>>>>>>> Clothing-Art
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

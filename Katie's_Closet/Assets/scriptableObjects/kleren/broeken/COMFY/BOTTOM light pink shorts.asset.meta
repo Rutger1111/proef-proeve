@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 0b64b4f5df3e6ce4b9d2a19843be1571
+=======
+<<<<<<<< HEAD:Katie's_Closet/Assets/scriptableObjects/kleren/Haren/COMFY/Ginger curls BACK.asset.meta
+guid: 0a2731d6c431dee4fbc997b7b47685df
+========
+guid: 8304ab040c3beb640b379ba6511e014e
+>>>>>>>> Clothing-Art:Katie's_Closet/Assets/scriptableObjects/kleren/broeken/COMFY/BOTTOM light pink shorts.asset.meta
+>>>>>>> Clothing-Art
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

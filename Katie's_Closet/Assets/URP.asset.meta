@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Katie's_Closet/Assets/URP.asset.meta
 guid: be55ac74a36b41e4496a1d70236a52f6
+========
+guid: aa66da88957f30443a8dc3304288f6da
+>>>>>>>> Clothing-Art:Katie's_Closet/Assets/scriptableObjects/kleren/Haren/COMFY/New Cloth.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

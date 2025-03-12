@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Katie's_Closet/Assets/Art/Official Assets/CLOTHES/BOTTOMS/COMFY/BOTTOM light pink shorts.png.meta
 guid: ed487c09f13d2654f8999c2891608874
+========
+guid: 181bb12fe0ee69e47950ae74d18bc296
+>>>>>>>> Clothing-Art:Katie's_Closet/Assets/Art/Official Assets/CLOTHES/BOTTOMS/COMFY/BOTTOM light blue long bpants.png.meta
+=======
+<<<<<<<< HEAD:Katie's_Closet/Assets/Art/Official Assets/CLOTHES/HAIR/COMFY/HAIR Pink bob.png.meta
+guid: 75bd8f5fb38174045a9fee574bce4368
+========
+guid: e661c5098b8fc0a408467e6cccd71734
+>>>>>>>> Clothing-Art:Katie's_Closet/Assets/Art/Official Assets/CLOTHES/BOTTOMS/COMFY/BOTTOM light pink shorts.png.meta
+>>>>>>> Clothing-Art
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
