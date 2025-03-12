@@ -8,7 +8,6 @@ public class ChooseCommand : ICommand
     public override void Invoke()
     {
         int randomNumber = Random.Range(0, commands.Count);
-        print(randomNumber);
         commands[randomNumber].Invoke();
     }
 }

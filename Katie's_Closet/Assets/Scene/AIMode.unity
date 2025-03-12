@@ -1839,7 +1839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1303972560
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4892,7 +4892,7 @@ GameObject:
   - component: {fileID: 5276496200062863855}
   - component: {fileID: 7323956285738525817}
   m_Layer: 5
-  m_Name: shoes (1)
+  m_Name: AI_Shoes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5143,7 +5143,7 @@ GameObject:
   - component: {fileID: 6338009887134659665}
   - component: {fileID: 6338009887134659666}
   m_Layer: 5
-  m_Name: Pants (1)
+  m_Name: AI_Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5183,7 +5183,7 @@ GameObject:
   - component: {fileID: 4586492492687369024}
   - component: {fileID: 8644985891284064542}
   m_Layer: 5
-  m_Name: Shirt (1)
+  m_Name: AI_Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6427,7 +6427,7 @@ GameObject:
   - component: {fileID: 8135895431347965764}
   - component: {fileID: 8135895431347965765}
   m_Layer: 5
-  m_Name: Hair (1)
+  m_Name: AI_Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7023,7 +7023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wardrobe: {fileID: 11400000, guid: edec03d00face31438a8b738a37fb72f, type: 2}
   index: 1
-  clothe: {fileID: 8135895431347965765}
+  clothe: {fileID: 1209530727}
   images:
   - {fileID: 6041438836743804506}
 --- !u!114 &8135895431347965765

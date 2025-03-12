@@ -18,8 +18,8 @@ public class Score : MonoBehaviour
     public List<GameObject> selectedclothes;
     public List<GameObject> AIselectedclothes;
 
-    private float _finalScore, AIFinalScore;
-    private float stylePoints, AIStylePoints;
+    public float _finalScore, AIFinalScore;
+    public float stylePoints, AIStylePoints;
     private float HighScore;
 
     private AIDresser _aiDresser;
@@ -85,6 +85,7 @@ public class Score : MonoBehaviour
     private void Update()
     {
         scoreText.text = _finalScore.ToString("F0");
+        aiScoreText.text = AIFinalScore.ToString("F0");
         if (Input.GetKeyDown(KeyCode.Q))
         {
             SubmitClothes();
@@ -111,8 +112,6 @@ public class Score : MonoBehaviour
                         
                         if (imageComponent != null)
                         {
-                            print("fuck");
-                            print("lol fuck");
                             newList.savedImage.Add(imageComponent.mainTexture);
                         }
                     
@@ -163,6 +162,8 @@ public class Score : MonoBehaviour
         HighScoreText.text = HighScore.ToString("F0");
         scoreText.text = _finalScore.ToString("F0");
         finalScoreText.text = _finalScore.ToString("F0");
+        
+        
     }
 
     public void save()
