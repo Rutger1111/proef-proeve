@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class SpriteHandler : MonoBehaviour
 {
 
-    [SerializeField] private List<GameObject> hair =new List<GameObject>();
+    [SerializeField] private List<GameObject> hair, backHair =new List<GameObject>();
     [SerializeField] private List<GameObject> shirts =new List<GameObject>();
     [SerializeField] private List<GameObject> pants =new List<GameObject>();
     [SerializeField] private List<GameObject> shoes =new List<GameObject>();
@@ -31,6 +31,10 @@ public class SpriteHandler : MonoBehaviour
                     hair[i].GetComponent<RawImage>().color = new Color(color.r,color.g,color.b, 225);
                     hair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
 
+                    for (int j = 0; j < clothingSettings.GetTexture().Count; j++)
+                    {
+                        backHair[j].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[j];
+                    }
                 }
                 break;
             case EClothes.Shirts:
