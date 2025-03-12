@@ -12,6 +12,7 @@ public class Score : MonoBehaviour
     [SerializeField] private TMPro.TMP_Text finalScoreText;
     [SerializeField] private TMPro.TMP_Text scoreText;
     [SerializeField] private TMPro.TMP_Text aiScoreText;
+    [SerializeField] private TMPro.TMP_Text aiFinalScoreText;
     [SerializeField] private TMPro.TMP_Text HighScoreText;
     
     public List<GameObject> shownClothes;
@@ -44,36 +45,9 @@ public class Score : MonoBehaviour
             
             
 
-            shownClothes.Clear();
-            selectedclothes.Clear();  
-            AIselectedclothes.Clear();
-            
-            GameObject parentModelClothes = GameObject.Find("modelOutline");
-
-
-            foreach (Transform ModelClothes in parentModelClothes.transform)
-            {
-                if (!shownClothes.Contains(ModelClothes.gameObject))
-                {
-                    shownClothes.Add(ModelClothes.gameObject);
-                }
-            }
-            GameObject parentSelectedClothes = GameObject.Find("ParentClothParts");
+         
             
             
-
-            foreach (Transform clothesSelected in parentSelectedClothes.transform)
-            {
-                selectedclothes.Add(clothesSelected.gameObject);
-            }
-            
-            
-            GameObject aiparentSelectedClothes = GameObject.Find("AIenemy");
-            foreach (Transform AIclothesSelected in aiparentSelectedClothes.transform)
-            {
-                AIselectedclothes.Add(AIclothesSelected.gameObject);
-            }
-        
         
     }
     private void UpdateHighScore()
@@ -162,6 +136,7 @@ public class Score : MonoBehaviour
         HighScoreText.text = HighScore.ToString("F0");
         scoreText.text = _finalScore.ToString("F0");
         finalScoreText.text = _finalScore.ToString("F0");
+        aiFinalScoreText.text = AIFinalScore.ToString("F0");
         
         
     }
