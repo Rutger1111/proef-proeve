@@ -18,6 +18,9 @@ public class Menu : MonoBehaviour
     private Score _score;
     private AIDresser _aiDresser;
     private SoundManager _soundManager;
+    [SerializeField] private List<GameObject> tutorialPanel = new List<GameObject>();
+    [SerializeField] private GameObject tutorialPanel1;
+    private int index = 0;
     
     private bool isEscapeMenuOpen;
 
@@ -29,6 +32,31 @@ public class Menu : MonoBehaviour
         _popupTimer = GetComponent<PopupTimer>();
         _score = GetComponent<Score>();
         _aiDresser = GetComponent<AIDresser>();
+    }
+    
+    public void NextPanel(int direction)
+    {
+        if (index >= tutorialPanel.Count || index < 0)
+        {
+            index = 0;
+            CloseTutorial();
+        }
+        else
+        {
+            tutorialPanel[index].SetActive(false);
+            index += direction;
+            tutorialPanel[index].SetActive(true);
+        }
+
+    }
+
+    public void OpenTutorial()
+    {
+        tutorialPanel1.SetActive(true);
+    }
+    public void CloseTutorial()
+    {
+        tutorialPanel1.SetActive(false);
     }
     public void ExitGame()
     {
