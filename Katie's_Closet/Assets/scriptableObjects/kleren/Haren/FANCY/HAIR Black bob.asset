@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6cd50e8c7becaa4a8a12a97e87dec5b, type: 3}
+  m_Name: HAIR Black bob
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 2800000, guid: 88760b84cb88a2f4b97dfcadc1ed10c3, type: 3}
+  iconTexture: {fileID: 2800000, guid: 31a2b9a92c702b94e9205f0cb250422a, type: 3}
+  Id: 0
+  style: 1
+  clothKind: 0

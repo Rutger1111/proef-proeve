@@ -13,8 +13,18 @@ MonoBehaviour:
   m_Name: SHirts
   m_EditorClassIdentifier: 
   clothesTextures:
-  - {fileID: 11400000, guid: 018be9593f143d64c97c34c16785ded9, type: 2}
-  - {fileID: 11400000, guid: 63409e33e88e4c74b9de88d6f746b6dc, type: 2}
-  - {fileID: 11400000, guid: a3baf2b8e7b8c9e40a74c4db9c7e4841, type: 2}
-  - {fileID: 11400000, guid: 5afcff11b111b9548b6692ecc85e68b2, type: 2}
-  - {fileID: 11400000, guid: accfaeeff5d850b469b623421cebe051, type: 2}
+  - {fileID: 11400000, guid: a2cad505dbbe3fd409028074a767681a, type: 2}
+  - {fileID: 11400000, guid: 4b5de42c6f10e0f4fa844152c9aa0647, type: 2}
+  - {fileID: 11400000, guid: e754bf72ecc9190488df81d8e2104538, type: 2}
+  - {fileID: 11400000, guid: 40a173f6444c585458ffc42b460299ab, type: 2}
+  - {fileID: 11400000, guid: d787c31627e10c940bf6e2077ffb7fb5, type: 2}
+  - {fileID: 11400000, guid: 9bd65065d1e77504380968e8f1cbe5f3, type: 2}
+  - {fileID: 11400000, guid: b556688f5ac91054880f6b163e8e6077, type: 2}
+  - {fileID: 11400000, guid: f954853815aae0d4da2cbae6fb7e99b0, type: 2}
+  - {fileID: 11400000, guid: bf12f5c5c866ad4428017754e55e4231, type: 2}
+  - {fileID: 11400000, guid: bc97b2b8c3a0c3a4f976b7f3d11b7310, type: 2}
+  - {fileID: 11400000, guid: 11c4053c8546e354e8d3360d3f2c1145, type: 2}
+  - {fileID: 11400000, guid: 0fc4d5fd784fa8b42adb623b3560b07c, type: 2}
+  - {fileID: 11400000, guid: 00ed8f4dfe08d624cb12a24268d913d4, type: 2}
+  - {fileID: 11400000, guid: 110db93f83be4304da782fdf256d3cda, type: 2}
+  - {fileID: 11400000, guid: c327754ae66421c4aab6fa596f8053a1, type: 2}
