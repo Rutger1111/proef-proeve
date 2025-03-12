@@ -4,18 +4,22 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Playables;
+using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
 public class SpriteHandler : MonoBehaviour
 {
 
-    [SerializeField] private List<GameObject> hair, backHair =new List<GameObject>();
+    [SerializeField] private List<GameObject> hair =new List<GameObject>();
+    [SerializeField] private List<GameObject> backHair;
     [SerializeField] private List<GameObject> shirts =new List<GameObject>();
     [SerializeField] private List<GameObject> pants =new List<GameObject>();
     [SerializeField] private List<GameObject> shoes =new List<GameObject>();
 
-    public List<Texture> backhairs;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public List<Texture> backHairs;
+
+    public int index;
+   
     public void Invoke(ClotheSettings clothingSettings)
     {
         print(clothingSettings);
@@ -29,29 +33,20 @@ public class SpriteHandler : MonoBehaviour
             case EClothes.Head:
                 for (int i = 0; i < clothingSettings.GetTexture().Count; i++)
                 {
-                    hair[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
-                    Color color = hair[i].GetComponent<RawImage>().color;
-                    hair[i].GetComponent<RawImage>().color = new Color(color.r,color.g,color.b, 225);
+                    RawImage hairImage = hair[i].GetComponent<RawImage>();
+                    RawImage backHairImage = backHair[i].GetComponent<RawImage>();
+
+                    index = i;
+                    hairImage.texture = clothingSettings.GetTexture()[i];
+                    Color color = hairImage.color;
+                    hairImage.color = new Color(color.r, color.g, color.b, 225);
                     hair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
-                    
+        
                     if (i < backHair.Count) 
                     {
-                        for (int j = 0; j < backhairs.Count; j++)
-                        {
-                            print("fuck");
-                            j = i;
-                            if (j < backhairs.Count)
-                            {
-                                print("chekc");
-                                
-                                backHair[i].GetComponent<RawImage>().texture = backhairs[j].GetComponent<RawImage>().texture;
-                                backhairs[j].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
-                                Color color2 = hair[i].GetComponent<RawImage>().color;
-                                backHair[i].GetComponent<RawImage>().color = new Color(color2.r, color2.g, color2.b, 255);  
-                                backHair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
-                            }
-                        }
-                        
+                        backHairImage.texture = backHairs[i]; 
+                        backHairImage.color = new Color(color.r, color.g, color.b, 255);
+                        //backHair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
                     }
                 }
                 break;

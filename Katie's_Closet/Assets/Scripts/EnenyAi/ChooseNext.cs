@@ -41,6 +41,7 @@ public class ChooseNext : ICommand
                 for (int i = 0; i < wardrobe.clothesTextures[index].textures.Count; i++)
                 {
                     images[i].texture = wardrobe.clothesTextures[index].textures[i];
+                    UpdateClothingTexture(i);
                 }
             }
             else{            
@@ -63,16 +64,25 @@ public class ChooseNext : ICommand
                 }
                 for (int i = 0; i < wardrobe.clothesTextures[index].textures.Count; i++)
                 {
-                    images[i].texture = wardrobe.clothesTextures[index].textures[i];
+                   UpdateClothingTexture(i);
                 }
             }            
         }
         else{
             for (int i = 0; i < wardrobe.clothesTextures[index].textures.Count; i++)
             {
-                images[i].texture = wardrobe.clothesTextures[index].textures[i];
+                UpdateClothingTexture(i);
             }
         }
         
+    }
+    
+    private void UpdateClothingTexture(int i)
+    {
+        RawImage shirt = images[i];
+        Color thisColor = shirt.color;
+        shirt.color = new Color(thisColor.r, thisColor.g, thisColor.b, 255f); 
+        shirt.texture = wardrobe.clothesTextures[index].textures[i];
+        shirt.GetComponent<ClotheReference>().CL = clothe.CL;
     }
 }
