@@ -45,7 +45,7 @@ public class SpriteHandler : MonoBehaviour
                                 print("chekc");
                                 
                                 backHair[i].GetComponent<RawImage>().texture = backhairs[j].GetComponent<RawImage>().texture;
-                                backHair[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
+                                backhairs[j].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
                                 Color color2 = hair[i].GetComponent<RawImage>().color;
                                 backHair[i].GetComponent<RawImage>().color = new Color(color2.r, color2.g, color2.b, 255);  
                                 backHair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
