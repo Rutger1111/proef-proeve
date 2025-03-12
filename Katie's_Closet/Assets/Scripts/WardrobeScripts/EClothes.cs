@@ -2,5 +2,5 @@ using UnityEngine;
 
 public enum EClothes
 {
-    Head, Shirts, Pants, Shoes
+    Head, Shirts, Pants, Shoes, BackHead
 }

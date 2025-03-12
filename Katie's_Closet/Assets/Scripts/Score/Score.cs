@@ -5,22 +5,29 @@ using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using Random = Unity.Mathematics.Random;
 
+
+
+
 public class Score : MonoBehaviour
 {
     [SerializeField] private TMPro.TMP_Text finalScoreText;
     [SerializeField] private TMPro.TMP_Text scoreText;
+    [SerializeField] private TMPro.TMP_Text aiScoreText;
+    [SerializeField] private TMPro.TMP_Text aiFinalScoreText;
     [SerializeField] private TMPro.TMP_Text HighScoreText;
     
-    [HideInInspector] public List<GameObject> shownClothes;
-    [HideInInspector] public List<GameObject> selectedclothes;
+    public List<GameObject> shownClothes;
+    public List<GameObject> selectedclothes;
+    public List<GameObject> AIselectedclothes;
 
-    private float _finalScore;
-    private float stylePoints;
+    public float _finalScore, AIFinalScore;
+    public float stylePoints, AIStylePoints;
     private float HighScore;
 
     private AIDresser _aiDresser;
     private Timer timeReference;
     private SaveClothes _saveClothes;
+    
 
     void Start()
     {
@@ -30,35 +37,19 @@ public class Score : MonoBehaviour
     }
     private void LookForObject()
     {
-        try
-        {
+        
             _aiDresser = GetComponent<AIDresser>();
             timeReference = GetComponent<Timer>();
             _saveClothes = GetComponent<SaveClothes>();
+
+           
             
-            GameObject parentShownClothes = GameObject.Find("VoorbeeldPanel");
+            
 
-            shownClothes.Clear();
-
-
-            GameObject parentModelClothes = GameObject.Find("modelOutline");
-
-
-            foreach (Transform ModelClothes in parentModelClothes.transform)
-            {
-                if (!shownClothes.Contains(ModelClothes.gameObject))
-                {
-                    shownClothes.Add(ModelClothes.gameObject);
-                }
-            }
-            GameObject parentSelectedClothes = GameObject.Find("ParentClothParts");
-
-            foreach (Transform clothesSelected in parentSelectedClothes.transform)
-            {
-                selectedclothes.Add(clothesSelected.gameObject);
-            }
-        }
-        catch { }
+         
+            
+            
+        
     }
     private void UpdateHighScore()
     {
@@ -69,6 +60,7 @@ public class Score : MonoBehaviour
     private void Update()
     {
         scoreText.text = _finalScore.ToString("F0");
+        aiScoreText.text = AIFinalScore.ToString("F0");
         if (Input.GetKeyDown(KeyCode.Q))
         {
             SubmitClothes();
@@ -79,48 +71,75 @@ public class Score : MonoBehaviour
 
     public void SubmitClothes()
     {
+        complatedClothesList newList = new complatedClothesList();
+        newList.savedImage = new List<Texture>();
         
-
         for (int i = 0; i < shownClothes.Count; i++)
         {
-            for(int j = 0; j < selectedclothes.Count; j++)
-            { 
-                if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
+                for(int j = 0; j < selectedclothes.Count; j++)
                 {
-                    stylePoints += 1;
-                    //_saveClothes.complatedClothes.Add();
+                
+                    if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
+                    { 
+                        stylePoints += 1;
+                    
+                        RawImage imageComponent = selectedclothes[j].GetComponent<RawImage>();
+                        
+                        if (imageComponent != null)
+                        {
+                            newList.savedImage.Add(imageComponent.mainTexture);
+                        }
+                    
+                    }
+
+                    if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == selectedclothes[j].GetComponent<ClotheReference>().CL.Id)
+                    {
+                        stylePoints += 3f;
+                    }
                 }
 
-                if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == selectedclothes[j].GetComponent<ClotheReference>().CL.Id)
+                for (int j = 0; j < AIselectedclothes.Count; j++)
                 {
-                    stylePoints += 3f;
-                }
-                /*
-                else
-                {
-                    float idDifference = Mathf.Abs(selectedclothes[j].GetComponent<ClotheReference>().CL.Id - shownClothes[i].GetComponent<ClotheReference>().CL.Id);
-                    float points = Mathf.Max(0, 10f - idDifference * 2f);
 
-                    stylePoints += points;
+                    if (shownClothes[i].GetComponent<ClotheReference>().CL.style == AIselectedclothes[j].GetComponent<ClotheReference>().CL.style)
+                    {
+                        AIStylePoints += 1f;
+                    }
+
+                    if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == AIselectedclothes[j].GetComponent<ClotheReference>().CL.Id)
+                    {
+                        AIStylePoints += 3f;
+                    }
                 }
-                */
-            }
+        }
+        CalculateScore();
+        
+        if (newList.savedImage.Count > 0)
+        {
+            _saveClothes.complatedClothes.Add(newList);
         }
         
-        CalculateScore();
+        
     }
 
     public void CalculateScore()
     {
        _finalScore += stylePoints;
        stylePoints = 0;
+       AIFinalScore += AIStylePoints;
+       AIStylePoints = 0;
     }
 
     public void gameOver()
     {
+        _saveClothes.complated();       
+        
         HighScoreText.text = HighScore.ToString("F0");
         scoreText.text = _finalScore.ToString("F0");
         finalScoreText.text = _finalScore.ToString("F0");
+        aiFinalScoreText.text = AIFinalScore.ToString("F0");
+        
+        
     }
 
     public void save()
@@ -133,3 +152,4 @@ public class Score : MonoBehaviour
         }
     }
 }
+

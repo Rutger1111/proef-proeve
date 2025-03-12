@@ -13,7 +13,14 @@ MonoBehaviour:
   m_Name: Shoes
   m_EditorClassIdentifier: 
   clothesTextures:
-  - {fileID: 11400000, guid: 73bfa2bff0bf54248ba1574454137959, type: 2}
-  - {fileID: 11400000, guid: 8348b6554797ad74eb773d3b45468d5a, type: 2}
-  - {fileID: 11400000, guid: 4a9d9e3d6e057094c8d2512ebf8f2246, type: 2}
-  - {fileID: 11400000, guid: 51979429e47bec74c9c1b5c87bd35718, type: 2}
+  - {fileID: 11400000, guid: 59c26feffea42bc40a4a608fb56d1dd7, type: 2}
+  - {fileID: 11400000, guid: 33d83b94bcfe1a545ae4d784a69209ad, type: 2}
+  - {fileID: 11400000, guid: 1104fbed427580a45bbd446cc3a03786, type: 2}
+  - {fileID: 11400000, guid: f7659a27930066e4b9fbab142189b8da, type: 2}
+  - {fileID: 11400000, guid: cba73ee31d60b9e47a3f6246b146775e, type: 2}
+  - {fileID: 11400000, guid: 4b2a7916b805dc441a405d3aa6089de7, type: 2}
+  - {fileID: 11400000, guid: 2654c3f1a7b0cd140994a15ff53989f0, type: 2}
+  - {fileID: 11400000, guid: 447a40d7ddc0cca48865538e8f47ac4f, type: 2}
+  - {fileID: 11400000, guid: eb6e1f7885744f543bcf2881fc1577c6, type: 2}
+  - {fileID: 11400000, guid: 073f8bdcafeb97441afb91b291cfa6dd, type: 2}
+  - {fileID: 11400000, guid: 154cee16fbf634c45a3708a961077162, type: 2}

@@ -19,7 +19,7 @@ public class PopupTimer : MonoBehaviour
                 popupTimerText.text = timer.ToString("F0");
             }
             else{
-                popupTimerText.text = timer.ToString("F1");
+                popupTimerText.text = timer.ToString("F0");
             }
         }
     }

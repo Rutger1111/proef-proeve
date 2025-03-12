@@ -15,6 +15,10 @@ public class ClotheSettings : MonoBehaviour
     }
     public void ChangeSprite(){
         GameObject.Find("EventSystem").GetComponent<SpriteHandler>().Invoke(this);
+        
+        GameObject.Find("EventSystem").GetComponent<SoundManager>().updateSourceClip();
+        GameObject.Find("EventSystem").GetComponent<SoundManager>().PlaySoundTrack(1);
+        
     }
     public Cloth GetCloth()
     {

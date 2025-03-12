@@ -23,7 +23,7 @@ public class Timer : MonoBehaviour
             ResetHighScores();   
         }
         // ternery operator to determan wether to use decimals or not and make the entire string ready
-        string time = timerDuration > 30 ? timerDuration.ToString("F0") : timerDuration.ToString("F2");
+        string time = timerDuration > 30 ? timerDuration.ToString("F0") : timerDuration.ToString("F0");
         timerText.text = time;
         // checks whether it needs to subtract then subtracts
         if (timerDuration >= 0 && _popupTimer.timer <= 0)
@@ -32,8 +32,9 @@ public class Timer : MonoBehaviour
         }
         
         // if its lower then 0 than it stops timer
-        else
+        else if (timerDuration <= 0)
         {
+            
             GetComponent<Score>().gameOver();
             timerText.text = "0";
             //currentTime.text = "tijd: " + timerDuration.ToString("F2") + " sec";

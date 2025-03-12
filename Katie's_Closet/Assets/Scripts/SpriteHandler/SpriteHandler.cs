@@ -1,18 +1,25 @@
 using System.Collections.Generic;
 using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Playables;
+using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
 public class SpriteHandler : MonoBehaviour
 {
 
     [SerializeField] private List<GameObject> hair =new List<GameObject>();
+    
     [SerializeField] private List<GameObject> shirts =new List<GameObject>();
     [SerializeField] private List<GameObject> pants =new List<GameObject>();
     [SerializeField] private List<GameObject> shoes =new List<GameObject>();
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    
+
+    public int index;
+   
     public void Invoke(ClotheSettings clothingSettings)
     {
         print(clothingSettings);
@@ -26,11 +33,14 @@ public class SpriteHandler : MonoBehaviour
             case EClothes.Head:
                 for (int i = 0; i < clothingSettings.GetTexture().Count; i++)
                 {
-                    hair[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
-                    Color color = hair[i].GetComponent<RawImage>().color;
-                    hair[i].GetComponent<RawImage>().color = new Color(color.r,color.g,color.b, 225);
-                    hair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
+                    RawImage hairImage = hair[i].GetComponent<RawImage>();
+                    
 
+                    
+                    hairImage.texture = clothingSettings.GetTexture()[i];
+                    Color color = hairImage.color;
+                    hairImage.color = new Color(color.r, color.g, color.b, 225);
+                    hair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
                 }
                 break;
             case EClothes.Shirts:

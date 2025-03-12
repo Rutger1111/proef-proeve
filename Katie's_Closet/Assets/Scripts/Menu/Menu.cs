@@ -17,18 +17,20 @@ public class Menu : MonoBehaviour
     public List<ClotheReference> _clothref;
     private int index = 0;
 
+    public Texture turban, slippers;
 
     private Timer _timer;
     private PopupTimer _popupTimer;
     private Score _score;
     private AIDresser _aiDresser;
-
+    private SoundManager _soundManager;
     
     private bool isEscapeMenuOpen;
 
 
     private void Start()
     {
+        _soundManager = GetComponent<SoundManager>();
         _timer = GetComponent<Timer>();
         _popupTimer = GetComponent<PopupTimer>();
         _score = GetComponent<Score>();
@@ -88,16 +90,22 @@ public class Menu : MonoBehaviour
     public void SinglePlayerGame()
     {
         SceneManager.LoadScene("SinglePlayer");
+        music(1);
     }
     
     public void MultiPlayerGame()
     {
         SceneManager.LoadScene("AIMode");
+        music(1);
     }
 
+    public void music(int soundtrack)
+    {
+        _soundManager.PlaySoundTrack(soundtrack);
+    }
     public void SubmitClothes()
     {
-        try{
+       
             _aiDresser.ChooseDress();
 
             _score.SubmitClothes();
@@ -112,16 +120,21 @@ public class Menu : MonoBehaviour
             
 
             foreach(var i in ClothingSlothes){
+                
                 i.GetComponent<RawImage>().color = new Color(255,255,255,0);
-                    
+                TurbanAndSlippers();
             }
             
-        }
-        catch{
-            return;
-        }
+        
     }
 
+    public void TurbanAndSlippers()
+    {
+        ClothingSlothes[0].GetComponent<RawImage>().texture = turban;
+        ClothingSlothes[1].GetComponent<RawImage>().texture = slippers;
+        ClothingSlothes[0].GetComponent<RawImage>().color = new Color(255,255,255,255);
+        ClothingSlothes[1].GetComponent<RawImage>().color = new Color(255,255,255,255);
+    }
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -130,12 +143,12 @@ public class Menu : MonoBehaviour
     public void Return()
     {
         SceneManager.LoadScene("Menu");
+        
     }
     public void Update()
     {
         if (Input.GetKey(KeyCode.Tab))
         {
-            Debug.Log("Ruben sucks");
             modelPanel.SetActive(true);
         }
         
