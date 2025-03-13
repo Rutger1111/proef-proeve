@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: Hair
   m_EditorClassIdentifier: 
   clothesTextures:
-  - {fileID: 11400000, guid: 78b901afb76901641b51100e25b9942b, type: 2}
-  - {fileID: 11400000, guid: 74bb0d2a32fbb83409538fdc561228a4, type: 2}
-  - {fileID: 11400000, guid: a1517293ebeedc946a86f69368137c74, type: 2}
   - {fileID: 11400000, guid: ede78cb7423851e4f84653b585aa7a32, type: 2}
   - {fileID: 11400000, guid: b9a18d7301a443644bf956b44f1bfda3, type: 2}
   - {fileID: 11400000, guid: d030a842a185d894a8ef9bd93074aa2f, type: 2}

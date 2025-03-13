@@ -26,6 +26,8 @@ public class Score : MonoBehaviour
     private AIDresser _aiDresser;
     private Timer timeReference;
     private SaveClothes _saveClothes;
+
+    public bool multiplay;
     
 
     void Start()
@@ -59,7 +61,12 @@ public class Score : MonoBehaviour
     private void Update()
     {
         scoreText.text = _finalScore.ToString("F0");
-        aiScoreText.text = AIFinalScore.ToString("F0");
+
+        if (multiplay == true)
+        {
+            aiScoreText.text = AIFinalScore.ToString("F0");
+        }
+
         if (Input.GetKeyDown(KeyCode.Q))
         {
             SubmitClothes();
@@ -73,22 +80,23 @@ public class Score : MonoBehaviour
         complatedClothesList newList = new complatedClothesList();
         newList.savedImage = new List<Texture>();
         
+        HashSet<Texture> uniqueTextures = new HashSet<Texture>();
+        
         for (int i = 0; i < shownClothes.Count; i++)
         {
                 for(int j = 0; j < selectedclothes.Count; j++)
                 {
-                
+                    RawImage imageComponent = selectedclothes[j].GetComponent<RawImage>();
+                        
+                    if (imageComponent != null)
+                    {
+                        uniqueTextures.Add(imageComponent.mainTexture);
+                        newList.savedImage.Add(imageComponent.mainTexture);
+                    }
+                    
                     if (shownClothes[i].GetComponent<ClotheReference>().CL.style == selectedclothes[j].GetComponent<ClotheReference>().CL.style)
                     { 
                         stylePoints += 1;
-                    
-                        RawImage imageComponent = selectedclothes[j].GetComponent<RawImage>();
-                        
-                        if (imageComponent != null)
-                        {
-                            newList.savedImage.Add(imageComponent.mainTexture);
-                        }
-                    
                     }
 
                     if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == selectedclothes[j].GetComponent<ClotheReference>().CL.Id)
@@ -97,18 +105,21 @@ public class Score : MonoBehaviour
                     }
                 }
 
-                for (int j = 0; j < AIselectedclothes.Count; j++)
+                if (multiplay == true)
                 {
-
-                    if (shownClothes[i].GetComponent<ClotheReference>().CL.style == AIselectedclothes[j].GetComponent<ClotheReference>().CL.style)
+                    for (int j = 0; j < AIselectedclothes.Count; j++)
                     {
-                        AIStylePoints += 1f;
-                    }
 
-                    if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == AIselectedclothes[j].GetComponent<ClotheReference>().CL.Id)
-                    {
-                        AIStylePoints += 3f;
-                    }
+                        if (shownClothes[i].GetComponent<ClotheReference>().CL.style == AIselectedclothes[j].GetComponent<ClotheReference>().CL.style )
+                        {
+                            AIStylePoints += 1f;
+                        }
+
+                        if (shownClothes[i].GetComponent<ClotheReference>().CL.Id == AIselectedclothes[j].GetComponent<ClotheReference>().CL.Id)
+                        {
+                            AIStylePoints += 3f;
+                        }
+                    }     
                 }
         }
         CalculateScore();
@@ -125,8 +136,11 @@ public class Score : MonoBehaviour
     {
        _finalScore += stylePoints;
        stylePoints = 0;
-       AIFinalScore += AIStylePoints;
-       AIStylePoints = 0;
+       if (multiplay == true)
+       {
+           AIFinalScore += AIStylePoints;
+           AIStylePoints = 0;    
+       }
     }
 
     public void gameOver()
