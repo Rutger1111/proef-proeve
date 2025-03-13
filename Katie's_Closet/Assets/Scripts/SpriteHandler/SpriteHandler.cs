@@ -31,16 +31,17 @@ public class SpriteHandler : MonoBehaviour
                 for (int i = 0; i < clothingSettings.GetTexture().Count; i++)
                 {
                     Color color = hair[i].GetComponent<RawImage>().color;
-                    hair[i].GetComponent<RawImage>().color = new Color(color.r,color.g,color.b, 225);
+                    hair[i].GetComponent<RawImage>().color = new Color(color.r, color.g, color.b, 225);
                     hair[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
                     hair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
                     
                     if (i < backHair.Count)
                     {
-                        Cloth chosenCloth = _Wardrobe.Choose(); 
-                        Color hairColor = backHair[i].GetComponent<RawImage>().color;
-                        backHair[i].GetComponent<RawImage>().color = new Color(hairColor.r, hairColor.g, hairColor.b, 225);
-                        backHair[i].GetComponent<RawImage>().texture = chosenCloth.textures; 
+                        Color backHairColor = backHair[i].GetComponent<RawImage>().color;
+                        backHair[i].GetComponent<RawImage>().color = new Color(backHairColor.r, backHairColor.g, backHairColor.b, 225);
+
+                        
+                        backHair[i].GetComponent<RawImage>().texture = clothingSettings.GetTexture()[i];
                         backHair[i].GetComponent<ClotheReference>().CL = clothingSettings.GetCloth();
                     }
                 }

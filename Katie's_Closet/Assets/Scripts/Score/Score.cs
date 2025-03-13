@@ -85,7 +85,11 @@ public class Score : MonoBehaviour
     private void Update()
     {
         scoreText.text = _finalScore.ToString("F0");
-        aiScoreText.text = AIFinalScore.ToString("F0");
+        if (aiScoreText != null)
+        {
+            aiScoreText.text = AIFinalScore.ToString("F0");    
+        }
+        
         if (Input.GetKeyDown(KeyCode.Q))
         {
             SubmitClothes();

@@ -1558,6 +1558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hair:
   - {fileID: 1566137640}
+  - {fileID: 1567498513}
   backHair:
   - {fileID: 1567498513}
   shirts:
@@ -1566,10 +1567,7 @@ MonoBehaviour:
   - {fileID: 39322529}
   shoes:
   - {fileID: 51252460}
-  backhairs:
-  - {fileID: 2800000, guid: 45ecd6a33254b5b41b77f40c3e828229, type: 3}
-  - {fileID: 2800000, guid: 3743489fcad65824b9fb66661a035046, type: 3}
-  - {fileID: 2800000, guid: e945314f8c76735479be6a623de7759f, type: 3}
+  _Wardrobe: {fileID: 11400000, guid: 23117479026e715469a2bded0c5507e3, type: 2}
 --- !u!114 &548861587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1656,6 +1654,10 @@ MonoBehaviour:
   shownClothes: []
   selectedclothes: []
   AIselectedclothes: []
+  _finalScore: 0
+  AIFinalScore: 0
+  stylePoints: 0
+  AIStylePoints: 0
 --- !u!114 &548861591
 MonoBehaviour:
   m_ObjectHideFlags: 0
