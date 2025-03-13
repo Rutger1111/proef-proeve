@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Shoes
   m_EditorClassIdentifier: 
   clothesTextures:
-  - {fileID: 11400000, guid: 59c26feffea42bc40a4a608fb56d1dd7, type: 2}
   - {fileID: 11400000, guid: 33d83b94bcfe1a545ae4d784a69209ad, type: 2}
+  - {fileID: 11400000, guid: 59c26feffea42bc40a4a608fb56d1dd7, type: 2}
   - {fileID: 11400000, guid: 1104fbed427580a45bbd446cc3a03786, type: 2}
   - {fileID: 11400000, guid: f7659a27930066e4b9fbab142189b8da, type: 2}
   - {fileID: 11400000, guid: cba73ee31d60b9e47a3f6246b146775e, type: 2}

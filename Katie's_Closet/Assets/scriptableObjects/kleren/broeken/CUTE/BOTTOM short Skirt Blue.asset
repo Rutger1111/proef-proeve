@@ -15,6 +15,6 @@ MonoBehaviour:
   textures:
   - {fileID: 2800000, guid: f2774ef68b0a64b4996168dd9ecb150c, type: 3}
   iconTexture: {fileID: 2800000, guid: 0653f9eec3b513246859e785da1cf157, type: 3}
-  Id: 0
+  Id: 11
   style: 2
   clothKind: 2
