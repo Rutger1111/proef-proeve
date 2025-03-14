@@ -852,10 +852,10 @@ RectTransform:
   m_LocalScale: {x: 5.0609374, y: 8.977418, z: 7.4689145}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 54819345}
   - {fileID: 838949092}
   - {fileID: 1928605941}
   - {fileID: 2030459009}
+  - {fileID: 54819345}
   m_Father: {fileID: 564337097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1649,6 +1649,9 @@ MonoBehaviour:
   stylePoints: 0
   AIStylePoints: 0
   multiplay: 0
+  win: {fileID: 0}
+  lose: {fileID: 0}
+  scoreScreen: {fileID: 0}
 --- !u!114 &548861591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7350,10 +7353,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 661119409}
-  - {fileID: 1566137641}
   - {fileID: 51252461}
   - {fileID: 39322530}
   - {fileID: 1711795034}
+  - {fileID: 1566137641}
   m_Father: {fileID: 1552867576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2004744102

@@ -1828,10 +1828,10 @@ RectTransform:
   m_LocalScale: {x: 4.0231414, y: 7.1365085, z: 5.937339}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1209530726}
   - {fileID: 671679635}
   - {fileID: 475102569}
   - {fileID: 1702020602}
+  - {fileID: 1209530726}
   m_Father: {fileID: 1303972560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -7169,6 +7169,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7900666829503297673}
     - target: {fileID: 1011573203508330820, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 21300000, guid: 22d17127b27101344986d4080f5cb6fe, type: 3}
+    - target: {fileID: 1011573203508330820, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: lose
+      value: 
+      objectReference: {fileID: 21300000, guid: 87f57248be51bbc4b9504420d0511081, type: 3}
+    - target: {fileID: 1011573203508330820, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: multiplay
       value: 1
       objectReference: {fileID: 0}
@@ -7184,6 +7192,10 @@ PrefabInstance:
       propertyPath: aiScoreText
       value: 
       objectReference: {fileID: 7153255}
+    - target: {fileID: 1011573203508330820, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
+      propertyPath: scoreScreen
+      value: 
+      objectReference: {fileID: 1003682375}
     - target: {fileID: 1011573203508330820, guid: f2514009f0fbea945a1c9e57a2962e2d, type: 3}
       propertyPath: HighScoreText
       value: 
@@ -7659,7 +7671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7761,10 +7773,10 @@ Transform:
   m_LocalScale: {x: 5.191856, y: 9.1811, z: 9.1811}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 388872331728754086}
   - {fileID: 8747596906098769387}
   - {fileID: 5812205242137775574}
   - {fileID: 927614709653659118}
+  - {fileID: 388872331728754086}
   m_Father: {fileID: 7900666829503297673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3393991712020952985
@@ -8038,7 +8050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 44.482437, y: 52.70218}
+  m_AnchoredPosition: {x: 44.48246, y: 52.702183}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5484599286975097161
@@ -8418,7 +8430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 331b9fe5beae8e84c91826d9bc7f9023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.5
   chooseCommand: {fileID: 6312305851720361278}
 --- !u!1 &6419533940634861691
 GameObject:
@@ -8636,7 +8648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8675,10 +8687,10 @@ RectTransform:
   m_LocalScale: {x: 2.4692044, y: 4.0964913, z: 4.0964913}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5337878519753504387}
   - {fileID: 7323956285738525816}
   - {fileID: 819928767829081792}
   - {fileID: 6359333362621795378}
+  - {fileID: 5337878519753504387}
   m_Father: {fileID: 7900666829503297673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

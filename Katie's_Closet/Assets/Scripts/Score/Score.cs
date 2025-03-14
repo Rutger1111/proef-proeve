@@ -28,8 +28,11 @@ public class Score : MonoBehaviour
     private SaveClothes _saveClothes;
 
     public bool multiplay;
-    
 
+    public Sprite win;
+    public Sprite lose;
+
+    public GameObject scoreScreen;
     void Start()
     {
         
@@ -151,8 +154,15 @@ public class Score : MonoBehaviour
         scoreText.text = _finalScore.ToString("F0");
         finalScoreText.text = _finalScore.ToString("F0");
         aiFinalScoreText.text = AIFinalScore.ToString("F0");
-        
-        
+
+        if (_finalScore > AIFinalScore && multiplay == false)
+        {
+            scoreScreen.GetComponent<Image>().sprite = win;
+        }
+        else if (AIFinalScore > _finalScore && multiplay == true)
+        {
+            scoreScreen.GetComponent<Image>().sprite = lose;
+        }
     }
 
     public void save()
