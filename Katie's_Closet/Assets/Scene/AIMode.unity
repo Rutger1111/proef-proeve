@@ -6000,7 +6000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodes:
-  - volume: 0.5
+  - volume: 0.15
     clip: {fileID: 8300000, guid: 1540f44a6d5d63c4793103dae55b96c9, type: 3}
     backgroundMusic: 0
     source:
@@ -6008,7 +6008,7 @@ MonoBehaviour:
     - {fileID: 8678155191540178827}
     - {fileID: 7762894261743279788}
     - {fileID: 7828136377900353687}
-  - volume: 0.5
+  - volume: 0.09
     clip: {fileID: 8300000, guid: 4005fd3b5c7f78143b5d805bec17e0aa, type: 3}
     backgroundMusic: 0
     source: []
